@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Bray Shamans -->
+  
+  <!-- Adulthood -->
+  
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_BrayDeath</defName>
+    <title>Wind of Shyish user</title>
+    <titleShort>Shyish user</titleShort>
+    <baseDescription>[PAWN_nameDef] can sense and wield Shyish, the purple magic associated with Death.</baseDescription>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfDeathTrait</defName>
+        <chance>100</chance>
+		<degree>1</degree>
+      </li>
+      <li>
+        <defName>Abrasive</defName>
+        <chance>20</chance>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Caring</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_GreatBrayDeath</defName>
+    <title>Wind of Shyish favorite</title>
+    <titleShort>Shyish favorite</titleShort>
+    <baseDescription>[PAWN_nameDef] can sense and wield Shyish, the purple magic associated with Death. Shyish has always flowed well, and easy for [PAWN_nameDef].</baseDescription>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+	
+	<forcedHediffs>
+      <li>RH_TET_Beastmen_BestigorHornLeft</li>
+      <li>RH_TET_Beastmen_BestigorHornRight</li>
+    </forcedHediffs>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_GreatBrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfDeathTrait</defName>
+        <chance>100</chance>
+		<degree>3</degree>
+      </li>
+      <li>
+        <defName>Abrasive</defName>
+        <chance>20</chance>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Caring</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_BrayTzeentch</defName>
+    <title>Lore of Tzeentch user</title>
+    <titleShort>horned</titleShort>
+    <baseDescription>[PAWN_nameDef] horns show that [PAWN_pronoun] has been touched by Tzeentch. Truly a rare beast, blessed with strength and the ability to weild the dark powers of Tzeentch. Unique horns are carried with pride, proof that [PAWN_pronoun] is blessed with strength to stand above the lesser beastkin.</baseDescription>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+	
+	<forcedHediffs>
+      <li>RH_TET_Beastmen_TzaangorHornLeft</li>
+      <li>RH_TET_Beastmen_TzaangorHornRight</li>
+    </forcedHediffs>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>5</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfTzeentchTrait</defName>
+        <chance>100</chance>
+		<degree>1</degree>
+      </li>
+      <li>
+        <defName>Bloodlust</defName>
+        <chance>25</chance>
+        <commonalityMale>100</commonalityMale>
+        <commonalityFemale>10</commonalityFemale>
+      </li>
+      <li>
+        <defName>Tough</defName>
+        <chance>20</chance>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_GreatBrayTzeentch</defName>
+    <title>Lore of Tzeentch user</title>
+    <titleShort>horned</titleShort>
+    <baseDescription>[PAWN_nameDef] horns show that [PAWN_pronoun] has been touched by Tzeentch. [PAWN_pronoun] has been extemely blessed, and is very skilled in the magic arts. Truly a rare beast, blessed with strength and the ability to weild the dark powers of Tzeentch. Unique horns are carried with pride, proof that [PAWN_pronoun] is blessed with strength to stand above the lesser beastkin.</baseDescription>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+	
+	<forcedHediffs>
+      <li>RH_TET_Beastmen_TzaangorHornLeft</li>
+      <li>RH_TET_Beastmen_TzaangorHornRight</li>
+    </forcedHediffs>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>5</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_GreatBrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfTzeentchTrait</defName>
+        <chance>100</chance>
+		<degree>3</degree>
+      </li>
+      <li>
+        <defName>Bloodlust</defName>
+        <chance>25</chance>
+        <commonalityMale>100</commonalityMale>
+        <commonalityFemale>10</commonalityFemale>
+      </li>
+      <li>
+        <defName>Tough</defName>
+        <chance>20</chance>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_BrayBeasts</defName>
+    <title>Wind of Ghur user</title>
+    <titleShort>Ghur user</titleShort>
+    <baseDescription>[PAWN_nameDef] can sense and wield Ghur, the amber magic associated with Beasts.</baseDescription>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfBeastsTrait</defName>
+        <chance>100</chance>
+		<degree>1</degree>
+      </li>
+      <li>
+        <defName>Immunity</defName>
+        <chance>20</chance>
+		<degree>1</degree>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Animals</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_GreatBrayBeasts</defName>
+    <title>Wind of Ghur favorite</title>
+    <titleShort>Ghur favorite</titleShort>
+    <baseDescription>[PAWN_nameDef] can sense and wield Ghur, the amber magic associated with Beasts. Ghur has always flowed well, and easy for [PAWN_nameDef].</baseDescription>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <forcedHediffs>
+      <li>RH_TET_Beastmen_BestigorHornLeft</li>
+      <li>RH_TET_Beastmen_BestigorHornRight</li>
+    </forcedHediffs>
+	
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>5</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_GreatBrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfBeastsTrait</defName>
+        <chance>100</chance>
+		<degree>3</degree>
+      </li>
+      <li>
+        <defName>Immunity</defName>
+        <chance>20</chance>
+		<degree>1</degree>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Animals</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_BrayShadow</defName>
+    <title>Wind of Ulgu user</title>
+    <titleShort>Ulgu user</titleShort>
+    <baseDescription>[PAWN_nameDef] can sense and wield Ulgu, the gray magic associated with shadows.</baseDescription>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Mining</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfShadowTrait</defName>
+        <chance>100</chance>
+		<degree>1</degree>
+      </li>
+      <li>
+        <defName>Abrasive</defName>
+        <chance>20</chance>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Mining</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_GreatBrayShadow</defName>
+    <title>Wind of Ulgu favorite</title>
+    <titleShort>Ulgu favorite</titleShort>
+    <baseDescription>[PAWN_nameDef] can sense and wield Ulgu, the gray magic associated with shadows. Ulgu has always flowed well, and easy for [PAWN_nameDef].</baseDescription>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <forcedHediffs>
+      <li>RH_TET_Beastmen_BestigorHornLeft</li>
+      <li>RH_TET_Beastmen_BestigorHornRight</li>
+    </forcedHediffs>
+	
+    <slot>Adulthood</slot>
+    <skillGains>
+     <li>
+        <defName>Intellectual</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Mining</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_GreatBrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfShadowTrait</defName>
+        <chance>100</chance>
+		<degree>3</degree>
+      </li>
+      <li>
+        <defName>Abrasive</defName>
+        <chance>20</chance>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Mining</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_BrayWild</defName>
+    <title>Lore of the Wild user</title>
+    <titleShort>wild magic user</titleShort>
+    <baseDescription>[PAWN_nameDef] can inantely wield the wild magic that thrives in the wild places of the world.</baseDescription>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfWildTrait</defName>
+        <chance>100</chance>
+		<degree>1</degree>
+      </li>
+      <li>
+        <defName>Nimble</defName>
+        <chance>20</chance>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Animals</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_GreatBrayWild</defName>
+    <title>Lore of the Wild user</title>
+    <titleShort>wild magic user</titleShort>
+    <baseDescription>[PAWN_nameDef] can inantely wield the wild magic that thrives in the wild places of the world, and has honed those innate skills to sharpness.</baseDescription>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <forcedHediffs>
+      <li>RH_TET_Beastmen_BestigorHornLeft</li>
+      <li>RH_TET_Beastmen_BestigorHornRight</li>
+    </forcedHediffs>
+	
+    <slot>Adulthood</slot>
+    <skillGains>
+     <li>
+        <defName>Intellectual</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_GreatBrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfWildTrait</defName>
+        <chance>100</chance>
+		<degree>3</degree>
+      </li>
+      <li>
+        <defName>Nimble</defName>
+        <chance>20</chance>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Animals</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_BrayNurgle</defName>
+    <title>Lore of Nurgle user</title>
+    <titleShort>nurgle magic user</titleShort>
+    <baseDescription>[PAWN_nameDef] has been blessed by the dark god Nurgle, and can wield Nurgle's magic.</baseDescription>
+    <bodyTypeMale>Fat</bodyTypeMale>
+    <bodyTypeFemale>Fat</bodyTypeFemale>
+
+    <forcedHediffs>
+      <li>RH_TET_Beastmen_PestigorHornLeft</li>
+      <li>RH_TET_Beastmen_PestigorHornRight</li>
+    </forcedHediffs>
+	
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Animals</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfNurgleTrait</defName>
+        <chance>100</chance>
+		<degree>1</degree>
+      </li>
+      <li>
+        <defName>Kind</defName>
+        <chance>20</chance>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Animals</li>
+      <li>Caring</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+  
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_GreatBrayNurgle</defName>
+    <title>Lore of Nurgle user</title>
+    <titleShort>nurgle magic user</titleShort>
+    <baseDescription>[PAWN_nameDef] has been blessed by the dark god Nurgle, and can wield Nurgle's magic extremely well.</baseDescription>
+    <bodyTypeMale>Fat</bodyTypeMale>
+    <bodyTypeFemale>Fat</bodyTypeFemale>
+
+    <forcedHediffs>
+      <li>RH_TET_Beastmen_PestigorHornLeft</li>
+      <li>RH_TET_Beastmen_PestigorHornRight</li>
+    </forcedHediffs>
+	
+    <slot>Adulthood</slot>
+    <skillGains>
+     <li>
+        <defName>Intellectual</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Animals</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_GreatBrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfNurgleTrait</defName>
+        <chance>100</chance>
+		<degree>3</degree>
+      </li>
+      <li>
+        <defName>Kind</defName>
+        <chance>20</chance>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+      <li>Animals</li>
+      <li>Caring</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_BrayChaos</defName>
+    <title>Lore of Chaos user</title>
+    <titleShort>chaos magic user</titleShort>
+    <baseDescription>[PAWN_nameDef] has been blessed by the dark gods, and can wield chaos undivided magic.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+	
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfChaosUndividedTrait</defName>
+        <chance>100</chance>
+		<degree>1</degree>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_GreatBrayChaos</defName>
+    <title>Lore of Chaos user</title>
+    <titleShort>chaos magic user</titleShort>
+    <baseDescription>[PAWN_nameDef] has been blessed by the dark gods, and can wield chaos undivided magic extremely well.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <forcedHediffs>
+      <li>RH_TET_Beastmen_BestigorHornLeft</li>
+      <li>RH_TET_Beastmen_BestigorHornRight</li>
+    </forcedHediffs>
+	
+    <slot>Adulthood</slot>
+    <skillGains>
+     <li>
+        <defName>Intellectual</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_GreatBrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfChaosUndividedTrait</defName>
+        <chance>100</chance>
+		<degree>3</degree>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_BraySlaanesh</defName>
+    <title>Lore of Slaanesh user</title>
+    <titleShort>Slaanesh magic user</titleShort>
+    <baseDescription>[PAWN_nameDef] has been blessed by the dark god Slaanesh, and can wield magic that has been gifted by the god.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+	    
+	<forcedHediffs>
+      <li>RH_TET_Beastmen_SlaangorHornLeft</li>
+      <li>RH_TET_Beastmen_SlaangorHornRight</li>
+    </forcedHediffs>
+	
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Artistic</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfSlaaneshTrait</defName>
+        <chance>100</chance>
+		<degree>1</degree>
+      </li>
+      <li>
+        <defName>Masochist</defName>
+        <chance>80</chance>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_GreatBraySlaanesh</defName>
+    <title>Lore of Slaanesh user</title>
+    <titleShort>Slaanesh magic user</titleShort>
+    <baseDescription>[PAWN_nameDef] has been blessed by the dark god Slaanesh, and can wield magic that has been gifted by the god extremely well.</baseDescription>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+
+    <forcedHediffs>
+      <li>RH_TET_Beastmen_SlaangorHornLeft</li>
+      <li>RH_TET_Beastmen_SlaangorHornRight</li>
+    </forcedHediffs>
+	
+    <slot>Adulthood</slot>
+    <skillGains>
+     <li>
+        <defName>Intellectual</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Artistic</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_GreatBrayShaman</li>
+    </spawnCategories>
+    <forcedTraits>
+      <li>
+        <defName>RH_TET_LoreOfSlaaneshTrait</defName>
+        <chance>100</chance>
+		<degree>3</degree>
+      </li>
+      <li>
+        <defName>Masochist</defName>
+        <chance>90</chance>
+      </li>
+    </forcedTraits>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <!-- Childhood -->
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_BrayGorWild</defName>
+    <title>wildling</title>
+    <titleShort>wild</titleShort>
+    <baseDescription>[PAWN_nameDef] was born as a gor to a human family. [PAWN_pronoun] was left in the wilds like so many other mutant children. [PAWN_pronoun] was found by a nearby gor herd that heard the mutant child calling; they immediately recongnized the magic skill inherent in the child. [PAWN_pronoun] was raised as a leader of beasts.</baseDescription>
+
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+      <li>Intellectual</li>
+    </workDisables>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+      <li>RH_TET_Beastmen_GreatBrayShaman</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_GorChildBray</defName>
+    <title>born in herd</title>
+    <titleShort>herd</titleShort>
+    <baseDescription>[PAWN_nameDef] was born as a gor to beastman parents, and could weild the dark powers from the start. The only life [PAWN_nameDef] has ever known is the herd.</baseDescription>
+
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+    </workDisables>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+      <li>RH_TET_Beastmen_GreatBrayShaman</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+  <AlienRace.BackstoryDef>
+    <defName>RH_TET_Beastmen_BrayGorShamanChild</defName>
+    <title>bray shaman</title>
+    <titleShort>bray shaman</titleShort>
+    <baseDescription>[PAWN_nameDef] "studied" under one of the bray-shamans of the herd as a child.</baseDescription>
+
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+
+    <slot>Childhood</slot>
+    <skillGains>
+      <li>
+        <defName>Medicine</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Intellectual</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+      <li>RH_TET_Beastmen_GreatBrayShaman</li>
+    </spawnCategories>
+    <requiredWorkTags>
+      <li>Caring</li>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </AlienRace.BackstoryDef>
+
+</Defs>

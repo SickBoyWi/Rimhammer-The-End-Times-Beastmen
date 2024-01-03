@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- God Gor -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_KhorngorHornLeft</defName>
+		<description>Left Khorngor horn.</description>
+		<label>left khorngor horn</label>
+		<labelNoun>a large horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+					<MeleeHitChance>0.05</MeleeHitChance>
+					<PainShockThreshold>-0.03</PainShockThreshold>
+				</statOffsets>
+				<painFactor>0.9</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_KhorngorHorn</spawnThingOnRemoved>
+	</HediffDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_KhorngorHornRight</defName>
+		<description>Right Khorngor horn.</description>
+		<label>right khorngor horn</label>
+		<labelNoun>a large horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+					<MeleeHitChance>0.05</MeleeHitChance>
+					<PainShockThreshold>-0.03</PainShockThreshold>
+				</statOffsets>
+				<painFactor>0.9</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_KhorngorHorn</spawnThingOnRemoved>
+	</HediffDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_PestigorHornLeft</defName>
+		<description>Left Pestigor horn.</description>
+		<label>left pestigor horn</label>
+		<labelNoun>a large horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+					<PainShockThreshold>-0.05</PainShockThreshold>
+					<ImmunityGainSpeed>0.05</ImmunityGainSpeed>
+				</statOffsets>
+				<painFactor>0.9</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_PestigorHorn</spawnThingOnRemoved>
+	</HediffDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_PestigorHornRight</defName>
+		<description>Right Pestigor horn.</description>
+		<label>right pestigor horn</label>
+		<labelNoun>a large horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+					<PainShockThreshold>-0.05</PainShockThreshold>
+					<ImmunityGainSpeed>0.05</ImmunityGainSpeed>
+				</statOffsets>
+				<painFactor>0.9</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_PestigorHorn</spawnThingOnRemoved>
+	</HediffDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_TzaangorHornLeft</defName>
+		<description>Left Tzaangor horn.</description>
+		<label>left tzaangor horn</label>
+		<labelNoun>a large horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+					<GlobalLearningFactor>0.05</GlobalLearningFactor>
+					<PsychicSensitivity>0.05</PsychicSensitivity>
+				</statOffsets>
+				<painFactor>0.9</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_TzaangorHorn</spawnThingOnRemoved>
+	</HediffDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_TzaangorHornRight</defName>
+		<description>Right Tzaangor horn.</description>
+		<label>right tzaangor horn</label>
+		<labelNoun>a large horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+					<GlobalLearningFactor>0.05</GlobalLearningFactor>
+					<PsychicSensitivity>0.05</PsychicSensitivity>
+				</statOffsets>
+				<painFactor>0.9</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_TzaangorHorn</spawnThingOnRemoved>
+	</HediffDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_SlaangorHornLeft</defName>
+		<description>Left Slaangor horn.</description>
+		<label>left slaangor horn</label>
+		<labelNoun>a large horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+					<SocialImpact>0.02</SocialImpact>
+					<JoyGainFactor>0.05</JoyGainFactor>
+				</statOffsets>
+				<painFactor>0.9</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_SlaangorHorn</spawnThingOnRemoved>
+	</HediffDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_SlaangorHornRight</defName>
+		<description>Right Slaangor horn.</description>
+		<label>right slaangor horn</label>
+		<labelNoun>a large horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+					<SocialImpact>0.02</SocialImpact>
+					<JoyGainFactor>0.05</JoyGainFactor>
+				</statOffsets>
+				<painFactor>0.9</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_SlaangorHorn</spawnThingOnRemoved>
+	</HediffDef>
+  
+	<!-- Bestigor -->
+ 
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_BestigorHornLeft</defName>
+		<description>Left bestigor horn.</description>
+		<label>left bestigor horn</label>
+		<labelNoun>a large horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+					<TameAnimalChance>0.02</TameAnimalChance>
+					<TrainAnimalChance>0.02</TrainAnimalChance>
+				</statOffsets>
+				<painFactor>0.9</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_BestigorHorn</spawnThingOnRemoved>
+	</HediffDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_BestigorHornRight</defName>
+		<description>Right bestigor horn.</description>
+		<label>right bestigor horn</label>
+		<labelNoun>a large horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+					<TameAnimalChance>0.02</TameAnimalChance>
+					<TrainAnimalChance>0.02</TrainAnimalChance>
+				</statOffsets>
+				<painFactor>0.9</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_BestigorHorn</spawnThingOnRemoved>
+	</HediffDef>
+  
+	<!-- Metallic Horns -->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_GoldHornLeft</defName>
+		<description>Left golden horn.</description>
+		<label>left golden horn</label>
+		<labelNoun>a large golden horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>true</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+					<SocialImpact>0.1</SocialImpact>
+					<MeleeHitChance>0.1</MeleeHitChance>
+				</statOffsets>
+				<painFactor>0.85</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_GorGoldHorn</spawnThingOnRemoved>
+	</HediffDef>
+  
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_GoldHornRight</defName>
+		<description>Right golden horn.</description>
+		<label>right golden horn</label>
+		<labelNoun>a large golden horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>true</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+					<SocialImpact>0.1</SocialImpact>
+					<MeleeHitChance>0.1</MeleeHitChance>
+				</statOffsets>
+				<painFactor>0.85</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_GorGoldHorn</spawnThingOnRemoved>
+	</HediffDef>
+
+	<!-- Gorebull -->
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_GorebullHornLeft</defName>
+		<description>Left gorebull horn.</description>
+		<label>left gorebull horn</label>
+		<labelNoun>a large horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+					<TameAnimalChance>0.02</TameAnimalChance>
+					<TrainAnimalChance>0.02</TrainAnimalChance>
+				</statOffsets>
+				<painFactor>0.9</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_GorebullHorn</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_GorebullHornRight</defName>
+		<description>Right gorebull horn.</description>
+		<label>right gorebull horn</label>
+		<labelNoun>a large horn</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1.0</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<statOffsets>
+					<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+					<TameAnimalChance>0.02</TameAnimalChance>
+					<TrainAnimalChance>0.02</TrainAnimalChance>
+				</statOffsets>
+				<painFactor>0.9</painFactor>
+			</li>
+		</stages>
+		<spawnThingOnRemoved>RH_TET_Beastmen_GorebullHorn</spawnThingOnRemoved>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_GorPegHoof</defName>
+		<description>Peg hoof.</description>
+		<label>peg leg</label>
+		<labelNoun>a peg leg</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>0.5</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>RH_TET_Beastmen_GorSteelHoof</defName>
+		<description>Steel hoof.</description>
+		<label>steel hoof</label>
+		<labelNoun>a steel hoof</labelNoun>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>false</betterThanNatural>
+			<partEfficiency>1</partEfficiency>
+		</addedPartProps>
+	</HediffDef>
+  
+</Defs>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<NeedDef>
+		<defName>RH_TET_Beastmen_NeedViolence</defName>
+		<needClass>TheEndTimes_Beastmen.Need_Violence</needClass>
+		<label>violence</label>
+		<description>Beastmen are violent by nature. If they don't hurt something every day, they start to get crabby.</description>
+		<minIntelligence>Humanlike</minIntelligence>
+		<colonistAndPrisonersOnly>true</colonistAndPrisonersOnly>
+		<listPriority>100</listPriority>
+		<freezeWhileSleeping>true</freezeWhileSleeping>
+	</NeedDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_NeedViolence</defName>
+		<workerClass>TheEndTimes_Beastmen.ThoughtWorker_NeedViolence</workerClass>
+		<stages>
+			<li>
+				<label>violence obsessed</label>
+				<description>I haven't hurt someone for too long. Violence is all I can think about. I need to hurt someone.</description>
+				<baseMoodEffect>-9</baseMoodEffect>
+			</li>
+			<li>
+				<label>requires violence</label>
+				<description>How long has it been since I've hurt someone? I need to hurt someone, it doesn't matter whom.</description>
+				<baseMoodEffect>-7</baseMoodEffect>
+			</li>
+			<li>
+				<label>craves violence</label>
+				<description>I haven't hurt someone in so long, it's distracting. I need to hurt someone.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+			<li>
+				<label>desires violence</label>
+				<description>It's been too long since I've hurt someone.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+			<li>
+				<label>wants violence</label>
+				<description>I'd like to hurt someone.</description>
+				<baseMoodEffect>-1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+</Defs>

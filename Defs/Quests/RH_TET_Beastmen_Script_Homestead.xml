@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<QuestScriptDef>
+		<defName>RH_TET_Beastmen_Homestead</defName>
+		<rootSelectionWeight>0.8</rootSelectionWeight>
+		<rootMinPoints>200</rootMinPoints>
+		<autoAccept>true</autoAccept>
+		<canGiveRoyalFavor>false</canGiveRoyalFavor>
+		<questNameRules>
+			<rulesStrings>
+				<li>questName->Homestead of [enemyFaction_pawnsPlural]</li>
+				<li>questName->The Homestead</li>
+				<li>questName->Smash the Homestead</li>
+			</rulesStrings>
+		</questNameRules>
+		<questDescriptionRules>
+			<rulesStrings>
+				<li>questDescription->Our scouts have returned word that settlers have set up a homestead nearby. They're attempting to build a new home, but are unaware of the presence of the herd. With just a few people living there, they would be easy pickings.</li>
+			</rulesStrings>
+		</questDescriptionRules>
+		<root Class="QuestNode_Sequence">
+			<nodes>
+				<li Class="QuestNode_SubScript">
+					<def>Util_RandomizePointsChallengeRating</def>
+					<parms>
+						<pointsFactorTwoStar>1.0</pointsFactorTwoStar>
+						<pointsFactorThreeStar>1.5</pointsFactorThreeStar>
+					</parms>
+				</li>
+				<li Class="QuestNode_SubScript">
+					<def>Util_AdjustPointsForDistantFight</def>
+				</li>
+				<li Class="QuestNode_GetMap"/>
+
+				<li Class="QuestNode_GetSiteTile">
+					<storeAs>siteTile</storeAs>
+					<preferCloserTiles>true</preferCloserTiles>
+				</li>
+
+				<li Class="QuestNode_GetSitePartDefsByTagsAndFaction">
+					<storeAs>sitePartDefs</storeAs>
+					<storeFactionAs>siteFaction</storeFactionAs>
+					<sitePartsTags>
+						<li><tag>RH_TET_Beastmen_Homestead</tag></li>
+					</sitePartsTags>
+				</li>
+
+				<li Class="QuestNode_GetDefaultSitePartsParams">
+					<tile>$siteTile</tile>
+					<faction>$siteFaction</faction>
+					<sitePartDefs>$sitePartDefs</sitePartDefs>
+					<storeSitePartsParamsAs>sitePartsParams</storeSitePartsParamsAs>
+				</li>
+        
+				<li Class="QuestNode_GetSiteThreatPoints">
+					<storeAs>sitePoints</storeAs>
+					<sitePartsParams>$sitePartsParams</sitePartsParams>
+				</li>
+
+				<li Class="QuestNode_SubScript">
+					<def>Util_GenerateSite</def>
+				</li>
+        
+				<li Class="QuestNode_SpawnWorldObjects">
+					<worldObjects>$site</worldObjects>
+				</li>
+
+				<li Class="QuestNode_Signal">
+					<inSignal>site.AllEnemiesDefeated</inSignal>
+				</li>
+				<li Class="QuestNode_End">
+					<inSignal>site.AllEnemiesDefeated</inSignal>
+					<outcome>Success</outcome>
+				</li>
+			</nodes>
+		</root>
+	</QuestScriptDef>
+
+	<SitePartDef>
+		<defName>RH_TET_Beastmen_Homestead</defName>
+		<label>homestead</label>
+		<description>A small, poorly guarded homestead.</description>
+		<tags>
+			<li>RH_TET_Beastmen_Homestead</li>
+		</tags>
+	
+		<workerClass>TheEndTimes_Beastmen.SitePartWorker_Homestead</workerClass>
+		<siteTexture>Things/World/RH_TET_Beastmen_HomesteadIconClose</siteTexture>
+		<expandingIconTexture>Things/World/RH_TET_Beastmen_HomesteadIcon</expandingIconTexture>
+		<applyFactionColorToSiteTexture>true</applyFactionColorToSiteTexture>
+		<showFactionInInspectString>true</showFactionInInspectString>
+		<requiresFaction>true</requiresFaction>
+		<approachOrderString>Attack {0}</approachOrderString>
+		<approachingReportString>Attacking {0}</approachingReportString>
+		<arrivedLetter>There is a homestead in this area.</arrivedLetter>
+		<arrivedLetterDef>PositiveEvent</arrivedLetterDef>
+		<wantsThreatPoints>true</wantsThreatPoints>
+	</SitePartDef>
+
+	<GenStepDef>
+		<defName>RH_TET_Beastmen_Homestead</defName>
+		<linkWithSite>RH_TET_Beastmen_Homestead</linkWithSite>
+		<order>450</order>
+		<genStep Class="TheEndTimes_Beastmen.GenStep_Homestead"/>
+	</GenStepDef>
+
+	<RuleDef>
+		<defName>RH_TET_Beastmen_Homestead</defName>
+		<symbol>RH_TET_Beastmen_Homestead</symbol>
+		<resolvers>
+			<li Class="TheEndTimes_Beastmen.SymbolResolver_Homestead">
+				<minRectSize>(12, 12)</minRectSize>
+			</li>
+		</resolvers>
+	</RuleDef>
+  
+</Defs>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_BuildingsArt</defName>
+		<label>beastmen</label>
+		<parent>BuildingsArt</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_BuildingsJoy</defName>
+		<label>beastmen</label>
+		<parent>BuildingsJoy</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_BuildingsFurniture</defName>
+		<label>beastmen</label>
+		<parent>BuildingsFurniture</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_BuildingsProduction</defName>
+		<label>beastmen</label>
+		<parent>BuildingsProduction</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_Buildings</defName>
+		<label>beastmen</label>
+		<parent>Buildings</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_BuildingsSarsens</defName>
+		<label>sarsen stones</label>
+		<parent>RH_TET_Beastmen_Buildings</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_BuildingsHeadsOnSpikes</defName>
+		<label>spiked heads</label>
+		<parent>RH_TET_Beastmen_Buildings</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_BodyParts</defName>
+		<label>beastmen</label>
+		<parent>BodyParts</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_Apparel</defName>
+		<label>beastmen</label>
+		<parent>Apparel</parent>
+	</ThingCategoryDef>
+  
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_Headgear</defName>
+		<label>beastmen</label>
+		<parent>Headgear</parent>
+	</ThingCategoryDef>
+  
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_ArmorHeadgear</defName>
+		<label>beastmen</label>
+		<parent>ArmorHeadgear</parent>
+	</ThingCategoryDef>
+  
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_Armor</defName>
+		<label>beastmen</label>
+		<parent>ApparelArmor</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_WeaponsMelee</defName>
+		<label>beastmen</label>
+		<parent>WeaponsMelee</parent>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_Shields</defName>
+		<label>shields</label>
+		<parent>RH_TET_Beastmen_WeaponsMelee</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_WeaponsRanged</defName>
+		<label>beastmen</label>
+		<parent>WeaponsRanged</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_BodyPartNatural</defName>
+		<label>beastmen</label>
+		<parent>BodyPartsNatural</parent>
+	</ThingCategoryDef>
+
+	<ThingCategoryDef>
+		<defName>RH_TET_Beastmen_BodyPartsProsthetic</defName>
+		<label>beastmen</label>
+		<parent>BodyPartsProsthetic</parent>
+	</ThingCategoryDef>
+	
+	<!-- pulled from base mod -->
+	<ThingCategoryDef>
+		<defName>RH_TET_PreservedFoods</defName>
+		<label>preserved foods</label>
+		<parent>FoodRaw</parent>
+		<iconPath>UI/Icons/ThingCategories/AnimalProductRaw</iconPath>
+	</ThingCategoryDef>
+	  
+</Defs>

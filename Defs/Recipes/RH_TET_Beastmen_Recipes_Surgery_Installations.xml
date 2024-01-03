@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--======================= hidden bloodlust/pain stopper =========================-->
+
+	<RecipeDef Abstract="True" Name="RH_TET_Beastmen_SurgeryFleshHiddenBeastmen">
+		<effectWorking>Surgery</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<workSkillLearnFactor>16</workSkillLearnFactor>
+		<dontShowIfAnyIngredientMissing>true</dontShowIfAnyIngredientMissing>
+	</RecipeDef>
+  
+	<RecipeDef ParentName="RH_TET_Beastmen_SurgeryFleshHiddenBeastmen">
+		<defName>RH_TET_Beastmen_InstallBeastmenBloodlust</defName>
+		<label>install bloodlust</label>
+		<description>Install bloodlust.</description>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Installing bloodlust.</jobString>
+		<workAmount>10</workAmount>
+		<deathOnFailedSurgeryChance>0.10</deathOnFailedSurgeryChance>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_BeastmenBloodlust</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RH_TET_Beastmen_BeastmenBloodlust</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_BeastmenPainStopper</addsHediff>
+	</RecipeDef>
+
+	<!--======================= stand in for gor horns =========================-->
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallGorHornLeft</defName>
+		<label>install gor left horn</label>
+		<description>Install a left gor horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_GorHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_GorHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorLeftHorn</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallGorHornRight</defName>
+		<label>install gor right horn</label>
+		<description>Install a right gor horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_GorHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_GorHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorRightHorn</li>
+		</appliedOnFixedBodyParts>
+	</RecipeDef>
+  
+	<!--======================= stand in for god gor horns =========================-->
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallKhorngorHornLeft</defName>
+		<label>install khorngor left horn</label>
+		<description>Install a left khorngor horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_KhorngorHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_KhorngorHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorLeftHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_KhorngorHornLeft</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallKhorngorHornRight</defName>
+		<label>install khorngor right horn</label>
+		<description>Install a right khorngor horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_KhorngorHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_KhorngorHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorRightHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_KhorngorHornRight</addsHediff>
+	</RecipeDef>
+  
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallPestigorHornLeft</defName>
+		<label>install pestigor left horn</label>
+		<description>Install a left pestigor horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_PestigorHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_PestigorHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorLeftHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_PestigorHornLeft</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallPestigorHornRight</defName>
+		<label>install pestigor right horn</label>
+		<description>Install a right pestigor horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_PestigorHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_PestigorHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorRightHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_PestigorHornRight</addsHediff>
+	</RecipeDef>
+  
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallTzaangorHornLeft</defName>
+		<label>install tzaangor left horn</label>
+		<description>Install a left tzaangor horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_TzaangorHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_TzaangorHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorLeftHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_TzaangorHornLeft</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallTzaangorHornRight</defName>
+		<label>install tzaangor right horn</label>
+		<description>Install a right tzaangor horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_TzaangorHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_TzaangorHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorRightHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_TzaangorHornRight</addsHediff>
+	</RecipeDef>
+  
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallSlaangorHornLeft</defName>
+		<label>install slaangor left horn</label>
+		<description>Install a left slaangor horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_SlaangorHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_SlaangorHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorLeftHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_SlaangorHornLeft</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallSlaangorHornRight</defName>
+		<label>install slaangor right horn</label>
+		<description>Install a right slaangor horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_SlaangorHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_SlaangorHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorRightHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_SlaangorHornRight</addsHediff>
+	</RecipeDef>
+	<!--======================= stand in for bestigor horns =========================-->
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallBestigorHornLeft</defName>
+		<label>install bestigor left horn</label>
+		<description>Install a left bestigor horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_BestigorHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_BestigorHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorLeftHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_BestigorHornLeft</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallBestigorHornRight</defName>
+		<label>install bestigor right horn</label>
+		<description>Install a right bestigor horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_BestigorHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_BestigorHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorRightHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_BestigorHornRight</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallGoldHornLeft</defName>
+		<label>install gold left horn</label>
+		<description>Install a left gold horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing golden horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_GorGoldHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_GorGoldHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorLeftHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_GoldHornLeft</addsHediff>
+	</RecipeDef>
+  
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallGoldHornRight</defName>
+		<label>install gold right horn</label>
+		<description>Install a right gold horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing golden horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_GorGoldHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_GorGoldHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorRightHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_GoldHornRight</addsHediff>
+	</RecipeDef>
+  
+	<!--======================= stand in for gorebull horns =========================-->
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallGorebullHornLeft</defName>
+		<label>install gorebull left horn</label>
+		<description>Install a left gorebull horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_GorebullHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_GorebullHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorLeftHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_GorebullHornLeft</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallGorebullHornRight</defName>
+		<label>install right gorebull horn</label>
+		<description>Install a right gorebull horn.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing horn.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_GorebullHorn</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_GorebullHorn</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>RH_TET_Beastmen_GorRightHorn</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_GorebullHornRight</addsHediff>
+	</RecipeDef>
+  
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallGorPegHoof</defName>
+		<label>Install peg hoof</label>
+		<description>Install a peg hoof.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing peg.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>WoodLog</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Leg</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_GorPegHoof</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryFlesh">
+		<defName>RH_TET_Beastmen_InstallGorSteelHoof</defName>
+		<label>Install steel hoof</label>
+		<description>Install a steel hoof.</description>
+		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<jobString>Installing hoof.</jobString>
+		<workAmount>1200</workAmount>
+		<surgerySuccessChanceFactor>1.5</surgerySuccessChanceFactor>
+		<skillRequirements>
+			<Medicine>1</Medicine>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RH_TET_Beastmen_GorSteelHoof</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>RH_TET_Beastmen_GorSteelHoof</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Hoof</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>RH_TET_Beastmen_GorSteelHoof</addsHediff>
+	</RecipeDef>
+  
+</Defs>

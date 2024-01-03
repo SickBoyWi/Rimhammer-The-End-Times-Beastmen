@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<JobDef>
+		<defName>RH_TET_Beastmen_MakeOffering</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_MakeOffering</driverClass>
+		<reportString>making an offering at TargetA.</reportString>
+		<suspendable>false</suspendable>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Beastmen_HoldSacrifice</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_HoldSacrifice</driverClass>
+		<reportString>holding a sacrifice.</reportString>
+		<joyDuration>1500</joyDuration>
+		<joyGainRate>2</joyGainRate>
+		<alwaysShowWeapon>true</alwaysShowWeapon>
+		<joyMaxParticipants>27</joyMaxParticipants>
+		<joyKind>RH_TET_Beastmen_Worship</joyKind>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Beastmen_HoldConversion</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_HoldConversion</driverClass>
+		<reportString>holding a chaos conversion ritual.</reportString>
+		<joyDuration>1500</joyDuration>
+		<joyGainRate>3</joyGainRate>
+		<alwaysShowWeapon>true</alwaysShowWeapon>
+		<joyMaxParticipants>27</joyMaxParticipants>
+		<joyKind>RH_TET_Beastmen_Worship</joyKind>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Beastmen_WaitThroughOffering</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_WaitThroughOffering</driverClass>
+		<reportString>reflecting on the offering.</reportString>
+		<joyDuration>400</joyDuration>
+		<joyGainRate>1</joyGainRate>
+		<joyMaxParticipants>27</joyMaxParticipants>
+		<joyKind>RH_TET_Beastmen_Worship</joyKind>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Beastmen_AttendSacrifice</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_AttendSacrifice</driverClass>
+		<reportString>attending a dark ritual.</reportString>
+		<joyDuration>250</joyDuration>
+		<joyGainRate>1</joyGainRate>
+		<joyMaxParticipants>27</joyMaxParticipants>
+		<joyKind>RH_TET_Beastmen_Worship</joyKind>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Beastmen_ReflectOnResult</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_ReflectOnResult</driverClass>
+		<reportString>reflecting on results.</reportString>
+		<joyDuration>400</joyDuration>
+		<joyGainRate>1</joyGainRate>
+		<joyMaxParticipants>27</joyMaxParticipants>
+		<joyKind>RH_TET_Beastmen_Worship</joyKind>
+	</JobDef>
+	
+	<JobDef>
+		<defName>RH_TET_Beastmen_AwaitDeath</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_AwaitDeath</driverClass>
+		<reportString>tied down.</reportString>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Beastmen_CarryToMassiveHerdstone</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_CarryToMassiveHerdstone</driverClass>
+		<reportString>carrying TargetA to burn at massive herdstone.</reportString>
+		<casualInterruptible>false</casualInterruptible>
+		<taleOnCompletion>RH_TET_Beastmen_BurnedAtMassiveHerdstone</taleOnCompletion>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Beastmen_JoinPitFightJob</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_JoinPitFight</driverClass>
+		<reportString>gearing up for the pit fight.</reportString>
+		<joyDuration>1600</joyDuration>
+		<joyGainRate>2</joyGainRate>
+		<alwaysShowWeapon>true</alwaysShowWeapon>
+		<joyMaxParticipants>20</joyMaxParticipants>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Beastmen_WatchPitFightJob</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_WatchPitFight</driverClass>
+		<reportString>watching a pit fight.</reportString>
+		<joyGainRate>10</joyGainRate>
+		<joyKind>Social</joyKind>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Beastmen_UrgeOnJob</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_UrgeOnPitFighter</driverClass>
+		<reportString>urging on a pit fighter.</reportString>
+		<joyGainRate>10</joyGainRate>
+		<joyKind>Social</joyKind>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Beastmen_PutBrineIntoSmoker</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_PutBrineIntoSmoker</driverClass>
+		<reportString>putting brined meat into TargetA.</reportString>
+		<suspendable>false</suspendable>
+	</JobDef>
+
+	<JobDef>
+		<defName>RH_TET_Beastmen_TakeBrinedMeatFromSmoker</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_TakeBrinedMeatFromSmoker</driverClass>
+		<reportString>taking brined meat out of TargetA.</reportString>
+	</JobDef>
+	
+	<JobDef>
+		<defName>RH_TET_Beastmen_PlayDrum</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_PlayDrum</driverClass>
+		<reportString>playing TargetA.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>1</joyMaxParticipants>
+		<joySkill>Artistic</joySkill>
+		<joyXpPerTick>0.0015</joyXpPerTick>
+		<joyKind>RH_TET_Music</joyKind>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+  
+	<JobDef>
+		<defName>RH_TET_Beastmen_ThrowAxesJoy</defName>
+		<driverClass>TheEndTimes_Beastmen.JobDriver_ThrowAxesJoy</driverClass>
+		<reportString>axe throwing.</reportString>
+		<joyDuration>4000</joyDuration>
+		<joyMaxParticipants>3</joyMaxParticipants>
+		<joySkill>Shooting</joySkill>
+		<joyXpPerTick>0.003</joyXpPerTick>
+		<joyKind>Gaming_Dexterity</joyKind>
+		<taleOnCompletion>PlayedGame</taleOnCompletion>
+		<allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+	</JobDef>
+  
+</Defs>

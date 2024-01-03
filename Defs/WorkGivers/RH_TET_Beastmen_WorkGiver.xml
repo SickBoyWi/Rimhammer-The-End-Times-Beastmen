@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Beastmen_PutBrineIntoSmoker</defName>
+		<label>put meat in smoker</label>
+		<giverClass>TheEndTimes_Beastmen.WorkGiver_PutBrineIntoSmoker</giverClass>
+		<workType>Hauling</workType>
+		<verb>fill</verb>
+		<gerund>filling</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>RH_TET_Beastmen_TakeSmokedMeatFromSmoker</defName>
+		<label>take smoked meat from smoker</label>
+		<giverClass>TheEndTimes_Beastmen.WorkGiver_TakeSmokedMeatFromSmoker</giverClass>
+		<workType>Hauling</workType>
+		<verb>take smoked meat</verb>
+		<gerund>taking smoked meat from</gerund>
+		<priorityInType>100</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+ 
+	<WorkGiverDef>
+		<defName>RH_TET_Beastmen_DoBillsCookBonfire</defName>
+		<label>cook meals at bonfire</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Cooking</workType>
+		<priorityInType>97</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RH_TET_Beastmen_Bonfire</li>
+		</fixedBillGiverDefs>
+		<verb>cook</verb>
+		<gerund>cooking at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>RH_TET_Beastmen_DoBillsHaulCampfire</defName>
+		<label>do bills at bonfire</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Hauling</workType>
+		<priorityInType>30</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RH_TET_Beastmen_Bonfire</li>
+		</fixedBillGiverDefs>
+		<verb>work at</verb>
+		<gerund>working at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+  
+	<WorkGiverDef>
+		<defName>RH_TET_Beastmen_DoSmithing</defName>
+		<label>smith</label>
+		<giverClass>WorkGiver_DoBill</giverClass>
+		<workType>Smithing</workType>
+		<priorityInType>115</priorityInType>
+		<fixedBillGiverDefs>
+			<li>RH_TET_Beastmen_TableSmithy</li>
+		</fixedBillGiverDefs>
+		<verb>smith</verb>
+		<gerund>smithing at</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+  
+</Defs>

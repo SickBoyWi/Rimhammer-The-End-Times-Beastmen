@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<MentalStateDef>
+		<defName>RH_TET_Beastmen_PitFighter</defName>
+		<label>pit fighting</label>
+		<stateClass>TheEndTimes_Beastmen.MentalState_PitFighter</stateClass>
+		<category>Misc</category>
+		<minTicksBeforeRecovery>99500</minTicksBeforeRecovery>
+		<recoveryMtbDays>0.2</recoveryMtbDays>
+		<blockNormalThoughts>true</blockNormalThoughts>
+		<nameColor>(0.8, 0.8, 0.2)</nameColor>
+		<beginLetterLabel>Started pit fight</beginLetterLabel>
+		<beginLetter>{0} is pit fighting.</beginLetter><!-- unused really -->
+		<beginLetterDef>NegativeEvent</beginLetterDef>
+		<baseInspectLine>pit fighting</baseInspectLine>
+		<inCaravanCanDo>true</inCaravanCanDo>
+	</MentalStateDef>
+
+</Defs>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase" Name="RH_TET_Beastmen_SculptureBase" Abstract="True">
+		<thingClass>Building_Art</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<useHitPoints>true</useHitPoints>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories>
+			<li>RH_TET_Beastmen_BuildingsArt</li>
+		</thingCategories>
+		<statBases>
+			<Flammability>1.0</Flammability>
+			<SellPriceFactor>.8</SellPriceFactor>
+			<MeditationFocusStrength>0.0</MeditationFocusStrength>
+		</statBases>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>NamerArtSculpture</nameMaker>
+				<descriptionMaker>ArtDescription_Sculpture</descriptionMaker>
+				<canBeEnjoyedAsArt>true</canBeEnjoyedAsArt>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Artistic</li>
+				</focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Quality">
+						<curve>
+							<points>
+								<li>(0,0.12)</li><!-- awful -->
+								<li>(1,0.16)</li><!-- poor -->
+								<li>(2,0.20)</li><!-- normal -->
+								<li>(3,0.22)</li><!-- good -->
+								<li>(4,0.24)</li><!-- excellent -->
+								<li>(5,0.26)</li><!-- masterwork -->
+								<li>(6,0.28)</li><!-- legendary -->
+							</points>
+						</curve>
+					</li>
+				</offsets>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<tradeTags>
+			<li>Art</li>
+		</tradeTags>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Artistic</workSkill>
+			<requiredGiverWorkType>Art</requiredGiverWorkType>
+			<unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+			<effectWorking>Sculpt</effectWorking>
+			<soundWorking>Recipe_Sculpt</soundWorking>
+			<recipeUsers>
+				<li>TableSculpting</li>
+				<li>RH_TET_Beastmen_TableStonecutter</li>
+			</recipeUsers>
+			<defaultIngredientFilter>
+				<categories>
+					<li>Root</li>
+				</categories>
+				<disallowedThingDefs>
+					<li>Gold</li>
+					<li>Silver</li>
+					<li>Plasteel</li>
+					<li>Jade</li>
+					<li>Uranium</li>
+				</disallowedThingDefs>
+			</defaultIngredientFilter>
+			<researchPrerequisite>RH_TET_Beastmen_Art_Basic</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Beastmen_SculptureBase">
+		<defName>RH_TET_Beastmen_GorStone</defName>
+		<label>small runestone</label>
+		<description>A small runestone. Made by beastmen, and used as totems to Chaos.</description>
+		<castEdgeShadows>false</castEdgeShadows>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/RH_TET_Beastmen_Rune</texPath>
+			<drawSize>(1.5,1.5)</drawSize>
+		</graphicData>
+		<tradeability>None</tradeability>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<fillPercent>0.35</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Beauty>1</Beauty>
+			<WorkToMake>8000</WorkToMake>
+			<Mass>5</Mass>
+			<MarketValue>40</MarketValue>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>25</costStuffCount>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Beastmen_SculptureBase">
+		<defName>RH_TET_Beastmen_GorStoneM</defName>
+		<label>medium runestone</label>
+		<description>A medium sized runestone. Made by beastmen, and used as totems to Chaos.</description>
+		<castEdgeShadows>false</castEdgeShadows>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/RH_TET_Beastmen_MediumRune</texPath>
+			<drawSize>(2.5,2.5)</drawSize>
+		</graphicData>
+		<tradeability>None</tradeability>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<fillPercent>0.55</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Beauty>2</Beauty>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>10</Mass>
+			<MarketValue>50</MarketValue>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>75</costStuffCount>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Beastmen_SculptureBase">
+		<defName>RH_TET_Beastmen_GorStoneL</defName>
+		<label>large runestone</label>
+		<description>A large runestone. Made by beastmen, and used as totems to Chaos.</description>
+		<castEdgeShadows>false</castEdgeShadows>
+		<graphicData>
+			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Building/RH_TET_Beastmen_LargeRune</texPath>
+			<drawSize>(3.5,3.5)</drawSize>
+		</graphicData>
+		<tradeability>None</tradeability>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<fillPercent>0.75</fillPercent>
+		<rotatable>false</rotatable>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Beauty>3</Beauty>
+			<WorkToMake>20000</WorkToMake>
+			<Mass>15</Mass>
+			<MarketValue>60</MarketValue>
+		</statBases>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+	</ThingDef>
+  
+</Defs>

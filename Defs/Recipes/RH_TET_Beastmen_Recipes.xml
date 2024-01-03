@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef ParentName="CookMealBase">
+		<defName>RH_TET_Beastmen_CookBrinedMeat</defName>
+		<label>cook brined meat</label>
+		<description>Brine meat, in preparation for making jerky.</description>
+		<jobString>Cooking brined meat.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>400</workAmount>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>0.5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<disallowedCategories>
+				<li>PlantFoodRaw</li>
+				<li>AnimalProductRaw</li>
+				<li>RH_TET_PreservedFoods</li>
+			</disallowedCategories>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Empire_BrinedMeat>10</RH_TET_Empire_BrinedMeat>
+		</products>
+		<recipeUsers>
+			<li>RH_TET_Beastmen_Bonfire</li>
+			<li>Campfire</li>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+		</recipeUsers>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>RH_TET_Beastmen_Cooking</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef ParentName="CookMealBase">
+		<defName>RH_TET_Beastmen_CookBrinedMeatBulk</defName>
+		<label>cook brined meat in bulk</label>
+		<description>Brine meat in bulk, in preparation for making jerky.</description>
+		<jobString>Cooking bulk brined meat.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>1500</workAmount>
+		<requiredGiverWorkType>Cooking</requiredGiverWorkType>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>2.0</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<disallowedCategories>
+				<li>PlantFoodRaw</li>
+				<li>AnimalProductRaw</li>
+				<li>RH_TET_PreservedFoods</li>
+			</disallowedCategories>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Empire_BrinedMeat>40</RH_TET_Empire_BrinedMeat>
+		</products>
+		<recipeUsers>
+			<li>RH_TET_Beastmen_Bonfire</li>
+			<li>Campfire</li>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+		</recipeUsers>
+		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>RH_TET_Beastmen_Cooking</researchPrerequisite>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Beastmen_BurnApparel</defName>
+		<label>burn apparel</label>
+		<description>Toss unwanted apparel on the bonfire to completely destroy it.</description>
+		<jobString>Burning apparel.</jobString>
+		<workAmount>1</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<requiredGiverWorkType>Hauling</requiredGiverWorkType>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Apparel</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Apparel</li>
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>Apparel</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>Apparel_ShieldBelt</li>
+				<li>Apparel_SmokepopBelt</li>
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+ 
+	<RecipeDef>
+		<defName>RH_TET_Beastmen_CremateCorpse</defName>
+		<label>burn corpse</label>
+		<description>Toss a corpse on the bonfire to completely destroy it.</description>
+		<jobString>Burning corpse.</jobString>
+		<workAmount>20</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<autoStripCorpses>false</autoStripCorpses>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Corpses</li>
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<thingDefs>
+				<li>Corpse_Human</li>
+			</thingDefs>
+			<specialFiltersToAllow>
+				<li>AllowCorpsesColonist</li>
+				<li>AllowCorpsesStranger</li>
+			</specialFiltersToAllow>
+		</defaultIngredientFilter>
+	</RecipeDef>
+ 
+	<RecipeDef>
+		<defName>RH_TET_Beastmen_BurnWeapon</defName>
+		<label>burn weapon</label>
+		<description>Toss unwanted weapon into the bonfire to completely destroy it.</description>
+		<jobString>Burning weapon.</jobString>
+		<workAmount>1</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<requiredGiverWorkType>Hauling</requiredGiverWorkType>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Weapons</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Weapons</li>
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>Weapons</li>
+			</categories>
+		</defaultIngredientFilter>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>RH_TET_Beastmen_BurnDrugs</defName>
+		<label>burn drugs</label>
+		<description>Throw unwanted drugs on the bonfire to completely destroy them.</description>
+		<jobString>Burning drugs.</jobString>
+		<workAmount>1</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<requiredGiverWorkType>Hauling</requiredGiverWorkType>
+		<effectWorking>BurnDrug</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<conceptLearned>DrugBurning</conceptLearned>
+		<ignoreIngredientCountTakeEntireStacks>true</ignoreIngredientCountTakeEntireStacks>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Drugs</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Drugs</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+ 
+	<RecipeDef>
+		<defName>RH_TET_Beastmen_BurnTextiles</defName>
+		<label>burn textiles</label>
+		<description>Throw unwanted textiles on the bonfire to completely destroy them.</description>
+		<jobString>Burning textiles.</jobString>
+		<workAmount>1</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<requiredGiverWorkType>Hauling</requiredGiverWorkType>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<ignoreIngredientCountTakeEntireStacks>true</ignoreIngredientCountTakeEntireStacks>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Textiles</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Textiles</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+ 
+	<RecipeDef>
+		<defName>RH_TET_Beastmen_BurnResource</defName>
+		<label>burn resource</label>
+		<description>Throw unwanted raw resources on the bonfire to completely destroy them.</description>
+		<jobString>Burning resources.</jobString>
+		<workAmount>1</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<requiredGiverWorkType>Hauling</requiredGiverWorkType>
+		<effectWorking>BurnDrug</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<ignoreIngredientCountTakeEntireStacks>true</ignoreIngredientCountTakeEntireStacks>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>ResourcesRaw</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>ResourcesRaw</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+ 
+	<RecipeDef>
+		<defName>RH_TET_Beastmen_BurnItem</defName>
+		<label>burn item</label>
+		<description>Throw unwanted items on the bonfire to completely destroy them.</description>
+		<jobString>Burning item.</jobString>
+		<workAmount>1</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<requiredGiverWorkType>Hauling</requiredGiverWorkType>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Items</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Items</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_Beastmen_BurnFood</defName>
+		<label>burn food</label>
+		<description>Toss unwanted food on the bonfire to completely destroy them.</description>
+		<jobString>Burning food.</jobString>
+		<workAmount>1</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<requiredGiverWorkType>Hauling</requiredGiverWorkType>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<ignoreIngredientCountTakeEntireStacks>true</ignoreIngredientCountTakeEntireStacks>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Foods</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Foods</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+ 
+	<RecipeDef>
+		<defName>RH_TET_Beastmen_Make_StoneBlocksAnyBulk</defName>
+		<label>make any stone blocks in bulk</label>
+		<description>Cut rock chunks into usable stone blocks, in bulk.</description>
+		<workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>StoneChunks</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>StoneChunks</li>
+			</categories>
+		</fixedIngredientFilter>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+		<jobString>Cutting stone blocks from chunks in bulk.</jobString>
+		<workAmount>4600</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<effectWorking>CutStone</effectWorking>
+		<soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+		<targetCountAdjustment>80</targetCountAdjustment>
+		<recipeUsers>
+			<li>RH_TET_Beastmen_TableStonecutter</li>
+		</recipeUsers>
+	</RecipeDef>
+  
+	<RecipeDef>
+		<defName>RH_TET_Beastmen_SpikeHead</defName>
+		<label>make head on spike</label>
+		<description>Remove the head from a body, and put it on a spike. This will consume the entire body, as it gets mutilated in the process.</description>
+		<jobString>Spiking head.</jobString>
+		<workAmount>450</workAmount>
+		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+		<workSkill>Crafting</workSkill>
+		<effectWorking>ButcherFlesh</effectWorking>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+		<interruptIfIngredientIsRotting>false</interruptIfIngredientIsRotting>
+		<uiIconThing>RH_TET_Beastmen_HeadSpikeHuman</uiIconThing>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>CorpsesHumanlike</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodLog</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>CorpsesHumanlike</li>
+			</categories>
+		</fixedIngredientFilter>
+		<products>
+			<RH_TET_Beastmen_HeadSpikeHuman>1</RH_TET_Beastmen_HeadSpikeHuman>
+		</products>
+		<recipeUsers>
+			<li>CraftingSpot</li>
+			<li>RH_TET_Beastmen_TableButcher</li>
+			<li>RH_TET_Beastmen_TableSmithy</li>
+		</recipeUsers>
+		<researchPrerequisite>RH_TET_Beastmen_Furniture</researchPrerequisite>
+	</RecipeDef>
+  
+</Defs>

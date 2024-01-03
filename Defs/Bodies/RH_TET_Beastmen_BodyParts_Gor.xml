@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<BodyPartGroupDef>
+		<defName>RH_TET_Beastmen_GorLeftHornGroup</defName>
+		<label>left horn</label>
+	</BodyPartGroupDef>
+
+	<BodyPartGroupDef>
+		<defName>RH_TET_Beastmen_GorRightHornGroup</defName>
+		<label>right horn</label>
+	</BodyPartGroupDef>
+
+	<BodyPartDef Name="RH_TET_Beastmen_GorHorn" Abstract="True">
+		<defName>RH_TET_Beastmen_GorHorn</defName>
+		<label>horn</label>
+		<hitPoints>20</hitPoints>
+		<frostbiteVulnerability>0.0</frostbiteVulnerability>
+		<permanentInjuryChanceFactor>0.05</permanentInjuryChanceFactor>
+		<skinCovered>false</skinCovered>
+		<spawnThingOnRemoved>RH_TET_Beastmen_GorHorn</spawnThingOnRemoved>
+	</BodyPartDef>
+
+	<BodyPartDef ParentName="RH_TET_Beastmen_GorHorn">
+		<defName>RH_TET_Beastmen_GorRightHorn</defName>
+		<label>right horn</label>
+		<labelShort>horn</labelShort>
+	</BodyPartDef>
+
+	<BodyPartDef ParentName="RH_TET_Beastmen_GorHorn">
+		<defName>RH_TET_Beastmen_GorLeftHorn</defName>
+		<label>left horn</label>
+		<labelShort>horn</labelShort>
+	</BodyPartDef>
+
+</Defs>

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "PsychiteTea"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Beastmen_Bonfire</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>//IncidentDef[defName = "Ambush"]/mtbDaysByBiome</xpath>
+		<value>
+			<RH_TET_Beastmen_OldGrowthForest>15</RH_TET_Beastmen_OldGrowthForest>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/RecipeDef[@Name="MakeStoneBlocksBase"]/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Beastmen_TableStonecutter</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[@Name="RH_TET_Beastmen_SculptureBase"]/recipeMaker/recipeUsers</xpath>
+		<value>
+			<li>RH_TET_Beastmen_TableStonecutter</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsStonecut"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>RH_TET_Beastmen_TableStonecutter</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsSculpt"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>RH_TET_Beastmen_TableStonecutter</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[1]/options</xpath>
+					<value>
+						<RH_TET_Beastmen_Raider>7</RH_TET_Beastmen_Raider>
+						<RH_TET_Beastmen_RaiderMelee>7</RH_TET_Beastmen_RaiderMelee>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[2]/options</xpath>
+					<value>
+						<RH_TET_Beastmen_Raider>7</RH_TET_Beastmen_Raider>
+						<RH_TET_Beastmen_RaiderMelee>7</RH_TET_Beastmen_RaiderMelee>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[3]/options</xpath>
+					<value>
+						<RH_TET_Beastmen_Raider>7</RH_TET_Beastmen_Raider>
+						<RH_TET_Beastmen_RaiderMelee>7</RH_TET_Beastmen_RaiderMelee>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[4]/options</xpath>
+					<value>
+						<RH_TET_Beastmen_Raider>7</RH_TET_Beastmen_Raider>
+						<RH_TET_Beastmen_RaiderMelee>7</RH_TET_Beastmen_RaiderMelee>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[5]/options</xpath>
+					<value>
+						<RH_TET_Beastmen_Raider>8</RH_TET_Beastmen_Raider>
+						<RH_TET_Beastmen_RaiderMelee>8</RH_TET_Beastmen_RaiderMelee>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//FactionDef[defName = "RH_TET_Outcasts"]/pawnGroupMakers/li[6]/guards</xpath>
+					<value>
+						<RH_TET_Beastmen_Raider>8</RH_TET_Beastmen_Raider>
+						<RH_TET_Beastmen_RaiderMelee>8</RH_TET_Beastmen_RaiderMelee>
+						<RH_TET_Beastmen_Minotaur>3</RH_TET_Beastmen_Minotaur>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_BrayGor"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Bullgor"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Cygor"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Gor"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Ungor"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Khornegor"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Pestigor"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Slaangor"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Tzaangor"]/recipes</xpath>
+					<value>
+						<li>RH_TET_AdministerHealingPotion</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Beastmen_CookBrinedMeat"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Stove</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//RecipeDef[defName = "RH_TET_Beastmen_CookBrinedMeatBulk"]/recipeUsers</xpath>
+					<value>
+						<li>RH_TET_Stove</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/WorldObjectDef[defName = "Site"]/comps</xpath>
+		<value>
+			<li Class="TheEndTimes_Beastmen.WorldObjectCompProperties_DefeatAllEnemiesQuestNoRequestor"/>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<order>Append</order>
+		<xpath>/Defs/ThinkTreeDef[defName = "MentalStateCritical"]/thinkRoot/subNodes</xpath>
+		<value>
+			<li Class="ThinkNode_ConditionalMentalState">
+				<state>RH_TET_Beastmen_PitFighter</state>
+				<subNodes>
+					<li Class="ThinkNode_Priority">
+						<subNodes>
+							<li Class="TheEndTimes_Beastmen.JobGiver_PitFighter">
+								<targetAcquireRadius>65</targetAcquireRadius>
+								<targetKeepRadius>72</targetKeepRadius>
+							</li>
+						</subNodes>
+					</li>
+				</subNodes>
+			</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsButcherFlesh"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>RH_TET_Beastmen_TableButcher</li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Extended Storage (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_Shelf"]/thingClass</xpath>
+					<value>
+						<thingClass>ExtendedStorage.Building_ExtendedStorage</thingClass>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_Shelf"]/inspectorTabs</xpath>
+					<value>
+						<inspectorTabs>
+							<li>ExtendedStorage.ITab_ExtendedStorage</li>
+						</inspectorTabs>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_Shelf"]/statBases</xpath>
+					<value>
+						<ES_StorageFactor>6</ES_StorageFactor>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_Shelf"]/drawGUIOverlay</xpath>
+					<value>
+						<drawGUIOverlay>True</drawGUIOverlay>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Jewelry</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_BrayGor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Jewelry_Earring</li>
+						<li>Jewelry_Earring_Silver</li>
+						<li>Jewelry_Necklace</li>
+						<li>Jewelry_Necklace_Silver</li>
+						<li>Jewelry_Ring</li>
+						<li>Jewelry_Ring_Silver</li>
+						<li>Jewelry_Bracelet</li>
+						<li>Jewelry_Bracelet_Silver</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Bullgor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Jewelry_Earring</li>
+						<li>Jewelry_Earring_Silver</li>
+						<li>Jewelry_Necklace</li>
+						<li>Jewelry_Necklace_Silver</li>
+						<li>Jewelry_Ring</li>
+						<li>Jewelry_Ring_Silver</li>
+						<li>Jewelry_Bracelet</li>
+						<li>Jewelry_Bracelet_Silver</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Tzaangor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Jewelry_Earring</li>
+						<li>Jewelry_Earring_Silver</li>
+						<li>Jewelry_Necklace</li>
+						<li>Jewelry_Necklace_Silver</li>
+						<li>Jewelry_Ring</li>
+						<li>Jewelry_Ring_Silver</li>
+						<li>Jewelry_Bracelet</li>
+						<li>Jewelry_Bracelet_Silver</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Khornegor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Jewelry_Earring</li>
+						<li>Jewelry_Earring_Silver</li>
+						<li>Jewelry_Necklace</li>
+						<li>Jewelry_Necklace_Silver</li>
+						<li>Jewelry_Ring</li>
+						<li>Jewelry_Ring_Silver</li>
+						<li>Jewelry_Bracelet</li>
+						<li>Jewelry_Bracelet_Silver</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Pestigor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Jewelry_Earring</li>
+						<li>Jewelry_Earring_Silver</li>
+						<li>Jewelry_Necklace</li>
+						<li>Jewelry_Necklace_Silver</li>
+						<li>Jewelry_Ring</li>
+						<li>Jewelry_Ring_Silver</li>
+						<li>Jewelry_Bracelet</li>
+						<li>Jewelry_Bracelet_Silver</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Slaangor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Jewelry_Earring</li>
+						<li>Jewelry_Earring_Silver</li>
+						<li>Jewelry_Necklace</li>
+						<li>Jewelry_Necklace_Silver</li>
+						<li>Jewelry_Ring</li>
+						<li>Jewelry_Ring_Silver</li>
+						<li>Jewelry_Bracelet</li>
+						<li>Jewelry_Bracelet_Silver</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Gor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Jewelry_Earring</li>
+						<li>Jewelry_Earring_Silver</li>
+						<li>Jewelry_Necklace</li>
+						<li>Jewelry_Necklace_Silver</li>
+						<li>Jewelry_Ring</li>
+						<li>Jewelry_Ring_Silver</li>
+						<li>Jewelry_Bracelet</li>
+						<li>Jewelry_Bracelet_Silver</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Ideology</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_BrayGor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Apparel_Headwrap</li>
+						<li>Apparel_Broadwrap</li>
+						<li>Apparel_VisageMask</li>
+						<li>Apparel_Slicecap</li>
+						<li>Apparel_Collar</li>
+						<li>Apparel_AuthorityCap</li>
+						<li>Apparel_Tailcap</li>
+						<li>Apparel_Shadecone</li>
+						<li>Apparel_Flophat</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Bullgor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Apparel_Headwrap</li>
+						<li>Apparel_Broadwrap</li>
+						<li>Apparel_VisageMask</li>
+						<li>Apparel_Slicecap</li>
+						<li>Apparel_Collar</li>
+						<li>Apparel_AuthorityCap</li>
+						<li>Apparel_Tailcap</li>
+						<li>Apparel_Shadecone</li>
+						<li>Apparel_Flophat</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Tzaangor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Apparel_Headwrap</li>
+						<li>Apparel_Broadwrap</li>
+						<li>Apparel_VisageMask</li>
+						<li>Apparel_Slicecap</li>
+						<li>Apparel_Collar</li>
+						<li>Apparel_AuthorityCap</li>
+						<li>Apparel_Tailcap</li>
+						<li>Apparel_Shadecone</li>
+						<li>Apparel_Flophat</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Khornegor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Apparel_Headwrap</li>
+						<li>Apparel_Broadwrap</li>
+						<li>Apparel_VisageMask</li>
+						<li>Apparel_Slicecap</li>
+						<li>Apparel_Collar</li>
+						<li>Apparel_AuthorityCap</li>
+						<li>Apparel_Tailcap</li>
+						<li>Apparel_Shadecone</li>
+						<li>Apparel_Flophat</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Pestigor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Apparel_Headwrap</li>
+						<li>Apparel_Broadwrap</li>
+						<li>Apparel_VisageMask</li>
+						<li>Apparel_Slicecap</li>
+						<li>Apparel_Collar</li>
+						<li>Apparel_AuthorityCap</li>
+						<li>Apparel_Tailcap</li>
+						<li>Apparel_Shadecone</li>
+						<li>Apparel_Flophat</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Slaangor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Apparel_Headwrap</li>
+						<li>Apparel_Broadwrap</li>
+						<li>Apparel_VisageMask</li>
+						<li>Apparel_Slicecap</li>
+						<li>Apparel_Collar</li>
+						<li>Apparel_AuthorityCap</li>
+						<li>Apparel_Tailcap</li>
+						<li>Apparel_Shadecone</li>
+						<li>Apparel_Flophat</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Gor"]/alienRace/raceRestriction/whiteApparelList</xpath>
+					<value>
+						<li>Apparel_Headwrap</li>
+						<li>Apparel_Broadwrap</li>
+						<li>Apparel_VisageMask</li>
+						<li>Apparel_Slicecap</li>
+						<li>Apparel_Collar</li>
+						<li>Apparel_AuthorityCap</li>
+						<li>Apparel_Tailcap</li>
+						<li>Apparel_Shadecone</li>
+						<li>Apparel_Flophat</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Rimhammer - The End Times - Ogres</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Rimhammer - Any One Can Beastmen</li><!-- making an assumption that if folks use one Any One Can mod, they will use them all. -->
+					</mods>
+					<nomatch Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>//AlienRace.ThingDef_AlienRace[defName = "RH_TET_Beastmen_Alien_Bullgor"]/alienRace/raceRestriction/weaponList</xpath>
+								<value>
+									<li>RH_TET_Ogres_MeleeWeapon_Club</li>
+									<li>RH_TET_Ogres_MeleeWeapon_Maul</li>
+									<li>RH_TET_Ogres_MeleeWeapon_Sword</li>
+									<li>RH_TET_Ogres_MeleeWeapon_IGMaul</li>
+									<li>RH_TET_Ogres_MeleeWeapon_IGSword</li>
+									<li>RH_TET_Ogres_LeadBelcher</li>
+									<li>RH_TET_Ogres_Maul_WizardStaff</li>
+									<li>RH_TET_Ogres_Cleaver_WizardStaff</li>
+									<li>RH_TET_Ogres_MeleeWeapon_TyrantMaul</li>
+									<li>RH_TET_Ogres_Crossbow_High</li>
+								</value>
+							</li>
+						</operations>
+					</nomatch>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

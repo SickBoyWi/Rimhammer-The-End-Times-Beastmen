@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <QuestScriptDef>
+    <defName>RH_TET_Beastmen_WandererJoins</defName>
+    <autoAccept>true</autoAccept>
+    <defaultHidden>true</defaultHidden>
+    <isRootSpecial>true</isRootSpecial>
+    <successHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityFulfilled_WandererJoins</successHistoryEvent>
+    <failedOrExpiredHistoryEvent MayRequire="Ludeon.RimWorld.Ideology">CharityRefused_WandererJoins</failedOrExpiredHistoryEvent>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName->Beastman joins</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription-></li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="TheEndTimes_Beastmen.QuestNode_Root_WandererJoin_WalkIn" />
+  </QuestScriptDef>
+  
+  <IncidentDef>
+    <defName>RH_TET_Beastmen_WandererJoin</defName>
+    <label>beastman joins</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_GiveQuest</workerClass>
+    <questScriptDef>RH_TET_Beastmen_WandererJoins</questScriptDef>
+    <baseChance>0.4</baseChance>
+    <pawnKind>RH_TET_Beastmen_Raider</pawnKind>
+    <populationEffect>IncreaseEasy</populationEffect>
+  </IncidentDef>  
+
+</Defs>

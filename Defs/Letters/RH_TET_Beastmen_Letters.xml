@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<LetterDef>
+		<defName>RH_TET_Beastmen_KhorneMessage</defName>
+		<color>(169, 0, 0)</color>
+		<flashColor>(255, 186, 186)</flashColor>
+		<flashInterval>32</flashInterval>
+		<arriveSound>RH_TET_Beastmen_StandardMessage</arriveSound>
+	</LetterDef>
+
+	<LetterDef>
+		<defName>RH_TET_Beastmen_NurgleMessage</defName>
+		<color>(7, 156, 0)</color>
+		<flashColor>(215, 255, 213)</flashColor>
+		<flashInterval>32</flashInterval>
+		<arriveSound>RH_TET_Beastmen_StandardMessage</arriveSound>
+	</LetterDef>
+
+	<LetterDef>
+		<defName>RH_TET_Beastmen_SlaaneshMessage</defName>
+		<color>(188, 0, 214)</color>
+		<flashColor>(250, 215, 255)</flashColor>
+		<flashInterval>32</flashInterval>
+		<arriveSound>RH_TET_Beastmen_StandardMessage</arriveSound>
+	</LetterDef>
+
+	<LetterDef>
+		<defName>RH_TET_Beastmen_TzeentchMessage</defName>
+		<color>(0, 44, 223)</color>
+		<flashColor>(200, 211, 255)</flashColor>
+		<flashInterval>32</flashInterval>
+		<arriveSound>RH_TET_Beastmen_StandardMessage</arriveSound>
+	</LetterDef>
+
+</Defs>

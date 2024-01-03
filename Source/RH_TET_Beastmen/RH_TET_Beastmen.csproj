@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C53833E-4687-4D26-ABB6-52A112239B6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RH_TET_Beastmen</RootNamespace>
+    <AssemblyName>RH_TET_Beastmen</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\1.4\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AbilityUser">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\932008009\1.4\Assemblies\AbilityUser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="AbilityUserAI">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\932008009\1.4\Assemblies\AbilityUserAI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="HugsLib">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.3\Assemblies\HugsLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RH_TET_Magic">
+      <HintPath>..\..\..\Rimhammer-The-End-Times-Magic\1.4\Assemblies\RH_TET_Magic.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AxeThrowing\JobDriver_ThrowAxesJoy.cs" />
+    <Compile Include="BaseModStuff\ChaosSpawn.cs" />
+    <Compile Include="Biome\BiomeWorker_OldGrowthForest.cs" />
+    <Compile Include="Biome\ElementSpawnDef.cs" />
+    <Compile Include="Biome\Watcher.cs" />
+    <Compile Include="Buildings\Building_HeadSpike.cs" />
+    <Compile Include="Buildings\Building_SarsenBeacon.cs" />
+    <Compile Include="Buildings\Building_SarsenGas.cs" />
+    <Compile Include="Buildings\Building_SarsenPulse.cs" />
+    <Compile Include="Buildings\Building_SarsenTutor.cs" />
+    <Compile Include="Buildings\PlaceWorker_OnWallVent.cs" />
+    <Compile Include="Buildings\Building_Drum.cs" />
+    <Compile Include="Cauldon\Harmony_Patch_Cauldron.cs" />
+    <Compile Include="Cauldon\PlaceWorker_NextToPailAccepter.cs" />
+    <Compile Include="Cauldon\Building_Cauldron.cs" />
+    <Compile Include="Comps\CompFireOverlayMulti.cs" />
+    <Compile Include="Comps\CompFireOverlayMore.cs" />
+    <Compile Include="Comps\CompFireOverlayYetMore.cs" />
+    <Compile Include="Comps\CompFireOverlayEvenMore.cs" />
+    <Compile Include="Comps\CompMoteThrower.cs" />
+    <Compile Include="Comps\CompFireOverlay.cs" />
+    <Compile Include="Comps\CompProperties_FireOverlayMulti.cs" />
+    <Compile Include="Comps\CompProperties_FireOverlayEvenMore.cs" />
+    <Compile Include="Comps\CompProperties_FireOverlayYetMore.cs" />
+    <Compile Include="Comps\CompProperties_FireOverlayMore.cs" />
+    <Compile Include="Comps\Graphic_FlickerMulti.cs" />
+    <Compile Include="Comps\Graphic_FlickerCustom4.cs" />
+    <Compile Include="Comps\Graphic_FlickerCustom3.cs" />
+    <Compile Include="Comps\Graphic_FlickerCustom2.cs" />
+    <Compile Include="Comps\Graphic_FlickerCustom.cs" />
+    <Compile Include="Comps\CompProperties_MoteThrower.cs" />
+    <Compile Include="Comps\CompProperties_FireOverlay.cs" />
+    <Compile Include="Drum\ThoughtWorker_ListeningToDrum.cs" />
+    <Compile Include="EndGame\StorytellerCompProperties_FinalDestruction.cs" />
+    <Compile Include="EndGame\StorytellerComp_FinalDestruction.cs" />
+    <Compile Include="EndGame\VisitableSite.cs" />
+    <Compile Include="EndGame\CaravanArrivalAction_EnterMap.cs" />
+    <Compile Include="EndGame\CaravanArrivalAction_FinalDestruction.cs" />
+    <Compile Include="EndGame\FinalDestructionSite.cs" />
+    <Compile Include="EndGame\FinalDestructionComp.cs" />
+    <Compile Include="EndGame\FinalDestructionCompMain.cs" />
+    <Compile Include="EndGame\RH_TET_Beastmen_GameVictoryUtility.cs" />
+    <Compile Include="EndGame\ThoughtWorker_PsychicEmanatorSoothe.cs" />
+    <Compile Include="FoodPreservation\Building_MeatSmoker.cs" />
+    <Compile Include="FoodPreservation\JobDriver_PutBrineIntoSmoker.cs" />
+    <Compile Include="FoodPreservation\JobDriver_TakeBrinedMeatFromSmoker.cs" />
+    <Compile Include="FoodPreservation\WorkGiver_PutBrineIntoSmoker.cs" />
+    <Compile Include="FoodPreservation\WorkGiver_TakeSmokedMeatFromSmoker.cs" />
+    <Compile Include="GettingSoft\GettingSoftDef.cs" />
+    <Compile Include="GettingSoft\ThoughtWorker_GettingSoft.cs" />
+    <Compile Include="GettingSoft\GettingSoftUtility.cs" />
+    <Compile Include="Harmony\HarmonyPatches.cs" />
+    <Compile Include="Incidents\IncidentWorker_CreatureJoin.cs" />
+    <Compile Include="Incidents\IncidentWorker_HerdMigration.cs" />
+    <Compile Include="Drum\JobDriver_PlayDrum.cs" />
+    <Compile Include="MapGen\ThingData.cs" />
+    <Compile Include="MapGen\RoofObject.cs" />
+    <Compile Include="MapGen\MapObject.cs" />
+    <Compile Include="MapGen\MapGenHandler.cs" />
+    <Compile Include="MapGen\MapGenDef.cs" />
+    <Compile Include="MassiveHerdstone\WeatherEvent_LightningStrikeNoDamage.cs" />
+    <Compile Include="MassiveHerdstone\ITab_HerdstoneHumanConversionCardUtil.cs" />
+    <Compile Include="MassiveHerdstone\ITab_Conversion.cs" />
+    <Compile Include="PitFight\Building\PlaceWorker_FightingPitRadius.cs" />
+    <Compile Include="PitFight\Building\Building_PitFightSpot.cs" />
+    <Compile Include="PitFight\Comp\CompProperties_PitFightSpot.cs" />
+    <Compile Include="PitFight\Comp\CompFightingPit.cs" />
+    <Compile Include="PitFight\Jobs\JobDriver_JoinPitFight.cs" />
+    <Compile Include="PitFight\Jobs\LordToilData_PitFight.cs" />
+    <Compile Include="PitFight\Jobs\LordToil_PitFight.cs" />
+    <Compile Include="PitFight\Jobs\LordJob_Joinable_PitFight.cs" />
+    <Compile Include="PitFight\Jobs\JobGiver_PitFighter.cs" />
+    <Compile Include="PitFight\Jobs\JobGiver_WatchPitFight.cs" />
+    <Compile Include="PitFight\Jobs\JobGiver_UrgeOn.cs" />
+    <Compile Include="PitFight\Jobs\JobDriver_WatchPitFight.cs" />
+    <Compile Include="PitFight\Jobs\JobDriver_UrgeOnPitFighter.cs" />
+    <Compile Include="PitFight\Mental\MentalState_PitFighter.cs" />
+    <Compile Include="PitFight\Building\PitFighter.cs" />
+    <Compile Include="PitFight\UI\ITab_FightingPitManager.cs" />
+    <Compile Include="PitFight\UI\ITab_FightingPitManagerInterface.cs" />
+    <Compile Include="PitFight\UI\ITab_FightingPitManagerUtility.cs" />
+    <Compile Include="Quests\QuestNode_Root_WandererJoin_WalkIn.cs" />
+    <Compile Include="Quests\QuestNode_GetSiteTileFinalDestruction.cs" />
+    <Compile Include="Quests\DefeatAllEnemiesQuestNoRequestorComp.cs" />
+    <Compile Include="Quests\WorldObjectCompProperties_DefeatAllEnemiesQuestNoRequestor.cs" />
+    <Compile Include="Sacrifice\Bill_Convert.cs" />
+    <Compile Include="Sacrifice\JobDriver_HoldConversion.cs" />
+    <Compile Include="Settings\Settings.cs" />
+    <Compile Include="SiteStuff\GenStep_Caravan.cs" />
+    <Compile Include="SiteStuff\SitePartWorker_Caravan.cs" />
+    <Compile Include="SiteStuff\SymbolResolver_Homestead.cs" />
+    <Compile Include="SiteStuff\SitePartWorker_Homestead.cs" />
+    <Compile Include="SiteStuff\GenStep_Homestead.cs" />
+    <Compile Include="Incidents\IncidentWorker_WildBullgorWandersIn.cs" />
+    <Compile Include="Incidents\IncidentWorker_RefugeesChased.cs" />
+    <Compile Include="Incidents\IncidentWorker_CygorJoin.cs" />
+    <Compile Include="Incidents\IncidentWorker_WildCygorWandersIn.cs" />
+    <Compile Include="Incidents\IncidentWorker_WildUngorWandersIn.cs" />
+    <Compile Include="Incidents\IncidentWorker_WildGorWandersIn.cs" />
+    <Compile Include="MapComponentInjectorBehavior.cs" />
+    <Compile Include="NeedViolence\ViolenceCategory.cs" />
+    <Compile Include="NeedViolence\ThoughtWorker_NeedViolence.cs" />
+    <Compile Include="NeedViolence\Need_Violence.cs" />
+    <Compile Include="StrongStomach\CompStrongStomach.cs" />
+    <Compile Include="StrongStomach\CompProperties_StrongStomach.cs" />
+    <Compile Include="Utility\EventMakerUtility.cs" />
+    <Compile Include="MassiveHerdstone\ITab_HerdstoneHumanSacrificeCardUtil.cs" />
+    <Compile Include="MassiveHerdstone\ITab_HerdstoneAnimalSacrificeCardUtil.cs" />
+    <Compile Include="MassiveHerdstone\ITab_HerdstoneFoodSacrificeCardUtil.cs" />
+    <Compile Include="MassiveHerdstone\ITab_MassiveHerdstoneCardUtil.cs" />
+    <Compile Include="MassiveHerdstone\MapComponent_SacrificeTracker.cs" />
+    <Compile Include="MassiveHerdstone\Building_MassiveHerdstone.cs" />
+    <Compile Include="MassiveHerdstone\ITab_HerdstoneSacrificeCardUtil.cs" />
+    <Compile Include="MassiveHerdstone\ITab_Sacrifice.cs" />
+    <Compile Include="RH_TET_BeastmenMod.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RH_TET_BeastmenDefOf.cs" />
+    <Compile Include="Sacrifice\JobDriver_AttendSacrifice.cs" />
+    <Compile Include="Sacrifice\JobDriver_CarryToMassiveHerdstone.cs" />
+    <Compile Include="Sacrifice\JobDriver_HoldSacrifice.cs" />
+    <Compile Include="Sacrifice\JobDriver_AwaitDeath.cs" />
+    <Compile Include="Sacrifice\JobDriver_ReflectOnResult.cs" />
+    <Compile Include="Sacrifice\JobDriver_WaitThroughOffering.cs" />
+    <Compile Include="Sacrifice\JobDriver_MakeOffering.cs" />
+    <Compile Include="Sacrifice\Bill_Sacrifice.cs" />
+    <Compile Include="Utility\RewardUtility.cs" />
+    <Compile Include="Utility\HerdUtility.cs" />
+    <Compile Include="Utility\TheEndTimesUtility.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

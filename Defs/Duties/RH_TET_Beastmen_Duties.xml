@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DutyDef>
+		<defName>RH_TET_Beastmen_WatchPitFight</defName>
+		<socialModeMax>Off</socialModeMax>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="ThinkNode_ConditionalRandom">
+					<chance>0.1</chance>
+					<subNodes>
+						<li Class="TheEndTimes_Beastmen.JobGiver_UrgeOn"/>
+					</subNodes>
+				</li>
+				<li Class="TheEndTimes_Beastmen.JobGiver_WatchPitFight"/>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+
+</Defs>

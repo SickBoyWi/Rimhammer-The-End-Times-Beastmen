@@ -1,0 +1,1022 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--===================== Death =====================-->
+  
+	<ThoughtDef ParentName="DeathMemory">
+		<defName>RH_TET_Beastmen_GorKnowColonistExecuted</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>justified execution of colonist</label>
+				<description>Guilty or not who cares.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+			<li>
+				<label>colonist euthanized</label>
+				<!-- generic humane, can't be worse than KnowColonistDied -->
+				<description>Could have done it quicker.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+			<li>
+				<label>colonist executed</label>
+				<!-- generic brutal -->
+				<description>A colonist was killed.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+			<li>
+				<label>colonist organ-harvested</label>
+				<!-- died because of organ harvesting -->
+				<description>Could make a good soup.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+	<ThoughtDef ParentName="DeathMemory">
+		<defName>RH_TET_Beastmen_GorKnowPrisonerDiedInnocent</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+			<li>Bloodlust</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>innocent prisoner died</label>
+				<description>Who cares.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="DeathMemory">
+		<defName>RH_TET_Beastmen_GorKnowColonistDied</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+			<li>Bloodlust</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>colonist died</label>
+				<description>Hmpf.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="DeathMemory">
+		<defName>RH_TET_Beastmen_GorBondedAnimalDied</defName>
+		<showBubble>true</showBubble>
+		<durationDays>20</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>bonded animal {0} died</label>
+				<description>That was mine!</description>
+				<baseMoodEffect>-8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="DeathMemory">
+		<defName>RH_TET_Beastmen_GorPawnWithGoodOpinionDied</defName>
+		<durationDays>20</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>my friend {0} died</label>
+				<description>I liked that one.</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="DeathMemory">
+		<defName>RH_TET_Beastmen_GorPawnWithBadOpinionDied</defName>
+		<durationDays>10</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>my rival {0} died</label>
+				<description>If only I could relive this.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef Name="RH_TET_Beastmen_GorDeathMemoryFamily" ParentName="DeathMemory" Abstract="True">
+		<durationDays>30.0</durationDays>
+		<stackLimit>10</stackLimit>
+		<showBubble>true</showBubble>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMySonDied</defName>
+		<stages>
+			<li>
+				<label>my son {0} died</label>
+				<description>So weak. Such dissapointment</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyDaughterDied</defName>
+		<stages>
+			<li>
+				<label>my daughter {0} died</label>
+				<description>So weak. Such dissapointment</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyHusbandDied</defName>
+		<stages>
+			<li>
+				<label>my husband {0} died</label>
+				<description>He was mine!</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyWifeDied</defName>
+		<stages>
+			<li>
+				<label>my wife {0} died</label>
+				<description>She was mine!</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyFianceDied</defName>
+		<stages>
+			<li>
+				<label>my fiance {0} died</label>
+				<description>He was mine!</description>
+				<baseMoodEffect>-7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyFianceeDied</defName>
+		<stages>
+			<li>
+				<label>my fiancée {0} died</label>
+				<description>She was mine!.</description>
+				<baseMoodEffect>-7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyLoverDied</defName>
+		<stages>
+			<li>
+				<label>my lover {0} died</label>
+				<description>That was mine!</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyBrotherDied</defName>
+		<stages>
+			<li>
+				<label>my brother {0} died</label>
+				<description>He was weak!</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMySisterDied</defName>
+		<stages>
+			<li>
+				<label>my sister {0} died</label>
+				<description>She was weak!</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyGrandchildDied</defName>
+		<stages>
+			<li>
+				<label>my grandchild {0} died</label>
+				<description>Such weakness!</description>
+				<baseMoodEffect>-4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyFatherDied</defName>
+		<stages>
+			<li>
+				<label>my father {0} died</label>
+				<description>He was weak! I'm stronger.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyMotherDied</defName>
+		<stages>
+			<li>
+				<label>my mother {0} died</label>
+				<description>She was weak! I'm stronger.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyNieceDied</defName>
+		<stages>
+			<li>
+				<label>my niece {0} died</label>
+				<description>Such weakness.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyNephewDied</defName>
+		<stages>
+			<li>
+				<label>my nephew {0} died</label>
+				<description>Such weakness.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyHalfSiblingDied</defName>
+		<stages>
+			<li>
+				<label>my half-sibling {0} died</label>
+				<description>Such weakness.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyAuntDied</defName>
+		<stages>
+			<li>
+				<label>my aunt {0} died</label>
+				<description>Weak! So weak!</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyUncleDied</defName>
+		<stages>
+			<li>
+				<label>my uncle {0} died</label>
+				<description>Weak! So weak!.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyGrandparentDied</defName>
+		<stages>
+			<li>
+				<label>my grandparent {0} died</label>
+				<description>Such weakness.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyCousinDied</defName>
+		<stages>
+			<li>
+				<label>my cousin {0} died</label>
+				<description>Weak! So weak!</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef ParentName="RH_TET_Beastmen_GorDeathMemoryFamily">
+		<defName>RH_TET_Beastmen_GorMyKinDied</defName>
+		<stages>
+			<li>
+				<label>my kin {0} died</label>
+				<description>Weak! Weak! Weak!</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Married -->
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorGotMarried</defName>
+		<durationDays>30.0</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>got married to {0}</label>
+				<description>Let us indulge ourselfs.</description>
+				<baseMoodEffect>20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAttendedWedding</defName>
+		<durationDays>10.0</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+			<li>
+				<label>attended wedding</label>
+				<description>I want more booze!</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAttendedParty</defName>
+		<durationDays>10</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+			<li>
+				<label>attended party</label>
+				<description>More wine! More booze!</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorMyOrganHarvested</defName>
+		<durationDays>8</durationDays>
+		<stackLimit>5</stackLimit>
+		<stages>
+			<li>
+				<label>my organ harvested</label>
+				<description>These weaklings!</description>
+				<baseMoodEffect>-30</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorWasImprisoned</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>was imprisoned</label>
+				<description>Weaklings try to contain me!</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorNuzzled</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>3</stackLimit>
+		<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>nuzzled</label>
+				<description>My little pet.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorKnowBuriedInSarcophagus</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+			<li>
+				<label>buried in sarcophagus</label>
+				<description>This colony buried someone in an ornamented sarcophagus.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorWitnessedDeathAlly</defName>
+		<icon>Things/Mote/ThoughtSymbol/Skull</icon>
+		<showBubble>true</showBubble>
+		<durationDays>2</durationDays>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+			<li>Bloodlust</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>witnessed ally's death</label>
+				<description>Weaklings! All of them!.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorWitnessedDeathNonAlly</defName>
+		<icon>Things/Mote/ThoughtSymbol/Skull</icon>
+		<showBubble>true</showBubble>
+		<durationDays>.5</durationDays>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+			<li>Bloodlust</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>witnessed outsiders's death</label>
+				<description>Weaklings! All of them!.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorWitnessedDeathFamily</defName>
+		<icon>Things/Mote/ThoughtSymbol/Skull</icon>
+		<showBubble>true</showBubble>
+		<durationDays>6</durationDays>
+		<stackLimit>1</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+			<li>Bloodlust</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>witnessed family member's death</label>
+				<description>Such weakness! This weaklings share my blood!</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorColonistBanished</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<showBubble>true</showBubble>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>colonist banished</label>
+				<description>Who cares.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorColonistBanishedToDie</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<showBubble>true</showBubble>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>colonist banished to death</label>
+				<description>Who cares.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorPrisonerBanishedToDie</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<showBubble>true</showBubble>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>prisoner banished to death</label>
+				<description>Who cares.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorBondedAnimalBanished</defName>
+		<durationDays>6</durationDays>
+		<stackLimit>5</stackLimit>
+		<showBubble>true</showBubble>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>bonded animal {0} banished</label>
+				<description>That one was mine!</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Rescue quest -->
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorFailedToRescueRelative</defName>
+		<durationDays>30</durationDays>
+		<stackLimit>5</stackLimit>
+		<showBubble>true</showBubble>
+		<stages>
+			<li>
+				<label>failed to rescue {0}</label>
+				<description>Such a waste. Could have been of use in the herd.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorRescuedRelative</defName>
+		<durationDays>30</durationDays>
+		<stackLimit>5</stackLimit>
+		<showBubble>true</showBubble>
+		<stages>
+			<li>
+				<label>rescued {0}</label>
+				<description>Make yourself usefull.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorRescued</defName>
+		<durationDays>30</durationDays>
+		<stackLimit>5</stackLimit>
+		<showBubble>true</showBubble>
+		<stages>
+			<li>
+				<label>rescued</label>
+				<description>Hmpf! I didn't need help.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorKindWordsMood</defName>
+		<durationDays>2</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>kind words</label>
+				<description>Hmph! What do you want!</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorSoldMyLovedOne</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>120</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackLimitForSameOtherPawn>2</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>loved one sold</label>
+				<labelSocial>sold my loved one</labelSocial>
+				<description>They sold what was mine!</description>
+				<baseOpinionOffset>-20</baseOpinionOffset>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorSoldMyBondedAnimal</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>60</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackLimitForSameOtherPawn>2</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>bonded animal sold</label>
+				<labelSocial>sold my bonded animal</labelSocial>
+				<description>They sold my pretty little pet!</description>
+				<baseOpinionOffset>-20</baseOpinionOffset>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorRebuffedMyRomanceAttemptMood</defName>
+		<durationDays>3.0</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>rebuffed by {0}</label>
+				<description>They dare refuse me!</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorFailedRomanceAttemptOnMeLowOpinionMood</defName>
+		<durationDays>3.0</durationDays>
+		<stackLimit>5</stackLimit>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>had to rebuff {0}</label>
+				<description>What's this weakling doing!</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorBrokeUpWithMe</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>60</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>broke up with me</label>
+				<baseOpinionOffset>-50</baseOpinionOffset>
+			</li>
+		</stages>
+		<thoughtToMake>BrokeUpWithMeMood</thoughtToMake>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>BrokeUpWithMeMood</defName>
+		<durationDays>25.0</durationDays>
+		<stackLimit>5</stackLimit>
+		<stages>
+			<li>
+				<label>broken up with by {0}</label>
+				<description>You don't break up with me!</description>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorCheatedOnMe</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>120</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>cheated on me</label>
+				<baseOpinionOffset>-70</baseOpinionOffset>
+			</li>
+		</stages>
+		<thoughtToMake>CheatedOnMeMood</thoughtToMake>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>CheatedOnMeMood</defName>
+		<durationDays>25.0</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+			<li>
+				<label>cheated on by {0}</label>
+				<description>You are mine!</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorDivorcedMe</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>180</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<stages>
+			<li>
+				<label>divorced me</label>
+				<baseOpinionOffset>-70</baseOpinionOffset>
+			</li>
+		</stages>
+		<thoughtToMake>DivorcedMeMood</thoughtToMake>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>DivorcedMeMood</defName>
+		<durationDays>30.0</durationDays>
+		<stackLimit>10</stackLimit>
+		<stages>
+			<li>
+				<label>divorced by {0}</label>
+				<description>How dare you!</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorRejectedMyProposal</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>60</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>rejected my proposal</label>
+				<baseOpinionOffset>-30</baseOpinionOffset>
+			</li>
+		</stages>
+		<thoughtToMake>RejectedMyProposalMood</thoughtToMake>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorIRejectedTheirProposal</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>60</durationDays>
+		<stackLimit>300</stackLimit>
+		<stackLimitForSameOtherPawn>1</stackLimitForSameOtherPawn>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>Such an insult. A weakling like you!</label>
+				<baseOpinionOffset>-15</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorGotSomeLovin</defName>
+		<thoughtClass>Thought_MemorySocial</thoughtClass>
+		<durationDays>3</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>got some lovin’</label>
+				<description>Indulge me!</description>
+				<baseMoodEffect>8</baseMoodEffect>
+				<baseOpinionOffset>6</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorInsultedMood</defName>
+		<durationDays>2</durationDays>
+		<stackLimit>10</stackLimit>
+		<stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+		<stages>
+			<li>
+				<label>insulted</label>
+				<description>This weakling dare to insult me.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteLavishMeal</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate lavish meal</label>
+				<description>It tasted great. I need some more of this.</description>
+				<baseMoodEffect>12</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteFineMeal</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate fine meal</label>
+				<description>I liked the taste of this.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteAwfulMeal</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate awful meal</label>
+				<description>Food is food.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteRawFood</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate raw food</label>
+				<description>Food is food.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteKibble</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate kibble</label>
+				<description>Food is food.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteCorpse</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate corpse</label>
+				<description>Raw meat is so good.</description>
+				<baseMoodEffect>12</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!--=========== Special nature thoughts ============-->
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteHumanlikeMeatDirect</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<nullifyingTraits>
+			<li>Cannibal</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>raw cannibalism</label>
+				<description>Raw human meat. So good!</description>
+				<baseMoodEffect>20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteHumanlikeMeatDirectCannibal</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<requiredTraits>
+			<li>Cannibal</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>raw cannibalism</label>
+				<description>Raw human meat. So good!</description>
+				<baseMoodEffect>20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteHumanlikeMeatAsIngredient</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<nullifyingTraits>
+			<li>Cannibal</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>cooked cannibalism</label>
+				<description>I like this.</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteHumanlikeMeatAsIngredientCannibal</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>cooked cannibalism</label>
+				<description>I like this.</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteInsectMeatDirect</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate insect meat</label>
+				<description>It works.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteInsectMeatAsIngredient</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate cooked insect meat</label>
+				<description>It works.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!--================== Rotten state thoughts =================-->
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GorAteRottenFood</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate rotten food</label>
+				<description>It works.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

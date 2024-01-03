@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThingDef Name="RH_TET_BodyPartBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>0.7</Flammability>
+			<Beauty>-4</Beauty>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<tickerType>Never</tickerType>
+		<alwaysHaulable>true</alwaysHaulable>
+		<isTechHediff>true</isTechHediff>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Horns</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_Beastmen_Horns</li>
+		</thingSetMakerTags>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+		</comps>
+		<pathCost>10</pathCost>
+	</ThingDef>
+  
+	<ThingDef Name="RH_TET_BodyPartNaturalBase" ParentName="RH_TET_BodyPartBase" Abstract="True">
+		<graphicData>
+			<texPath>Things/Item/Health/HealthItem</texPath>
+			<color>(190,190,190)</color>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.80</drawSize>
+		</graphicData>
+		<tradeability>None</tradeability>
+		<thingCategories>
+			<li>RH_TET_Beastmen_BodyPartNatural</li>
+		</thingCategories>
+		<statBases>
+			<DeteriorationRate>4.0</DeteriorationRate>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_BodyPartNaturalBase">
+		<defName>RH_TET_Beastmen_GorHorn</defName>
+		<label>gor horn</label>
+		<description>Horn of a gor.</description>
+		<statBases>
+			<Mass>2</Mass>
+			<MarketValue>50</MarketValue>
+		</statBases>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_BodyPartNaturalBase">
+		<defName>RH_TET_Beastmen_KhorngorHorn</defName>
+		<label>khorngor horn</label>
+		<description>Horn of a khorngor.</description>
+		<statBases>
+			<Mass>2</Mass>
+			<MarketValue>250</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>RH_TET_Beastmen_Bestigor</li>
+		</techHediffsTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_BodyPartNaturalBase">
+		<defName>RH_TET_Beastmen_PestigorHorn</defName>
+		<label>pestigor horn</label>
+		<description>Horn of a pestigor.</description>
+		<statBases>
+			<Mass>2</Mass>
+			<MarketValue>250</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>RH_TET_Beastmen_Bestigor</li>
+		</techHediffsTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_BodyPartNaturalBase">
+		<defName>RH_TET_Beastmen_TzaangorHorn</defName>
+		<label>tzaangor horn</label>
+		<description>Horn of a tzaangor.</description>
+		<statBases>
+			<Mass>2</Mass>
+			<MarketValue>250</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>RH_TET_Beastmen_Bestigor</li>
+		</techHediffsTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_BodyPartNaturalBase">
+		<defName>RH_TET_Beastmen_SlaangorHorn</defName>
+		<label>slaangor horn</label>
+		<description>Horn of a slaangor.</description>
+		<statBases>
+			<Mass>2</Mass>
+			<MarketValue>250</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>RH_TET_Beastmen_Bestigor</li>
+		</techHediffsTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_BodyPartNaturalBase">
+		<defName>RH_TET_Beastmen_BestigorHorn</defName>
+		<label>bestigor horn</label>
+		<description>Horn of a bestigor.</description>
+		<statBases>
+			<Mass>2</Mass>
+			<MarketValue>200</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>RH_TET_Beastmen_Bestigor</li>
+		</techHediffsTags>
+	</ThingDef>
+  
+	<!--
+  <ThingDef ParentName="RH_TET_BodyPartNaturalBase">
+    <defName>RH_TET_Beastmen_MetalHorn</defName>
+    <label>metal horn</label>
+    <description>Metal beastman horn.</description>
+    <statBases>
+      <Mass>2</Mass>
+      <MarketValue>200</MarketValue>
+    </statBases>
+    <techHediffsTags>
+      <li>RH_TET_Beastmen_Bestigor</li>
+    </techHediffsTags>
+    <thingCategories>
+      <li>RH_TET_Beastmen_BodyParts</li>
+    </thingCategories>
+  </ThingDef>
+  -->
+
+	<ThingDef ParentName="RH_TET_BodyPartNaturalBase">
+		<defName>RH_TET_Beastmen_GorebullHorn</defName>
+		<label>gorebull horn</label>
+		<description>Horn of a gorebull.</description>
+		<statBases>
+			<Mass>2</Mass>
+			<MarketValue>200</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>RH_TET_Beastmen_GoreBull</li>
+		</techHediffsTags>
+	</ThingDef>
+  
+	<ThingDef Name="RH_TET_Beastmen_BodyPartArtificialBase" ParentName="BodyPartBase" Abstract="True">
+		<thingCategories>
+			<li>RH_TET_Beastmen_BodyPartsProsthetic</li>
+		</thingCategories>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Horns</li>
+		</tradeTags>
+		<tradeability>None</tradeability>
+		<statBases>
+			<DeteriorationRate>2.0</DeteriorationRate>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_Beastmen_GorBodyPartHoofProstheticBase" ParentName="RH_TET_Beastmen_BodyPartArtificialBase" Abstract="True">
+		<graphicData>
+			<texPath>Things/Item/Health/HealthItem</texPath>
+			<color>(154,124,104)</color>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.80</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+			<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		</recipeMaker>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Hooves</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_Beastmen_Hooves</li>
+		</thingSetMakerTags>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_Beastmen_GorBodyPartHornProstheticBase" ParentName="RH_TET_Beastmen_BodyPartArtificialBase" Abstract="True">
+		<graphicData>
+			<texPath>Things/Item/Health/HealthItem</texPath>
+			<color>(189,169,118)</color>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.80</drawSize>
+		</graphicData>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+		</recipeMaker>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Horns</li>
+		</tradeTags>
+		<thingSetMakerTags>
+			<li>RH_TET_Beastmen_Horns</li>
+		</thingSetMakerTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Beastmen_GorBodyPartHornProstheticBase">
+		<defName>RH_TET_Beastmen_GorGoldHorn</defName>
+		<label>golden horn</label>
+		<description>A horn made of gold. May be surgically installed on a beastman's head, and improve the beastman in many positive ways.</description>
+		<techLevel>Medieval</techLevel>
+		<costList>
+			<Gold>10</Gold>
+		</costList>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>3</Mass>
+		</statBases>
+		<techHediffsTags>
+			<li>RH_TET_Beastmen_Gor</li>
+		</techHediffsTags>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+				<li>RH_TET_Beastmen_TableSmithy</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>8</Crafting>
+			</skillRequirements>
+			<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+			<researchPrerequisite>RH_TET_Beastmen_ElaborateCrown</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Beastmen_GorBodyPartHoofProstheticBase">
+		<defName>RH_TET_Beastmen_GorSteelHoof</defName>
+		<label>steel hoof</label>
+		<description>A hoof made out of steel.</description>
+		<techLevel>Medieval</techLevel>
+		<costList>
+			<Steel>30</Steel>
+		</costList>
+		<statBases>
+			<WorkToMake>10000</WorkToMake>
+			<Mass>5</Mass>
+		</statBases>
+		<techHediffsTags>
+			<li>RH_TET_Beastmen_Gor</li>
+		</techHediffsTags>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>ElectricSmithy</li>
+				<li>FueledSmithy</li>
+				<li>RH_TET_Beastmen_TableSmithy</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+			<unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+			<researchPrerequisite>RH_TET_Beastmen_ElaborateCrown</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+  
+</Defs>

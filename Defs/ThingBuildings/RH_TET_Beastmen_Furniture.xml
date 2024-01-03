@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Beastmen_MeditationFurs</defName>
+		<thingClass>TheEndTimes_Magic.Building_MagicMeditationSpot</thingClass>
+		<label>Commune hide pile</label>
+		<graphicData>
+			<texPath>Things/Building/Magic/RH_TET_Magic_MeditationFurs</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.2)</drawSize>
+			<shadowData>
+				<volume>(0.6, 0.6, 0.6)</volume>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<useHitPoints>true</useHitPoints>
+		<size>(1,1)</size>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<WorkToBuild>300</WorkToBuild>
+			<Comfort>0.6</Comfort>
+			<MarketValue>10</MarketValue>
+			<Mass>3</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+		</statBases>
+		<description>A place to commune with the dark gods in some comfort, will restore magic ability. Made of hides or fabric. Bray shamans are required to build.</description>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Leathery</li>
+			<li>Fabric</li>
+		</stuffCategories>
+		<costStuffCount>25</costStuffCount>
+		<pathCost>1</pathCost>
+		<fillPercent>0.40</fillPercent>
+		<building>
+			<isSittable>true</isSittable>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<rotatable>false</rotatable>
+		<designationCategory>RH_TET_Beastmen_Buildings</designationCategory>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<category>Building</category>
+		<thingCategories>
+			<li>RH_TET_Beastmen_BuildingsFurniture</li>
+		</thingCategories>
+		<passability>Standable</passability>
+		<drawGUIOverlay>True</drawGUIOverlay>
+		<defaultPlacingRot>South</defaultPlacingRot>
+	</ThingDef>
+
+	<ThingDef ParentName="BedBase">
+		<defName>RH_TET_Beastmen_HidePile</defName>
+		<label>Crude bed</label>
+		<description>A crude pile of furs, hides, or fabrics for a beastman to sleep on.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Beastmen_HidePile/RH_TET_Beastmen_HidePile</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.75,2)</drawSize>
+		</graphicData>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Beastmen_BuildingsFurniture</li>
+		</thingCategories>
+		<castEdgeShadows>True</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Mass>2.5</Mass>
+			<BedRestEffectiveness>0.95</BedRestEffectiveness>
+			<ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
+			<Comfort>0.68</Comfort>
+			<WorkToBuild>600</WorkToBuild>
+			<MarketValue>20</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>Dresser</li>
+					<li>EndTable</li>
+					<li>RH_TET_Beastmen_EndTable</li>
+					<li>RH_TET_Beastmen_Dresser</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<size>(1,2)</size>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>40</costStuffCount>
+		<building>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+			<bed_caravansCanUse>true</bed_caravansCanUse>
+		</building>
+		<designationCategory>Furniture</designationCategory>
+		<pathCost>5</pathCost>
+		<passability>Standable</passability>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<designationHotKey>Misc2</designationHotKey>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>RH_TET_Beastmen_PitFightingSpot</defName>
+		<label>Pit fighting spot</label>
+		<description>A place to hold pit fights. Pit fighting area must be clear of impassible obstacles. Fighters will fight with melee weapons if they have them equipped.</description>
+		<thingClass>TheEndTimes_Beastmen.Building_PitFightSpot</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_Beastmen_PitFightingSpot</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<altitudeLayer>FloorEmplacement</altitudeLayer>
+		<statBases>
+			<WorkToBuild>0</WorkToBuild>
+			<MarketValue>0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="TheEndTimes_Beastmen.CompProperties_PitFightSpot"/>
+		</comps>
+		<placeWorkers>
+			<li>TheEndTimes_Beastmen.PlaceWorker_FightingPitRadius</li>
+		</placeWorkers>
+		<useHitPoints>false</useHitPoints>
+		<scatterableOnMapGen>false</scatterableOnMapGen>
+		<designationCategory>RH_TET_Beastmen_Buildings</designationCategory>
+		<passability>Standable</passability>
+		<inspectorTabs>
+			<li>TheEndTimes_Beastmen.ITab_FightingPitManager</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<sowTag>SupportPlantsOnly</sowTag>
+			<canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+			<ai_chillDestination>false</ai_chillDestination>
+		</building>
+		<designationHotKey>Misc12</designationHotKey>
+		<category>Building</category>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Joy</li>
+		</researchPrerequisites>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+	</ThingDef>
+
+	<ThingDef ParentName="BedWithQualityBase">
+		<defName>RH_TET_Beastmen_Bed</defName>
+		<label>crude cot</label>
+		<description>A crude leather and wooden cot. Not the most comfortable thing to sleep on, but easy to make, and better than laying on the floor.\n\nBeastmen aren't generally picky about where they sleep. A crude cot gives even the lowliest ungor a sense that they're more important than they are. Considering the nature of beasts, this isn't a bad thing.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Beastmen_Bed</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.9,1.9)</drawSize>
+			<damageData>
+				<rect>(0,0.05,1,1.95)</rect>
+			</damageData>
+		</graphicData>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Beastmen_BuildingsFurniture</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>EndTable</li>
+					<li>Dresser</li>
+					<li>RH_TET_Beastmen_EndTable</li>
+					<li>RH_TET_Beastmen_Dresser</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>0.0</Beauty>
+			<WorkToBuild>500</WorkToBuild>
+			<Mass>10</Mass>
+			<BedRestEffectiveness>1.0</BedRestEffectiveness>
+			<Comfort>0.75</Comfort>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+			<MarketValue>30</MarketValue>
+		</statBases>
+		<size>(1,2)</size>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<costList>
+			<WoodLog>20</WoodLog>
+		</costList>
+		<building>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+		</building>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>60</pathCost>
+		<staticSunShadowHeight>0.13</staticSunShadowHeight>
+		<castEdgeShadows>True</castEdgeShadows>
+		<designationHotKey>Misc2</designationHotKey>
+		<techLevel>Medieval</techLevel>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<uiIconScale>0.90</uiIconScale>
+		<designationCategory>Furniture</designationCategory>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BedWithQualityBase">
+		<defName>RH_TET_Beastmen_BedDouble</defName>
+		<label>crude double cot</label>
+		<description>A crude leather and wooden cot that sleeps two. Not the most comfortable thing to sleep on, but easy to make, and better than laying on the floor.\n\nBeastmen aren't generally picky about where they sleep. A crude cot gives even the lowliest ungor a sense that they're more important than they are. Considering the nature of beasts, this isn't a bad thing.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Beastmen_DoubleBed</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2.0,2.0)</drawSize>
+			<damageData>
+				<rect>(0,0.05,2,1.95)</rect>
+			</damageData>
+		</graphicData>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Beastmen_BuildingsFurniture</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>EndTable</li>
+					<li>Dresser</li>
+					<li>RH_TET_Beastmen_EndTable</li>
+					<li>RH_TET_Beastmen_Dresser</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>0.0</Beauty>
+			<WorkToBuild>900</WorkToBuild>
+			<Mass>18</Mass>
+			<BedRestEffectiveness>1.0</BedRestEffectiveness>
+			<Comfort>0.75</Comfort>
+			<ImmunityGainSpeedFactor>1.07</ImmunityGainSpeedFactor>
+			<SurgerySuccessChanceFactor>1</SurgerySuccessChanceFactor>
+			<MarketValue>40</MarketValue>
+		</statBases>
+		<size>(2,2)</size>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>80</costStuffCount>
+		<costList>
+			<WoodLog>30</WoodLog>
+		</costList>
+		<building>
+			<bed_showSleeperBody>True</bed_showSleeperBody>
+			<bed_healPerDay>4</bed_healPerDay>
+		</building>
+		<fillPercent>0.4</fillPercent>
+		<pathCost>60</pathCost>
+		<staticSunShadowHeight>0.13</staticSunShadowHeight>
+		<castEdgeShadows>True</castEdgeShadows>
+		<designationHotKey>Misc2</designationHotKey>
+		<techLevel>Medieval</techLevel>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<uiIconScale>0.90</uiIconScale>
+		<designationCategory>Furniture</designationCategory>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef Abstract="True" ParentName="FurnitureWithQualityBase" Name="RH_TET_Beastmen_TableNoGatherBase">
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<pathCost>60</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<canOverlapZones>false</canOverlapZones>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<surfaceType>Item</surfaceType>
+		<designationCategory>Furniture</designationCategory>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Beastmen_TableNoGatherBase">
+		<defName>RH_TET_Beastmen_EndTable</defName>
+		<label>crude end table</label>
+		<description>A small crude bedside table which makes nearby beds a little bit more comfortable. Must be placed directly adjacent to the head of the bed. Placing more than one end table near the same bed has no effect.\n\nBeastmen don't put much stock in furniture. They do sleep a little better knowing that there's a place to put their favored weapon that's within easy reach.</description>
+		<surfaceType>Item</surfaceType>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Beastmen_EndTable</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData>
+			<drawSize>(0.8,0.8)</drawSize>
+		</graphicData>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Beastmen_BuildingsFurniture</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<WorkToBuild>450</WorkToBuild>
+			<Mass>3</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>15</MarketValue>
+		</statBases>
+		<pathCost>60</pathCost>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<costStuffCount>30</costStuffCount>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Comfort>0.1</Comfort>
+				</statOffsets>
+				<maxSimultaneous>1</maxSimultaneous>
+				<mustBePlacedAdjacentCardinalToBedHead>true</mustBePlacedAdjacentCardinalToBedHead>
+			</li>
+		</comps>
+		<staticSunShadowHeight>0</staticSunShadowHeight>
+		<castEdgeShadows>false</castEdgeShadows>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<designationCategory>Furniture</designationCategory>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="FurnitureWithQualityBase">
+		<defName>RH_TET_Beastmen_Dresser</defName>
+		<label>crude bedroom crate</label>
+		<description>A crude crate that beastmen will keep in their bedrooms. Gives a small comfort bonus to all nearby beds. Placing more than one dresser near the same bed has no effect.\n\nBeastmen don't really own personal items, but a random interesting rock, or perhaps a dead or unconscious victim that will later be eater may be stuffed inside. The more sane races of the old world would never even bother opening such a box.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Beastmen_Dresser</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1.8,.9)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Beastmen_BuildingsFurniture</li>
+		</thingCategories>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<pathCost>60</pathCost>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<costStuffCount>60</costStuffCount>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>8</Mass>
+			<WorkToBuild>1000</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>20</MarketValue>
+		</statBases>
+		<size>(2,1)</size>
+		<designationHotKey>Misc12</designationHotKey>
+		<staticSunShadowHeight>0.3</staticSunShadowHeight>
+		<surfaceType>Item</surfaceType>
+		<canOverlapZones>false</canOverlapZones>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<comps>
+			<li Class="CompProperties_Facility">
+				<statOffsets>
+					<Comfort>0.1</Comfort>
+				</statOffsets>
+				<maxSimultaneous>1</maxSimultaneous>
+				<maxDistance>6</maxDistance>
+			</li>
+		</comps>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<designationCategory>Furniture</designationCategory>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="FurnitureWithQualityBase">
+		<defName>RH_TET_Beastmen_Stool</defName>
+		<label>crude stool</label>
+		<description>A stool for sitting on. Not very comfortable, but somewhat better than nothing. It is beastman craftsmanship, so its quality and value are minimal.\n\nEven a beast that doesn't value furniture would use a stool if it was present.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Beastmen_Stool</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+				<rectN>(0.125,0.296875,0.734375,0.421875)</rectN>
+				<rectS>(0.125,0.296875,0.734375,0.421875)</rectS>
+				<rectE>(0.234375,0.296875,0.5,0.546875)</rectE>
+				<rectW>(0.234375,0.296875,0.5,0.546875)</rectW>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+			<shadowData>
+				<volume>(0.18, 0.23, 0.18)</volume>
+			</shadowData>
+			<drawSize>.9</drawSize>
+		</graphicData>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Beastmen_BuildingsFurniture</li>
+		</thingCategories>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<WorkToBuild>250</WorkToBuild>
+			<Mass>2</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>0.0</Beauty>
+			<Comfort>0.5</Comfort>
+			<MarketValue>10</MarketValue>
+		</statBases>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>25</costStuffCount>
+		<pathCost>30</pathCost>
+		<designationHotKey>Misc6</designationHotKey>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<fillPercent>0.20</fillPercent>
+		<building>
+			<isSittable>true</isSittable>
+		</building>
+		<uiIconOffset>(0, -0.05)</uiIconOffset>
+		<designationCategory>Furniture</designationCategory>
+		<constructionSkillPrerequisite>2</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef Abstract="True" ParentName="FurnitureWithQualityBase" Name="RH_TET_Beastmen_TableBase">
+		<thingClass>Building</thingClass>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<castEdgeShadows>true</castEdgeShadows>
+		<pathCost>60</pathCost>
+		<fillPercent>0.4</fillPercent>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<canOverlapZones>false</canOverlapZones>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<surfaceType>Eat</surfaceType>
+		<comps>
+			<li>
+				<compClass>CompGatherSpot</compClass>
+			</li>
+		</comps>
+		<designationCategory>Furniture</designationCategory>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Beastmen_BuildingsFurniture</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Beastmen_TableBase">
+		<defName>RH_TET_Beastmen_Table1x2c</defName>
+		<label>crude table (1x2)</label>
+		<description>A crude but functional table.\n\nEating is important to everyone.\n\nIf a table was present, even a beastman would use it rather than eating without one; despite their innate hatred of all things related to civilization.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Beastmen_Table1x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,4)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.8</uiIconScale>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<WorkToBuild>450</WorkToBuild>
+			<Mass>4</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>15</MarketValue>
+		</statBases>
+		<size>(1,2)</size>
+		<costStuffCount>35</costStuffCount>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Beastmen_TableBase">
+		<defName>RH_TET_Beastmen_Table2x2c</defName>
+		<label>crude table (2x2)</label>
+		<description>A crude but functional table.\n\nRoughly cut wood crudely nailed together. The legs still have raw bark edges. Provides no beauty, but does provide a spot to eat, or sit and relax.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Beastmen_Tabe2x2</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,4)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.8</uiIconScale>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>850</WorkToBuild>
+			<Mass>10</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>20</MarketValue>
+		</statBases>
+		<size>(2,2)</size>
+		<costStuffCount>70</costStuffCount>
+		<rotatable>false</rotatable>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Beastmen_TableBase">
+		<defName>RH_TET_Beastmen_Table3x3c</defName>
+		<label>crude table (3x3)</label>
+		<description>A huge, crude, yet functional table.\n\nRoughly cut wood crudely nailed together. The legs still have raw bark edges. Provides no beauty, but does provide a spot to eat, or sit and relax.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Beastmen_Tabe3x3</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5.8,5.8)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.8</uiIconScale>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToBuild>1150</WorkToBuild>
+			<Mass>13</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>25</MarketValue>
+		</statBases>
+		<size>(3,3)</size>
+		<costStuffCount>105</costStuffCount>
+		<rotatable>false</rotatable>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Beastmen_TableBase">
+		<defName>RH_TET_Beastmen_Table2x4c</defName>
+		<label>crude table (2x4)</label>
+		<description>A huge, crude, yet functional table.\n\nRoughly cut wood crudely nailed together. The legs still have raw bark edges. Provides no beauty, but does provide a spot to eat, or sit and relax.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Beastmen_Tabe2x4</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4,6)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToBuild>1500</WorkToBuild>
+			<Mass>25</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>25</MarketValue>
+		</statBases>
+		<size>(2,4)</size>
+		<costStuffCount>105</costStuffCount>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+ 
+	<ThingDef ParentName="ArtableFurnitureBase">
+		<defName>RH_TET_Beastmen_DiningChair</defName>
+		<label>crude dining chair</label>
+		<description>A crude yet functional. Can be used at tables, work stations, and elsewhere.\n\nProvides no beauty, but is much better than sitting on the floor. Made of rough cut wood, hide, and leather straps.</description>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Beastmen_DiningChair</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.5)</drawSize>
+			<damageData>
+				<rectN>(0.25,0.234375,0.5,0.28125)</rectN>
+				<rectS>(0.25,0.234375,0.5,0.28125)</rectS>
+				<rectE>(0.28125,0.25,0.453125,0.25)</rectE>
+				<rectW>(0.28125,0.25,0.453125,0.25)</rectW>
+			</damageData>
+			<shadowData>
+				<volume>(0.23, 0.26, 0.23)</volume>
+			</shadowData>
+		</graphicData>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Beastmen_BuildingsFurniture</li>
+		</thingCategories>
+		<uiIconScale>0.7</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<WorkToBuild>1500</WorkToBuild>
+			<Mass>3</Mass>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+			<Comfort>0.70</Comfort>
+			<MarketValue>25</MarketValue>
+		</statBases>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>30</costStuffCount>
+		<costList>
+			<WoodLog>20</WoodLog>
+		</costList>
+		<pathCost>30</pathCost>
+		<designationHotKey>Misc7</designationHotKey>
+		<fillPercent>0.35</fillPercent>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+			<isSittable>true</isSittable>
+		</building>
+		<constructionSkillPrerequisite>3</constructionSkillPrerequisite>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<designationCategory>Furniture</designationCategory>
+		<tradeTags>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</tradeTags>
+	</ThingDef>
+  
+	<ThingDef ParentName="FurnitureWithQualityBase">
+		<defName>RH_TET_Beastmen_Shelf</defName>
+		<label>crude storage box</label>
+		<description>Very crude wooden box for storing things. Ugly, but effective.</description>
+		<thingClass>Building_Storage</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Furniture/RH_TET_Beastmen_Shelf</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,2)</drawSize>
+		</graphicData>
+		<thingCategories Inherit="False">
+			<li>RH_TET_Beastmen_BuildingsFurniture</li>
+		</thingCategories>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<pathCost>50</pathCost>
+		<stuffCategories>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>30</costStuffCount>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Mass>6</Mass>
+			<WorkToBuild>450</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>25</MarketValue>
+		</statBases>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<size>(2,1)</size>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<building>
+			<preventDeteriorationOnTop>true</preventDeteriorationOnTop>
+			<ignoreStoredThingsBeauty>true</ignoreStoredThingsBeauty>
+			<!-- new for 1.4 -->
+			<maxItemsInCell>3</maxItemsInCell>
+			<storageGroupTag>Shelf</storageGroupTag>
+			<blueprintClass>Blueprint_Storage</blueprintClass>
+			<defaultStorageSettings>
+				<priority>Preferred</priority>
+				<filter>
+					<categories>
+						<li>Foods</li>
+						<li>Manufactured</li>
+						<li>ResourcesRaw</li>
+						<li>Items</li>
+						<li>Weapons</li>
+						<li>Apparel</li>
+						<li>BodyParts</li>
+					</categories>
+				</filter>
+			</defaultStorageSettings>
+			<paintable>true</paintable>
+			<fixedStorageSettings>
+				<filter>
+					<disallowNotEverStorable>true</disallowNotEverStorable>
+					<categories>
+						<li>Root</li>
+					</categories>
+					<disallowedCategories>
+						<li>Plants</li>
+						<li>Buildings</li>
+					</disallowedCategories>
+					<disallowedThingDefs MayRequire="Ludeon.RimWorld.Biotech">
+						<li MayRequire="Ludeon.RimWorld.Biotech">Wastepack</li>
+					</disallowedThingDefs>
+					<specialFiltersToDisallow>
+						<li>AllowLargeCorpses</li>
+					</specialFiltersToDisallow>
+				</filter>
+			</fixedStorageSettings>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<designationHotKey>Misc12</designationHotKey>
+		<staticSunShadowHeight>0.5</staticSunShadowHeight>
+		<surfaceType>Item</surfaceType>
+		<canOverlapZones>false</canOverlapZones>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Furniture</li>
+		</researchPrerequisites>
+		<tickerType>Normal</tickerType>
+		<minifiedDef>MinifiedThing</minifiedDef>
+	</ThingDef>
+  
+</Defs>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchTabDef>
+		<defName>RH_TET_Beastmen_Tab</defName>
+		<label>Beastmen</label>
+	</ResearchTabDef>
+
+	<ResearchProjectDef Name="RH_TET_BeastmenResearch" Abstract="True">
+		<techLevel>Medieval</techLevel>
+		<tab>RH_TET_Beastmen_Tab</tab>
+		<requiredResearchBuilding>RH_TET_Beastmen_ResearchBench</requiredResearchBuilding>
+	</ResearchProjectDef>
+
+	<ResearchProjectTagDef>
+		<defName>RH_TET_Beastmen_ProjectTag</defName>
+	</ResearchProjectTagDef>
+
+	<!-- Column 1 -->
+
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_Apparel_Basic</defName>
+		<label>Basic Apparel</label>
+		<description>Unlocks the ability to make basic beastmen apparel. Nothing fancy, in fact, they're rather gross, but they will provide some protection from the elements.</description>
+		<baseCost>250</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<researchViewX>0</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_Cooking</defName>
+		<label>Meat Preservation &amp; Cooking</label>
+		<description>Allows beastmen to make meat jerky by cooking a brined meat, then putting it in a meat smoking pit.</description>
+		<baseCost>500</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<researchViewX>0</researchViewX>
+		<researchViewY>.75</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_WeaponsMelee_Basic</defName>
+		<label>Crude Weapons</label>
+		<description>Allows beastmen to construct crude clubs and the like. Includes knives.</description>
+		<baseCost>100</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<researchViewX>0</researchViewX>
+		<researchViewY>1.5</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_WeaponsRanged_Basic</defName>
+		<label>Crude Ranged Weapons</label>
+		<description>Allows beastmen to construct crude but cunningly effective bows, and throwing axes.</description>
+		<baseCost>350</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<researchViewX>0</researchViewX>
+		<researchViewY>2.25</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_WallsDoors</defName>
+		<label>Crude Structures</label>
+		<description>Allows beastmen to make walls and doors out of leather or fabric, as well as crude vents.</description>
+		<baseCost>250</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<researchViewX>0</researchViewX>
+		<researchViewY>3.0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_Furniture</defName>
+		<label>Crude Furniture</label>
+		<description>Allows beastmen to make crude beds out of furs, as well as meditiation spots. In addition, allows the construction of unique beastman work tables.</description>
+		<baseCost>100</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<researchViewX>0</researchViewX>
+		<researchViewY>3.75</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_ElaborateCrown</defName>
+		<label>Metallic Horns &amp; Hooves</label>
+		<description>Allows beastmen to make elaborate horns out of precious metals, and prosthetic hooves out of steel.</description>
+		<baseCost>500</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<researchViewX>0</researchViewX>
+		<researchViewY>4.5</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_Art_Basic</defName>
+		<label>Small Herdstones</label>
+		<description>Allows beastmen to make herdstones as art pieces.</description>
+		<baseCost>250</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<researchViewX>0</researchViewX>
+		<researchViewY>5.25</researchViewY>
+	</ResearchProjectDef>
+
+
+	<!-- Column 2 -->
+  
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_ArmorBasic</defName>
+		<label>Armor</label>
+		<description>Allows beastmen to build basic armor and shields. Includes basic helmets.</description>
+		<baseCost>500</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Beastmen_Apparel_Basic</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+  
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_ApparelShaman</defName>
+		<label>Shaman Apparel</label>
+		<description>Allows beastmen to shaman robes and hoods.</description>
+		<baseCost>300</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Beastmen_Apparel_Basic</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>0.75</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_WeaponsMelee_Mid</defName>
+		<label>Crude Bladed Weapons</label>
+		<description>Allows beastmen to construct crude swords and axes. Ungor spears as well.</description>
+		<baseCost>300</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Beastmen_WeaponsMelee_Basic</li>
+		</prerequisites>
+		<researchViewX>1</researchViewX>
+		<researchViewY>1.5</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_WorkBuildings</defName>
+		<label>Work &amp; Production</label>
+		<description>Allows beastmen to construct work tables, bonfires, and the like.</description>
+		<baseCost>250</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<researchViewX>1</researchViewX>
+		<researchViewY>2.25</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_Joy</defName>
+		<label>Cruel Recreation</label>
+		<description>Allows beastmen to make a fighting pit, where you can stage fights between your pawns for the joy of the herd.</description>
+		<baseCost>100</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<researchViewX>1</researchViewX>
+		<researchViewY>4.5</researchViewY>
+	</ResearchProjectDef>
+
+	<!-- Column 3 -->
+  
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_ArmorMid</defName>
+		<label>Leader Armor</label>
+		<description>Unlocks the ability to make warmor armor and helms. Better than basic, but still not great.</description>
+		<baseCost>500</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Beastmen_ArmorBasic</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="RH_TET_BeastmenResearch">
+		<defName>RH_TET_Beastmen_WeaponsMelee_Advanced</defName>
+		<label>Crude Great Weapons</label>
+		<description>Allows beastmen to construct large and powerful weapons.</description>
+		<baseCost>450</baseCost>
+		<tags>
+			<li>RH_TET_Beastmen_ProjectTag</li>
+		</tags>
+		<prerequisites>
+			<li>RH_TET_Beastmen_WeaponsMelee_Mid</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>1.5</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

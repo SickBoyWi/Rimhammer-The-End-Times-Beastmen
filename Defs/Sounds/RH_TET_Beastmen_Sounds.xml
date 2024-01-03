@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<SoundDef>
+		<defName>RH_TET_Beastmen_StandardMessage</defName>
+		<eventNames/>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Beastmen_StandardMessage</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>45</min>
+					<max>45</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Beastmen_Braying</defName>
+		<sustain>True</sustain>
+		<context>MapOnly</context>
+		<eventNames/>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<muteWhenPaused>True</muteWhenPaused>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Beastmen_Braying</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>18</min>
+					<max>22</max>
+				</volumeRange>
+				<distRange>
+					<min>1</min>
+					<max>50</max>
+				</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_Beastmen_DrumPlay</defName>
+		<context>MapOnly</context>
+		<sustain>True</sustain>
+		<sustainFadeoutTime>0.1</sustainFadeoutTime>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Beastmen_PlayDrum</clipPath>
+					</li>
+				</grains>
+				<volumeRange>35~65</volumeRange>
+				<distRange>10~35</distRange>
+				<sustainLoop>True</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+	<SoundDef>
+		<defName>RH_TET_Beastmen_AxHitWood</defName>
+		<context>MapOnly</context>
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Beastmen_AxHitWood</clipPath>
+					</li>
+				</grains>
+				<volumeRange>8~12</volumeRange>
+				<pitchRange>0.9~1.1</pitchRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+	<SoundDef>
+		<defName>RH_TET_Beastmen_Victory</defName>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<onCamera>True</onCamera>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>RH_TET_Beastmen_Victory</clipPath>
+					</li>
+				</grains>
+				<volumeRange>
+					<min>50</min>
+					<max>50</max>
+				</volumeRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+  
+</Defs>

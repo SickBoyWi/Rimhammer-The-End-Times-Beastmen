@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Gor -->
+  
+	<!-- Adulthood -->
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_Bestigor</defName>
+		<title>big horned</title>
+		<titleShort>horned</titleShort>
+		<baseDesc>[PAWN_nameDef]'s horns show that [PAWN_pronoun] belongs to the strongest of the beasts. Larger horns are carried with pride; proof that [PAWN_pronoun] is blessed with strength and stands above the lesser kin.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+	
+		<forcedHediffs>
+			<li>RH_TET_Beastmen_BestigorHornLeft</li>
+			<li>RH_TET_Beastmen_BestigorHornRight</li>
+		</forcedHediffs>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>5</value>
+			</li>
+			<li>
+				<key>Shooting</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Animals</key>
+				<value>5</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Bestigor</li>
+		</spawnCategories>
+		<forcedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>50</chance>
+				<commonalityMale>100</commonalityMale>
+				<commonalityFemale>10</commonalityFemale>
+			</li>
+			<li>
+				<defName>Tough</defName>
+				<chance>20</chance>
+			</li>
+		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_GorTurned</defName>
+		<title>mutant</title>
+		<titleShort>mutant</titleShort>
+		<baseDesc>[PAWN_nameDef] was turned by chaos in [PAWN_possessive] middle years. Once the realization set in of what [PAWN_pronoun] had become, [PAWN_pronoun] embraced the new emotion and became as violent and ornry as the rest of the beasts.</baseDesc>
+
+		<bodyTypeMale>Fat</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Shooting</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Gor</li>
+		</spawnCategories>
+		<forcedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>25</chance>
+				<commonalityMale>100</commonalityMale>
+				<commonalityFemale>10</commonalityFemale>
+			</li>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>5</chance>
+			</li>
+		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<linkedBackstory>RH_TET_Beastmen_GorChild</linkedBackstory>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_GorTurnedRich</defName>
+		<title>mutant</title>
+		<titleShort>mutant</titleShort>
+		<baseDesc>[PAWN_nameDef] was born a mutant. [PAWN_pronoun] was left in the wild by loving human parents, and was found by a roving beast herd that took [PAWN_objective] in.</baseDesc>
+
+		<bodyTypeMale>Fat</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Shooting</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Gor</li>
+		</spawnCategories>
+		<forcedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>25</chance>
+				<commonalityMale>100</commonalityMale>
+				<commonalityFemale>10</commonalityFemale>
+			</li>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>5</chance>
+			</li>
+		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<linkedBackstory>RH_TET_Beastmen_GorChildRich</linkedBackstory>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_GorRaider</defName>
+		<title>raider</title>
+		<titleShort>raider</titleShort>
+		<baseDesc>[PAWN_nameDef] is cut from the same cloth as the rest of the herd. [PAWN_pronoun] loves causing mayhem and destruction.</baseDesc>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Shooting</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Gor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_GorThrall</defName>
+		<title>thrall</title>
+		<titleShort>thrall</titleShort>
+		<baseDesc>[PAWN_nameDef] performs menial task for the herd, and is generally treated as a peon. This causing [PAWN_objective] much frustration, and [PAWN_pronoun] takes that out on any one lesser than [PAWN_objective]self.</baseDesc>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Construction</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Mining</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Gor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_GorGrunt</defName>
+		<title>grunt</title>
+		<titleShort>grunt</titleShort>
+		<baseDesc>[PAWN_nameDef] is an average rough and vile Gor. Tough, ornry, and always ready to fight.</baseDesc>
+
+		<bodyTypeMale>Fat</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Gor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- Childhood -->
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_GorWild</defName>
+		<title>wildling</title>
+		<titleShort>wild</titleShort>
+		<baseDesc>[PAWN_nameDef] was born as a gor to a human family. [PAWN_pronoun] was left in the wilds like so many other mutant children, and was rescued by a nearby gor herd that heard the mutant child calling.</baseDesc>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Artistic</li>
+			<li>Intellectual</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Gor</li>
+			<li>RH_TET_Beastmen_Bestigor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_GorChild</defName>
+		<title>herd born</title>
+		<titleShort>herd</titleShort>
+		<baseDesc>[PAWN_nameDef] was born as a gor, to beastman parents. The only life [PAWN_pronoun] ever knew is one with the herd.</baseDesc>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Shooting</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Crafting</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Artistic</li>
+			<li>Intellectual</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Gor</li>
+			<li>RH_TET_Beastmen_Bestigor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_GorStrange</defName>
+		<title>strange</title>
+		<titleShort>strange</titleShort>
+		<baseDesc>[PAWN_nameDef] was born as a mutant. Abandoned like so many other mutants, [PAWN_pronoun] was left to die or fend for [PAWN_objective]self in the wild. [PAWN_nameDef] was stranger than the rest of the mutant children, having a mind touched by chaos throwing [PAWN_objective] into a mania from time to time.</baseDesc>
+
+		<bodyTypeMale>Fat</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Artistic</key>
+				<value>2</value>
+			</li>
+			<li>
+				<key>Melee</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<forcedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>25</chance>
+			</li>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>25</chance>
+			</li>
+			<li>
+				<defName>Nerves</defName>
+				<degree>-2</degree>
+				<chance>98</chance>
+			</li>
+		</forcedTraitsChance>
+		<workDisables>
+			<li>Caring</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Gor</li>
+			<li>RH_TET_Beastmen_Bestigor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Artistic</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_GorChildFarmer</defName>
+		<title>farm child</title>
+		<titleShort>farmer</titleShort>
+		<baseDesc>[PAWN_nameDef] wasn't born as a mutant. [PAWN_pronoun] grew up as a farmer's child.  [PAWN_nameDef] was corrupted by chaos in [PAWN_possessive] mid 20s, and ran off to the woods where [PAWN_pronoun] joined a wandering beast herd.</baseDesc>
+
+		<bodyTypeMale>Fat</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Crafting</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Plants</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Gor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>PlantWork</li>
+			<li>Crafting</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_GorChildRich</defName>
+		<title>rich child</title>
+		<titleShort>rich</titleShort>
+		<baseDesc>[PAWN_nameDef] wasn't born as a mutant, but was born into a rich human family. [PAWN_pronoun] spent [PAWN_possessive] childhood studying the arts of a aristocrat. [PAWN_nameDef] was turned by chaos later in life during a chaos storm, and joined herd after having lived in the wilds alone for a short time.</baseDesc>
+
+		<bodyTypeMale>Fat</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Intellectual</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Social</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Artistic</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Gor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Artistic</li>
+			<li>Social</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+</Defs>

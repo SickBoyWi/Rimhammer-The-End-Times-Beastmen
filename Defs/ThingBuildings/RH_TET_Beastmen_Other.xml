@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Beastmen_GreatOakDead</defName>
+		<label>dead great oak</label>
+		<description>A massive dead tree. It clearly fell over at some point, has has laid for years or even generations. Can be deconstructed for much wood.</description>
+		<graphicData>
+			<texPath>Things/Plants_Dead/GreatOak_Dead</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawRotated>false</drawRotated>
+			<shadowData>
+				<volume>(0.55, 0.2, 0.2)</volume>
+				<offset>(0,0,-0.25)</offset>
+			</shadowData>
+			<drawSize>(9,3)</drawSize>
+		</graphicData>
+		<tickerType>Rare</tickerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>Impassable</passability>
+		<selectable>true</selectable>
+		<destroyable>true</destroyable>
+		<useHitPoints>true</useHitPoints>
+		<costList>
+			<WoodLog>175</WoodLog>
+		</costList>
+		<comps/>
+		<statBases>
+			<MaxHitPoints>3500</MaxHitPoints>
+			<WorkToBuild>5000</WorkToBuild>
+			<Flammability>1</Flammability>
+			<Beauty>12</Beauty>
+			<MarketValue>25</MarketValue>
+		</statBases>
+		<fillPercent>0.25</fillPercent>
+		<building>
+			<ai_chillDestination>true</ai_chillDestination>
+			<deconstructible>true</deconstructible>
+		</building>
+		<repairEffect/>
+		<rotatable>false</rotatable>
+	</ThingDef>
+
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>RH_TET_UnfinishedDrum</defName>
+		<label>unfinished drum</label>
+		<description>An unfinished drum.</description>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<graphicData>
+			<texPath>Things/Items/Misc/RH_TET_UnfinishedInstrument</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_Beastmen_MusicalInstrumentBase" ParentName="BuildingBase" Abstract="True">
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>true</rotatable>
+		<thingClass>TheEndTimes_Beastmen.Building_Drum</thingClass>
+		<tickerType>Normal</tickerType>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<hasInteractionCell>true</hasInteractionCell>
+		<thingCategories>
+			<li>RH_TET_Beastmen_BuildingsJoy</li>
+		</thingCategories>
+		<tradeTags>
+			<li>RH_TET_Instrument</li>
+		</tradeTags>
+		<recipeMaker>
+			<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Sculpt</soundWorking>
+			<unfinishedThingDef>RH_TET_UnfinishedDrum</unfinishedThingDef>
+		</recipeMaker>
+		<building>
+			<joyKind>RH_TET_Music</joyKind>
+		</building>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li>
+				<compClass>CompGatherSpot</compClass>
+			</li>
+			<li Class="TheEndTimes_Beastmen.CompProperties_MoteThrower">
+				<mote>RH_TET_MoteMusic</mote>
+				<offsetMin>(-0.6,0,0.3)</offsetMin>
+				<offsetMax>(0.6,0,0.5)</offsetMax>
+				<emissionInterval>150</emissionInterval>
+				<scale>0.4~0.8</scale>
+				<rotationRate>-15~15</rotationRate>
+				<velocityX>0.3~0.7</velocityX>
+				<velocityY>0.3~0.8</velocityY>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowInstrumentAoE</li><!--CREATURE UNIQUE? I think not.-->
+		</placeWorkers>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Beastmen_MusicalInstrumentBase">
+		<defName>RH_TET_Beastmen_Drum</defName>
+		<label>bestial drum</label>
+		<description>A simple but effective drum. Hide is stretched over a wooden frame.\n\nIt can be crafted at a crafting spot.\n\nListening to the drum beat will soothe a beastman, and remove their need for violence.</description>
+		<size>(1,1)</size>
+		<pathCost>30</pathCost>
+		<minTechLevelToBuild>Medieval</minTechLevelToBuild>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<soundPlayInstrument>RH_TET_Beastmen_DrumPlay</soundPlayInstrument>
+		<researchPrerequisites><li>RH_TET_Beastmen_Joy</li></researchPrerequisites>
+		<thingSetMakerTags><li>RH_TET_Beastmen_RewardStandardQualitySuper</li></thingSetMakerTags>
+		<statBases>
+			<MaxHitPoints>70</MaxHitPoints>
+			<WorkToMake>15000</WorkToMake>
+			<Mass>4</Mass>
+			<JoyGainFactor>1</JoyGainFactor>
+			<Beauty>0</Beauty>
+			<MarketValue>50</MarketValue>
+		</statBases>
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>3</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>RH_TET_Beastmen_Joy</researchPrerequisite>
+			<recipeUsers>
+				<li>CraftingSpot</li>
+				<li>FueledSmithy</li>
+				<li>RH_TET_TableSmithy</li>
+				<li>RH_TET_Beastmen_TableSmithy</li>
+			</recipeUsers>
+		</recipeMaker>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<costStuffCount>75</costStuffCount>
+		<costList>
+			<WoodLog>75</WoodLog>
+		</costList>
+		<building>
+			<instrumentRange>15</instrumentRange>
+		</building>
+		<uiIconOffset>(0, 0.08)</uiIconOffset>
+		<uiIconScale>0.9</uiIconScale>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_Beastmen_Drum</texPath>
+			<drawSize>(2,2)</drawSize>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawRotated>false</drawRotated>
+			<allowFlip>false</allowFlip>
+			<shadowData>
+				<volume>(0.08, 0.2, 0.08)</volume>
+				<offset>(0, 0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.3,0.3,0.4,0.4)</rect>
+			</damageData>
+		</graphicData>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Beastmen_AxTarget</defName>
+		<label>throwing axe target</label>
+		<description>A large block of wood, used to throw axes at.</description>
+		<graphicData>
+			<texPath>Things/Building/Misc/RH_TET_Beastmen_AxeTarget</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.08, 0.2, 0.08)</volume>
+				<offset>(0, 0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.3,0.3,0.4,0.4)</rect>
+			</damageData>
+			<drawSize>(1.5,1.5)</drawSize>
+		</graphicData>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<minTechLevelToBuild>Neolithic</minTechLevelToBuild>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<thingCategories>
+			<li>RH_TET_Beastmen_BuildingsJoy</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>125</MaxHitPoints>
+			<WorkToBuild>100</WorkToBuild>
+			<Mass>8</Mass>
+			<Flammability>1.0</Flammability>
+			<JoyGainFactor>1</JoyGainFactor>
+			<MarketValue>25</MarketValue>
+		</statBases>
+		<costList>
+			<WoodLog>10</WoodLog>
+			<Steel>10</Steel>
+		</costList>
+		<building>
+			<joyKind>Gaming_Dexterity</joyKind>
+			<watchBuildingStandDistanceRange>5~5</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>3</watchBuildingStandRectWidth>
+			<watchBuildingInSameRoom>true</watchBuildingInSameRoom>
+			<artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+		</building>
+		<uiIconScale>0.7</uiIconScale>
+		<pathCost>14</pathCost>
+		<placeWorkers>
+			<li>PlaceWorker_WatchArea</li>
+		</placeWorkers>
+		<designationCategory>Joy</designationCategory>
+		<designationHotKey>Misc1</designationHotKey>
+		<researchPrerequisites>
+			<li>RH_TET_Beastmen_Joy</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef Name="RH_TET_Beastmen_HeadSpikeBase" ParentName="BuildingBase" Abstract="true">
+		<thingClass>TheEndTimes_Beastmen.Building_HeadSpike</thingClass>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1.5,1.5)</drawSize>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<defaultPlacingRot>North</defaultPlacingRot>
+		<rotatable>false</rotatable>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.1</fillPercent>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<WorkToBuild>100</WorkToBuild>
+			<Mass>3</Mass>
+			<Beauty>-5</Beauty>
+			<Flammability>1.0</Flammability>
+			<MeditationFocusStrength>0.15</MeditationFocusStrength>
+			<MarketValue>0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes>
+					<li>Morbid</li>
+				</focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_GraveCorpseRelationship">
+						<offset>0.15</offset>
+					</li>
+				</offsets>
+			</li>
+		</comps>
+		<uiIconScale>.5</uiIconScale>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<thingCategories>
+			<li>RH_TET_Beastmen_BuildingsHeadsOnSpikes</li>
+		</thingCategories>
+		<building>
+			<isInert>true</isInert>
+		</building>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikeHuman</defName>
+		<label>human head on spike</label>
+		<description>A human head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikeHuman</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikeDawi</defName>
+		<label>dawi head on spike</label>
+		<description>A dwarfen head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikeDawi</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikeSlayer</defName>
+		<label>slayer head on spike</label>
+		<description>A dwarf slayer head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikeSlayer</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikeBrayGor</defName>
+		<label>bray shaman head on spike</label>
+		<description>A bray shaman's head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikeBrayGor</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikeGor</defName>
+		<label>gor head on spike</label>
+		<description>A gor beastman's head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikeGor</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikeUngor</defName>
+		<label>ungor head on spike</label>
+		<description>An ungor beastman's head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikeUngor</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikeBullgor</defName>
+		<label>bullgor head on spike</label>
+		<description>A bullgor beastman's head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikeBullgor</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikeCygor</defName>
+		<label>cygor head on spike</label>
+		<description>A cygor beastman's head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikeCygor</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikeKhorngor</defName>
+		<label>khorngor head on spike</label>
+		<description>A khorngor beastman's head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikeKhorngor</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikePestigor</defName>
+		<label>pestigor head on spike</label>
+		<description>A pestigor beastman's head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikePestigor</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikeTzaangor</defName>
+		<label>tzaangor head on spike</label>
+		<description>A tzaangor beastman's head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikeTzaangor</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikeSlaangor</defName>
+		<label>slaangor head on spike</label>
+		<description>A slaangor beastman's head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikeSlaangor</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_HeadSpikeBase">
+		<defName>RH_TET_Beastmen_HeadSpikeSkaven</defName>
+		<label>skaven head on spike</label>
+		<description>A skaven's head impaled on a wooden spike. A warning perhaps, to keep intelligent beings away.</description>
+		<graphicData>
+			<texPath>Things/Building/HeadsOnSpikes/RH_TET_Beastmen_HeadSpikeSkaven</texPath>
+		</graphicData>
+	</ThingDef>
+ 
+</Defs>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Rimhammer - The End Times - Beastmen</name>
+	<author>SickBoyWI</author>
+	<supportedVersions><li>1.2</li><li>1.3</li><li>1.4</li></supportedVersions>
+	<packageId>SickBoyWi.TheEndTimes.Beastmen</packageId>
+	<description>
+IF YOU HAVE ISSUES, YOU'LL GET A MUCH FASTER RESPONSE BY POSTING ON MY DISCORD ISSUES-AND-BUGS CHANNEL: https://discord.gg/UCmQbCT
+
+This mod adds Warhammer Beastmen into Rimworld. Play the ultimate RimWorld tribal game with this mod!
+
+This is the second extension of the base 'Rimhammer - The End Times' mod, and is intended to be used with the base mod; however, that isn't required. This mod will work without the base Rimhammer - The End Times mod.
+
+Required mods (all must be loaded before this mod):
+Harmony
+Jec's Tools
+Jec's Doors Expanded
+HugsLib
+Humanoid Alien Races 2.0
+Rimhammer - The End Times (OPTIONAL)
+Rimhammer - The End Times - Magic
+
+If you're using the base Rimhammer - The End Times mod, you should load that immediately before the Rimhammer Magic mod, and after the other previously mentioned required mods, and before this one. The Rimhammer mods should be placed at the bottom of your mod list. Place the base Rimhammer - The End Times mod at the bottom, then the Rimhammer - Then End Times - Magic mod, then the race/faction mods under those.
+  
+Recommended Mods:
+Storage Extended (NOTE: The beastman storage building will behave like an Extended Storage shelf that can hold most anything if you have this mod active.)
+Rim of Madness - Bones
+Medieval Bones
+Better Walls &amp; Floors
+Respect the Scars
+
+Mod Settings: 
+The mod settings for this mod control the way Beastmen think about the wealth of their colony. If you are going for a beastman building game, turn off the 'Herd is Getting Soft' mod setting. There is also a setting for the frequency of the events fired off by the herdstone. I recommend setting it to -10, the lowest setting, unless you're looking for lots of excitement (even the 0 setting is tough!). 
+
+Here's a list of some of what it includes, all Beastman themed:
+	-New races: gor, ungor, cygor, bray shamans, and bullgor, chaos creatures/monsters: warhounds, tuskgor, razorgor, jabberslythes, and spawn, olde growth forest biome, research, magic (Lores of: The Wild, Beasts, Death, Shadow, and Tzeentch), massive herdstone with sacrifices and offerings, pit fights between your pawns, game alterations for beastmen to make them sustainable on meat alone, a unique nutrient paste dispenser like cauldron for cheap easy feeding, making meat into jerky, bonfires, crude furniture, crude workbenches, statues (herdstones), tent walls and doors, backstories, weapons, apparel, magic weapons and items, shields, recreation (axe throwing and drums), Unique events: Nearby Homestead and Nearby Caravan, and more!
+
+This mod series will not be released fast. I'm one person, and the amount of work involved is significant. This mod took hundreds hours of work to make, and many more to upkeep and update, no joke.
+
+Super special thanks to Discord users "Dino's Bar and Grill" for the forge/anvil texture, and leugimimi for patching several popular mods to work with this mod!!
+
+If you'd like to speed up the process of release, please consider supporting me on Patreon. The more support I get, the more motivated I will be to create more races/factions. https://www.patreon.com/SickBoyWI	
+
+Buy me a coffee if you'd prefer to support me that way: https://ko-fi.com/sickboywi	
+	
+========================
+Changelog
+========================
+
+0.0.1.0 2020-01-11
+========================
+Final development version released for testing. So close to actually being done now!
+
+0.0.0.1 2019-07-02
+========================
+Development started. 
+
+	</description>
+</ModMetaData>

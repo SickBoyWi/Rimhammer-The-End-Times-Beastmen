@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Resources -->
+	<ThingDef ParentName="ResourceBase">
+		<defName>RH_TET_Coal</defName>
+		<label>coal</label>
+		<description>A lump of dark, dirty coal. Can be used to fuel for forges, stoves, torches and campfires.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Coal</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>ChunkRock_Drop</soundInteract>
+		<soundDrop>ChunkRock_Drop</soundDrop>
+		<statBases>
+			<MarketValue>1.0</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Mass>0.4</Mass>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>2</deepCommonality>
+		<deepCountPerPortion>35</deepCountPerPortion>
+		<deepLumpSizeRange>
+			<min>15</min>
+			<max>50</max>
+		</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef>
+		<defName>RH_TET_WoodenStakes</defName>
+		<label>Wooden Stakes</label>
+		<techLevel>Medieval</techLevel>
+		<description>Sharpened wooden stakes. Makes it difficult for pawns to pass quickly or safely. Will likely damage pawns crossing them.</description>
+		<graphicData>
+			<texPath>Things/Building/Security/RH_TET_Stakes/RH_TET_Stakes</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(1.2,1.2)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<uiIconPath>UI/Icons/Security/RH_TET_Stakes</uiIconPath>
+		<costList>
+			<WoodLog>15</WoodLog>
+		</costList>
+		<soundImpactDefault>BulletImpact_Wood</soundImpactDefault>
+		<selectable>true</selectable>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToBuild>800</WorkToBuild>
+			<Beauty>-5</Beauty>
+			<TrapMeleeDamage>15</TrapMeleeDamage>
+			<TrapSpringChance>0.1</TrapSpringChance>
+			<Flammability>1</Flammability>
+			<Mass>25</Mass>
+		</statBases>
+		<altitudeLayer>Building</altitudeLayer>
+		<drawerType>RealtimeOnly</drawerType>
+		<stealable>false</stealable>
+		<rotatable>true</rotatable>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.35</fillPercent>
+		<pathCost>150</pathCost>
+		<constructEffect>ConstructWood</constructEffect>
+		<repairEffect>ConstructWood</repairEffect>
+		<pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<designationHotKey>Misc6</designationHotKey>
+		<building>
+			<isTrap>true</isTrap>
+			<trapDestroyOnSpring>false</trapDestroyOnSpring>
+			<trapDamageCategory>Sharp</trapDamageCategory>
+			<ai_chillDestination>false</ai_chillDestination>
+			<expandHomeArea>false</expandHomeArea>
+		</building>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<category>Building</category>
+		<designationCategory>Security</designationCategory>
+		<thingCategories><li>BuildingsSecurity</li></thingCategories>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingClass>Building_TrapDamager</thingClass>
+	</ThingDef>
+
+	<RecipeDef>
+		<defName>RH_TET_ExtractMetalFromSlag</defName>
+		<label>smelt metal from slag</label>
+		<description>Use heat to extract useful metal from slag chunks.</description>
+		<jobString>Smelting metal from slag.</jobString>
+		<workAmount>1600</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>ChunkSlagSteel</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<Steel>20</Steel>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>ChunkSlagSteel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_SmeltWeapon</defName>
+		<label>smelt weapon</label>
+		<description>Use heat to break down weapons into useful resources.</description>
+		<jobString>Smelting weapon.</jobString>
+		<workAmount>1600</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<specialProducts>
+			<li>Smelted</li>
+		</specialProducts>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Weapons</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Weapons</li>
+			</categories>
+			<specialFiltersToDisallow>
+				<li>AllowNonSmeltableWeapons</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<forceHiddenSpecialFilters>
+			<li>AllowSmeltable</li>
+		</forceHiddenSpecialFilters>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_SmeltApparel</defName>
+		<label>smelt apparel</label>
+		<description>Use heat to break down metallic apparel like armor into useful resources.</description>
+		<jobString>Smelting apparel.</jobString>
+		<workAmount>1600</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<specialProducts>
+			<li>Smelted</li>
+		</specialProducts>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Apparel</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Apparel</li>
+			</categories>
+			<specialFiltersToDisallow>
+				<li>AllowNonSmeltableApparel</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<forceHiddenSpecialFilters>
+			<li>AllowSmeltableApparel</li>
+			<li>AllowBurnableApparel</li>
+			<li>AllowNonBurnableApparel</li>
+		</forceHiddenSpecialFilters>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_DestroyWeapon</defName>
+		<label>destroy weapon</label>
+		<description>Use heat to destroy unwanted weapons. This process is faster than smelting, and works on non-smeltable items, but yields no resources.</description>
+		<jobString>Destroying weapon.</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Weapons</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Weapons</li>
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>Weapons</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>Gun_DoomsdayRocket</li>
+				<li>Gun_TripleRocket</li>
+				<li>OrbitalTargeterPowerBeam</li>
+				<li>OrbitalTargeterBombardment</li>
+				<li>TornadoGenerator</li>
+			</disallowedThingDefs>
+		</defaultIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>RH_TET_DestroyApparel</defName>
+		<label>destroy apparel</label>
+		<description>Use heat to destroy unwanted apparels. This process is faster than smelting, and works on non-smeltable items, but yields no resources.</description>
+		<jobString>Destroying apparel.</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Apparel</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Apparel</li>
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>Apparel</li>
+			</categories>
+		</defaultIngredientFilter>
+	</RecipeDef>
+  
+</Defs>

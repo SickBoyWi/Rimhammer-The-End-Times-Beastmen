@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Beastmen_MassiveHerdstone</defName>
+		<label>massive herdstone</label>
+		<thingClass>TheEndTimes_Beastmen.Building_MassiveHerdstone</thingClass>
+		<description>A huge herdstone. Used for offering humanlike corpses up to the dark gods in order to gain favor.\n\nOffering up corpses will please the Lord Khorne, or Papa Nurgle; depending upon the condition of the body offered (rotten vs fresh).\n\nRewards are likely to be granted each time the offered up body count reaches a multiple of one of the gods' sacred numbers. There are many rewards; some small, and some great.\n\nThis herdstone will be automatically upgraded when the number of fresh corpses offered up reaches 8, and the number of rotten corpses offered up reaches 7; the sacred numbers of the gods. Khorne's number is 8, and Nurgle's number is 7.\n\nTO USE THE HERDSTONE: In order to offer a body up for sacrifice, select the pawn that will do the offering, right click on the dead pawn body in question, and give the pawn the order to burn the body at the massive herdstone.\n\nThe presence of a herdstobe will cause additional pawns to join you much more frequently, but will also cause additional raids.</description>
+		<tickerType>Normal</tickerType>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/RH_TET_Beastmen_MassiveHerdstone/RH_TET_Beastmen_MassiveHerdstone</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(8.0, 8.0)</drawSize>
+			<damageData>
+				<rect>(1,1,2,2)</rect>
+			</damageData>
+		</graphicData>
+		<canOverlapZones>false</canOverlapZones>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>1000</costStuffCount>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<fillPercent>0.85</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToBuild>50000</WorkToBuild>
+			<MaxHitPoints>5000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>10</Beauty>
+			<JoyGainFactor>1</JoyGainFactor>
+			<Mass>1000</Mass>
+		</statBases>
+		<minifiedDef/>
+		<thingCategories Inherit="false"/>
+		<size>(3,7)</size>
+		<passability>PassThroughOnly</passability>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-4)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<inspectorTabs>
+			<li>TheEndTimes_Beastmen.ITab_Conversion</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<watchBuildingStandDistanceRange>
+				<min>-8</min>
+				<max>8</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>15</watchBuildingStandRectWidth>
+			<ai_chillDestination>false</ai_chillDestination>
+			<haulToContainerDuration>1000</haulToContainerDuration>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_WatchArea</li>
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.0</fuelConsumptionRate>
+				<fuelCapacity>50.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0001</fuelConsumptionPerTickInRain>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>.1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(255,253,197,0)</glowColor>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>0.5</fireSize>
+				<offset>(0,0,-2.4)</offset>
+			</li>
+			<li>
+				<compClass>CompGatherSpot</compClass>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes><li>Flame</li></focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Lit">
+						<offset>0.12</offset>
+					</li>
+					<li Class="FocusStrengthOffset_BuildingDefsLit">
+						<defs>
+							<li>Campfire</li>
+							<li>TorchLamp</li>
+							<li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
+							<li>RH_TET_Beastmen_MassiveHerdstone</li>
+							<li>RH_TET_Beastmen_Bonfire</li>
+						</defs>
+						<offsetPerBuilding>0.02</offsetPerBuilding>
+						<radius>9.9</radius>
+						<maxBuildings>8</maxBuildings>
+						<explanationKey>MeditationFocusPerFlame</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationCategory>RH_TET_Beastmen_Buildings</designationCategory>
+		<designationHotKey>Misc2</designationHotKey>
+		<interactionCellIcon>DiningChair</interactionCellIcon>
+		<!--
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+	-->
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Beastmen_MassiveHerdstone_UpgradeOne</defName>
+		<label>massive herdstone upgraded</label>
+		<thingClass>TheEndTimes_Beastmen.Building_MassiveHerdstone</thingClass>
+		<description>A huge herdstone, upgraded once. Can still be used as before for offering humanlike corpses up to the dark gods Khorne and Nurgle in order to gain favor.\n\nCan now be used to offer up food stuffs to the gods. Use the tab on the herdstone card to set up food offerings. Meat offerings please Slaanesh, and plant offerings please Tzeentch. The favor gained is based on the nutrition amount offered up. A bray shaman is required to perform the sacrifice.\n\nOnce enough food has been offered up, the herdstone will automatically upgrade to the next level. In order to upgrade, the favor of Slaanesh must reach 36, and the favor of Tzeentch must reach 81. Those are the sacred numbers of each god squared, respectively.\n\nFood Offering Amounts Based on Size:\n\nMeagre: 5\nDecent: 10\nSizeable: 20\nWorthy: 50\nImpressive: 100.
+	\n\nRewards are likely to be granted each time the total food type nutrition amount offered up reaches a multiple of one of the gods' sacred numbers. There are many rewards; some small, and some great.\n\nSlaanesh's number is 6, and Tzeentch's number is 9. \n\nThe presence of a herdstobe will cause additional pawns to join you much more frequently, but will also cause additional raids.</description>
+		<tickerType>Normal</tickerType>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/RH_TET_Beastmen_MassiveHerdstone/RH_TET_Beastmen_MassiveHerdstone-Upgrade1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(8.0, 8.0)</drawSize>
+			<damageData>
+				<rect>(1,1,2,2)</rect>
+			</damageData>
+		</graphicData>
+		<canOverlapZones>false</canOverlapZones>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>1000</costStuffCount>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<fillPercent>0.85</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<MaxHitPoints>6000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>10</Beauty>
+			<JoyGainFactor>1</JoyGainFactor>
+			<Mass>1000</Mass>
+		</statBases>
+		<minifiedDef/>
+		<thingCategories Inherit="false"/>
+		<size>(3,7)</size>
+		<passability>PassThroughOnly</passability>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-4)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<inspectorTabs>
+			<li>TheEndTimes_Beastmen.ITab_Sacrifice</li>
+			<li>TheEndTimes_Beastmen.ITab_Conversion</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<watchBuildingStandDistanceRange>
+				<min>-8</min>
+				<max>8</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>15</watchBuildingStandRectWidth>
+			<ai_chillDestination>false</ai_chillDestination>
+			<haulToContainerDuration>1000</haulToContainerDuration>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_WatchArea</li>
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.0</fuelConsumptionRate>
+				<fuelCapacity>50.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0001</fuelConsumptionPerTickInRain>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>.1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(255,253,197,0)</glowColor>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>0.5</fireSize>
+				<offset>(0,0,-2.4)</offset>
+			</li>
+			<li>
+				<compClass>CompGatherSpot</compClass>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes><li>Flame</li></focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Lit">
+						<offset>0.12</offset>
+					</li>
+					<li Class="FocusStrengthOffset_BuildingDefsLit">
+						<defs>
+							<li>Campfire</li>
+							<li>TorchLamp</li>
+							<li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
+							<li>RH_TET_Beastmen_MassiveHerdstone_UpgradeOne</li>
+							<li>RH_TET_Beastmen_Bonfire</li>
+						</defs>
+						<offsetPerBuilding>0.02</offsetPerBuilding>
+						<radius>9.9</radius>
+						<maxBuildings>8</maxBuildings>
+						<explanationKey>MeditationFocusPerFlame</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationHotKey>Misc2</designationHotKey>
+		<interactionCellIcon>DiningChair</interactionCellIcon>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Beastmen_MassiveHerdstone_UpgradeTwo</defName>
+		<label>massive herdstone upgraded</label>
+		<thingClass>TheEndTimes_Beastmen.Building_MassiveHerdstone</thingClass>
+		<description>A huge herdstone, upgraded twice. Can still be used for offering humanlike corpses up to the dark gods Khorne and Nurgle in order to gain favor. Can also still be used to offer up food resources to Tzeentch and Slaanesh in order to gain their favor. A bray shaman is required to perform the sacrifice.\n\nCan now be used to offer up animal sacrifices to any of the four gods. Use the sacrifices tab to set up a sacrifice. \n\nSacrificing an animal will grant favor amount equal to the sacred number of the god selected, and will therefore most likely give you a reward every time it is done. Once 30 animals are sacrificed, the herdstone will automatically upgrade once again. 30 is the sum of all of the sacred numbers of the four gods of chaos.\n\nSacrificing animals will also increase your world renown. Your renown will increase the likelihood of additional pawns joining, and for raids occuring. Word spreads of your herd, and it's glory at this location.</description>
+		<tickerType>Normal</tickerType>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/RH_TET_Beastmen_MassiveHerdstone/RH_TET_Beastmen_MassiveHerdstone-Upgrade2</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(8.0, 8.0)</drawSize>
+			<damageData>
+				<rect>(1,1,2,2)</rect>
+			</damageData>
+		</graphicData>
+		<canOverlapZones>false</canOverlapZones>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>1000</costStuffCount>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<fillPercent>0.85</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<MaxHitPoints>6000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>10</Beauty>
+			<JoyGainFactor>1</JoyGainFactor>
+			<Mass>1000</Mass>
+		</statBases>
+		<minifiedDef/>
+		<thingCategories Inherit="false"/>
+		<size>(3,7)</size>
+		<passability>PassThroughOnly</passability>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-4)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<inspectorTabs>
+			<li>TheEndTimes_Beastmen.ITab_Sacrifice</li>
+			<li>TheEndTimes_Beastmen.ITab_Conversion</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<watchBuildingStandDistanceRange>
+				<min>-8</min>
+				<max>8</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>15</watchBuildingStandRectWidth>
+			<ai_chillDestination>false</ai_chillDestination>
+			<haulToContainerDuration>1000</haulToContainerDuration>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_WatchArea</li>
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.0</fuelConsumptionRate>
+				<fuelCapacity>50.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0001</fuelConsumptionPerTickInRain>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>.1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(255,253,197,0)</glowColor>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>0.5</fireSize>
+				<offset>(0,0,-2.4)</offset>
+			</li>
+			<li>
+				<compClass>CompGatherSpot</compClass>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes><li>Flame</li></focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Lit">
+						<offset>0.12</offset>
+					</li>
+					<li Class="FocusStrengthOffset_BuildingDefsLit">
+						<defs>
+							<li>Campfire</li>
+							<li>TorchLamp</li>
+							<li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
+							<li>RH_TET_Beastmen_MassiveHerdstone_UpgradeTwo</li>
+							<li>RH_TET_Beastmen_Bonfire</li>
+						</defs>
+						<offsetPerBuilding>0.02</offsetPerBuilding>
+						<radius>9.9</radius>
+						<maxBuildings>8</maxBuildings>
+						<explanationKey>MeditationFocusPerFlame</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationHotKey>Misc2</designationHotKey>
+		<interactionCellIcon>DiningChair</interactionCellIcon>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>RH_TET_Beastmen_MassiveHerdstone_UpgradeThree</defName>
+		<label>massive herdstone fully upgraded</label>
+		<thingClass>TheEndTimes_Beastmen.Building_MassiveHerdstone</thingClass>
+		<description>A huge herdstone, fully upgraded. Can still be used for offering humanlike corpses up to the dark gods Khorne and Nurgle in order to gain favor. Can also still be used to offer up food resources to Tzeentch and Slaanesh in order to gain their favor, and as a sacrifice location for animals to one of the gods. Can now also be used to sacrifice humanlike prisoner pawns.\n\nSacrificing humans works the same as sacrificing animals, use the sacrifices tab on the herdstone card to set them up. A bray shaman is required to perform the sacrifice.\n\nSacrificing humanlike pawns will increase your world renown much faster than sacrificing animals, thus increasing raids and random pawns joining.\n\nRewards for sacrificing humanlike pawns are new, and are not the same as the rewards for all previous sacrifices and offerings.\n\nEach god will grant you their own special magical item, to assist you in the destruction of your foes.</description>
+		<tickerType>Normal</tickerType>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<graphicData>
+			<texPath>Things/Building/RH_TET_Beastmen_MassiveHerdstone/RH_TET_Beastmen_MassiveHerdstone-Upgrade3</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(8.0, 8.0)</drawSize>
+			<damageData>
+				<rect>(1,1,2,2)</rect>
+			</damageData>
+		</graphicData>
+		<canOverlapZones>false</canOverlapZones>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<stuffCategories>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>1000</costStuffCount>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<fillPercent>0.85</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<MaxHitPoints>6000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>10</Beauty>
+			<JoyGainFactor>1</JoyGainFactor>
+			<Mass>1000</Mass>
+		</statBases>
+		<minifiedDef/>
+		<thingCategories Inherit="false"/>
+		<size>(3,7)</size>
+		<passability>PassThroughOnly</passability>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,-4)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<inspectorTabs>
+			<li>TheEndTimes_Beastmen.ITab_Sacrifice</li>
+			<li>TheEndTimes_Beastmen.ITab_Conversion</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			<watchBuildingStandDistanceRange>
+				<min>-8</min>
+				<max>8</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>15</watchBuildingStandRectWidth>
+			<ai_chillDestination>false</ai_chillDestination>
+			<haulToContainerDuration>1000</haulToContainerDuration>
+			<buildingTags>
+				<li>Production</li>
+			</buildingTags>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_WatchArea</li>
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Refuelable">
+				<fuelConsumptionRate>1.0</fuelConsumptionRate>
+				<fuelCapacity>50.0</fuelCapacity>
+				<fuelConsumptionPerTickInRain>0.0001</fuelConsumptionPerTickInRain>
+				<fuelFilter>
+					<thingDefs>
+						<li>WoodLog</li>
+						<li>RH_TET_Coal</li>
+					</thingDefs>
+				</fuelFilter>
+				<initialFuelPercent>.1</initialFuelPercent>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>15</glowRadius>
+				<glowColor>(255,253,197,0)</glowColor>
+			</li>
+			<li Class="CompProperties_FireOverlay">
+				<fireSize>0.5</fireSize>
+				<offset>(0,0,-2.4)</offset>
+			</li>
+			<li>
+				<compClass>CompGatherSpot</compClass>
+			</li>
+			<li Class="CompProperties_MeditationFocus">
+				<statDef>MeditationFocusStrength</statDef>
+				<focusTypes><li>Flame</li></focusTypes>
+				<offsets>
+					<li Class="FocusStrengthOffset_Lit">
+						<offset>0.12</offset>
+					</li>
+					<li Class="FocusStrengthOffset_BuildingDefsLit">
+						<defs>
+							<li>Campfire</li>
+							<li>TorchLamp</li>
+							<li MayRequire="Ludeon.RimWorld.Royalty">Brazier</li>
+							<li>RH_TET_Beastmen_MassiveHerdstone_UpgradeThree</li>
+							<li>RH_TET_Beastmen_Bonfire</li>
+						</defs>
+						<offsetPerBuilding>0.02</offsetPerBuilding>
+						<radius>9.9</radius>
+						<maxBuildings>8</maxBuildings>
+						<explanationKey>MeditationFocusPerFlame</explanationKey>
+						<explanationKeyAbstract>MeditationFocusPerFlameAbstract</explanationKeyAbstract>
+					</li>
+				</offsets>
+			</li>
+		</comps>
+		<rotatable>false</rotatable>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationHotKey>Misc2</designationHotKey>
+		<interactionCellIcon>DiningChair</interactionCellIcon>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase" Name="RH_TET_Beastmen_SarsenBase" Abstract="True">
+		<thingCategories>
+			<li>RH_TET_Beastmen_BuildingsSarsens</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Beastmen_SarsenBase">
+		<defName>RH_TET_Beastmen_SarsenLintel_Psychic</defName>
+		<label>mental soothe sarsens with lintel</label>
+		<description>Two huge sarsen stones with a huge lintel stone placed over them. They've been daubed in blood, and a corpse has been strung up between the sarsens.\n\nThe chaos power imbued in the stones will soothe the minds of beastmen on the map, and improve their mood some.\n\nA gift from the chaos gods to the beastmen for the destruction of an order faction settlement.</description>
+		<graphicData>
+			<texPath>Things/Building/Sarsens/psychic</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5, 5)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0.0, 0.0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0,0.75,1.0,0.5)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.85</uiIconScale>
+		<comps>
+			<li Class="CompProperties_MoteEmitter">
+				<mote>Mote_PsychicEmanatorEffect</mote>
+				<emissionInterval>350</emissionInterval>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(250,200,200,0)</glowColor>
+			</li>
+		</comps>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<building>
+			<destroySound>BuildingDestroyed_Stone_Big</destroySound>
+		</building>
+		<tradeability>None</tradeability>
+		<size>(4,4)</size>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>5</Beauty>
+			<Mass>35</Mass>
+			<MarketValue>0</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RH_TET_Beastmen_DestructionRewards</li>
+		</thingSetMakerTags>
+		<fillPercent>0.5</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<rotatable>true</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_SarsenBase">
+		<defName>RH_TET_Beastmen_Sarsen_Gifter</defName>
+		<label>gifter sarsen</label>
+		<description>A large sarsen stone covered in beastial scribbles, written in blood, and adorned with the skull of an unfortunate victim.\n\nOccasionally spawns food for the herds to nourish themselves on so that your herd may continue it's destruction of the order forces.\n\nA gift from the chaos gods to the beastmen for the destruction of an order faction settlement.</description>
+		<graphicData>
+			<texPath>Things/Building/Sarsens/gifter</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(5, 5)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0.0, 0.0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0,0.75,1.0,0.5)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.85</uiIconScale>
+		<building>
+			<destroySound>BuildingDestroyed_Stone_Big</destroySound>
+		</building>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(250,200,200,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<requiresPower>false</requiresPower>
+				<thingToSpawn>Meat_Human</thingToSpawn>
+				<spawnCount>225</spawnCount>
+				<spawnIntervalRange><min>50000</min><max>125000</max></spawnIntervalRange>
+				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+				<showMessageIfOwned>true</showMessageIfOwned>
+			</li>
+		</comps>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>5</Beauty>
+			<Mass>35</Mass>
+			<MarketValue>0</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RH_TET_Beastmen_DestructionRewards</li>
+		</thingSetMakerTags>
+		<tickerType>Normal</tickerType>
+		<size>(3,4)</size>
+		<fillPercent>.8</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<rotatable>false</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeability>None</tradeability>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_SarsenBase">
+		<defName>RH_TET_Beastmen_SarsenDouble_Conversion</defName>
+		<label>conversion sarsens</label>
+		<description>Two free standing sarsen stones daubed with chaotic beastial symbols in blood. There's a dessicated body of an unfortunate victime strung between them. \n\nCreates a new ability for a massive herdstone when placed near one. The new herdstone action allows a bray shaman to convert a humanlike prisoner pawn into an ungor.\n\nA gift from the chaos gods to the beastmen for the destruction of an order faction settlement.</description>
+		<graphicData>
+			<texPath>Things/Building/Sarsens/conversion</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(6, 6)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0.0, 0.0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0,0.75,1.0,0.5)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.85</uiIconScale>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(250,200,200,0)</glowColor>
+			</li>
+		</comps>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<building>
+			<destroySound>BuildingDestroyed_Stone_Big</destroySound>
+		</building>
+		<tradeability>None</tradeability>
+		<size>(4,4)</size>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>5</Beauty>
+			<Mass>35</Mass>
+			<MarketValue>0</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RH_TET_Beastmen_DestructionRewards</li>
+		</thingSetMakerTags>
+		<fillPercent>0.5</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<rotatable>true</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Beastmen_SarsenBase">
+		<defName>RH_TET_Beastmen_Sarsen_Tutor</defName>
+		<label>tutor sarsen</label>
+		<description>A large sarsen stone with a small lintel on top and a base underneath. Crudely decorated with bestial symbols in blood, and adorned with the skull of an unfortunate victim.\n\nWill spawn a unique item that can be used to turn a pawn into a wizard, granting them the Lore of Chaos Undivided.\n\nA gift from the chaos gods to the beastmen for the destruction of an order faction settlement.</description>
+		<thingClass>TheEndTimes_Beastmen.Building_SarsenTutor</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Sarsens/tutor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(6, 6)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0.0, 0.0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0,0.75,1.0,0.5)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.85</uiIconScale>
+		<building>
+			<destroySound>BuildingDestroyed_Stone_Big</destroySound>
+		</building>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(250,200,200,0)</glowColor>
+			</li>
+		</comps>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>5</Beauty>
+			<Mass>35</Mass>
+			<MarketValue>0</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RH_TET_Beastmen_DestructionRewards</li>
+		</thingSetMakerTags>
+		<tickerType>Normal</tickerType>
+		<size>(3,4)</size>
+		<fillPercent>.8</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<rotatable>false</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeability>None</tradeability>
+	</ThingDef>
+  
+	<ThingDef ParentName="RH_TET_Beastmen_SarsenBase">
+		<defName>RH_TET_Beastmen_Sarsen_Healer</defName>
+		<label>healer sarsen</label>
+		<description>A large sarsen stone shaped in a very rough approximation of some creature. It's been daubed with blood by bestial hands.\n\nOccasionally spawns healing potions to keep the strongest of your herd in good health, so that your herds may continue their rampage of destruction.\n\nA gift from the chaos gods to the beastmen for the destruction of an order faction settlement.</description>
+		<graphicData>
+			<texPath>Things/Building/Sarsens/healer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(5, 5)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0.0, 0.0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0,0.75,1.0,0.5)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.85</uiIconScale>
+		<building>
+			<destroySound>BuildingDestroyed_Stone_Big</destroySound>
+		</building>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(250,200,200,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Spawner">
+				<requiresPower>false</requiresPower>
+				<thingToSpawn>RH_TET_Potion_Healing</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange><min>500000</min><max>700000</max></spawnIntervalRange>
+				<writeTimeLeftToSpawn>true</writeTimeLeftToSpawn>
+				<showMessageIfOwned>true</showMessageIfOwned>
+			</li>
+		</comps>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>5</Beauty>
+			<Mass>35</Mass>
+			<MarketValue>0</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RH_TET_Beastmen_DestructionRewards</li>
+		</thingSetMakerTags>
+		<tickerType>Normal</tickerType>
+		<size>(3,4)</size>
+		<fillPercent>.8</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<rotatable>false</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tradeability>None</tradeability>
+	</ThingDef>
+
+	<ThingDef ParentName="RH_TET_Beastmen_SarsenBase">
+		<defName>RH_TET_Beastmen_SarsenLintel_Pulse</defName>
+		<label>animal maddening sarsens with lintel</label>
+		<description>Two massively thick sarsen stones with a massive lintel stone placed over them. It has been daubed in sickening chaos symbols by bestial hands. \n\nCan release a psychic pulse that drives all wild animals on the map into a mad frenzy. Must recharge after use, and will not affect tame animals.\n\nA gift from the chaos gods to the beastmen for the destruction of an order faction settlement.</description>
+		<thingClass>TheEndTimes_Beastmen.Building_SarsenPulse</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Sarsens/pulse</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5.5, 5.5)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0.0, 0.0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0,0.75,1.0,0.5)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.85</uiIconScale>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(250,200,200,0)</glowColor>
+			</li>
+		</comps>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<building>
+			<destroySound>BuildingDestroyed_Stone_Big</destroySound>
+		</building>
+		<tradeability>None</tradeability>
+		<size>(4,4)</size>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>5</Beauty>
+			<Mass>35</Mass>
+			<MarketValue>0</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RH_TET_Beastmen_DestructionRewards</li>
+		</thingSetMakerTags>
+		<fillPercent>0.75</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<rotatable>true</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_SarsenBase">
+		<defName>RH_TET_Beastmen_SarsenLintel_Gas</defName>
+		<label>combat gas sarsen</label>
+		<description>A massive carved sarsen stone decorated (defaced?) with chaos symbols hand drawn in blood.\n\nCan emit a cloud of gas that will give any who breathe it in a boost to combat skills. The gas will dissipate fast in the open air, but any pawn (including foes) who breathe it in will be affected by the combat bonuses.\n\nA gift from the chaos gods to the beastmen for the destruction of an order faction settlement.</description>
+		<thingClass>TheEndTimes_Beastmen.Building_SarsenGas</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Sarsens/combatgas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(5.5, 5.5)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0.0, 0.0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0,0.75,1.0,0.5)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.85</uiIconScale>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(250,200,200,0)</glowColor>
+			</li>
+		</comps>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<building>
+			<destroySound>BuildingDestroyed_Stone_Big</destroySound>
+		</building>
+		<tradeability>None</tradeability>
+		<size>(4,4)</size>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>5</Beauty>
+			<Mass>35</Mass>
+			<MarketValue>0</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RH_TET_Beastmen_DestructionRewards</li>
+		</thingSetMakerTags>
+		<fillPercent>0.75</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<rotatable>false</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	</ThingDef>
+ 
+	<ThingDef ParentName="RH_TET_Beastmen_SarsenBase">
+		<defName>RH_TET_Beastmen_SarsenLintel_Beacon</defName>
+		<label>beacon sarsens with lintel</label>
+		<description>Two sarsen stones with a lintel stone placed over them. They've been painted in blood and chaotic symbols by bestial hands, and a victim has been strung up for the linten using entrails.\n\nIf turned on, will increase the event frequency for the massive herdstone, with the likelihood of pawn join events being increased much more than the likelihood of raids. If turned off, it will have no effect.\n\nA gift from the chaos gods to the beastmen for the destruction of an order faction settlement.</description>
+		<thingClass>TheEndTimes_Beastmen.Building_SarsenBeacon</thingClass>
+		<graphicData>
+			<texPath>Things/Building/Sarsens/beacon</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(5.5, 5.5)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0.0, 0.0, -0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0,0.75,1.0,0.5)</rect>
+			</damageData>
+		</graphicData>
+		<uiIconScale>0.85</uiIconScale>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(250,200,200,0)</glowColor>
+			</li>
+		</comps>
+		<altitudeLayer>BuildingOnTop</altitudeLayer>
+		<building>
+			<destroySound>BuildingDestroyed_Stone_Big</destroySound>
+		</building>
+		<tradeability>None</tradeability>
+		<size>(4,4)</size>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+			<Flammability>0</Flammability>
+			<Beauty>5</Beauty>
+			<Mass>35</Mass>
+			<MarketValue>0</MarketValue>
+		</statBases>
+		<thingSetMakerTags>
+			<li>RH_TET_Beastmen_DestructionRewards</li>
+		</thingSetMakerTags>
+		<fillPercent>0.75</fillPercent>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<rotatable>true</rotatable>
+		<canOverlapZones>false</canOverlapZones>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<tickerType>Normal</tickerType>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+	</ThingDef>
+  
+</Defs>

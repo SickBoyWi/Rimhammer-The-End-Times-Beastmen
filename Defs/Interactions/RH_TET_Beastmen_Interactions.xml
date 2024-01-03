@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<InteractionDef>
+		<defName>RH_TET_Beastmen_UrgeOn</defName>
+		<label>urge on</label>
+		<symbol>Mote/RH_TET_Beastmen_UrgeOn</symbol>
+	</InteractionDef>
+
+</Defs>

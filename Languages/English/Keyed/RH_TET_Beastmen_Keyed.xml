@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RH_TET_Beastmen_Herdstone>Herdstone</RH_TET_Beastmen_Herdstone>
+
+	<RH_TET_Beastmen_Box_Titles>&lt;b&gt;Titles&lt;/b&gt;</RH_TET_Beastmen_Box_Titles>
+	<RH_TET_Beastmen_Box_Domains>&lt;b&gt;Domains&lt;/b&gt;</RH_TET_Beastmen_Box_Domains>
+	<RH_TET_Beastmen_Box_Description>&lt;b&gt;Description&lt;/b&gt;</RH_TET_Beastmen_Box_Description>
+
+	<RH_TET_Beastmen_Discovered>Entity Discovered</RH_TET_Beastmen_Discovered>
+	<RH_TET_Beastmen_DiscoveredDeityMessage>{0} was discovered amongst the strange symbols.</RH_TET_Beastmen_DiscoveredDeityMessage>
+  
+	<RH_TET_Beastmen_God>God</RH_TET_Beastmen_God>
+	<RH_TET_Beastmen_Sacrifice>Sacrifice</RH_TET_Beastmen_Sacrifice>
+	<RH_TET_Beastmen_ConversionVictim>Victim</RH_TET_Beastmen_ConversionVictim>
+	<RH_TET_Beastmen_Executioner>Executioner</RH_TET_Beastmen_Executioner>
+	<RH_TET_Beastmen_Offerer>Offerer</RH_TET_Beastmen_Offerer>
+	<RH_TET_Beastmen_Shaman>Shaman</RH_TET_Beastmen_Shaman>
+	<RH_TET_Beastmen_IsUnavailable>is unavailable.</RH_TET_Beastmen_IsUnavailable>
+	<RH_TET_Beastmen_TabManage>Manage</RH_TET_Beastmen_TabManage>
+	<RH_TET_Beastmen_ShamanDesc>This herd member addresses the herd. Those with strong social skills are recommended.</RH_TET_Beastmen_ShamanDesc>
+	<RH_TET_Beastmen_FailedOfferingIngredients>Failed to find offering ingredients.</RH_TET_Beastmen_FailedOfferingIngredients>
+  
+	<RH_TET_Beastmen_UpgradeSuccessful>Slaanesh and Tzeentch have noted the offerings you've given to Khorne and Nurgle, and have turned their eyes to you. You may now make food offerings to them at the massive herdstone.\n\nClick on the herdstone, then use the Offerings tab to set up offerings. For more info on food amounts, click on the i on the herdstone card.</RH_TET_Beastmen_UpgradeSuccessful>
+	<RH_TET_Beastmen_UpgradeSuccessful2>The gods are pleased with your offerings. They will now accept animal sacrifices at the massive herdstone.\n\nClick on the herdstone, then use the Offerings tab to set up sacrifices. For more info on favor amounts gained from sacrifices, click on the i on the herdstone card.</RH_TET_Beastmen_UpgradeSuccessful2>
+	<RH_TET_Beastmen_UpgradeSuccessful3>The of dark gods smile upon your offerings. They will now accept humanlike sacrifices at the massive herdstone.\n\nClick on the herdstone, then use the Offerings tab to set up sacrifices. For more info on how rewards work for humanlike sacrifices, click on the i on the herdstone card.</RH_TET_Beastmen_UpgradeSuccessful3>
+	<RH_TET_Beastmen_HerdstoneUpgradeLabel>Herdstone Upgraded</RH_TET_Beastmen_HerdstoneUpgradeLabel>
+  
+	<RH_TET_Beastmen_GodDesc>Dark gods can be discovered via rituals and prayer.</RH_TET_Beastmen_GodDesc>
+	<RH_TET_Beastmen_TabOffering>Offerings</RH_TET_Beastmen_TabOffering>
+	<RH_TET_Beastmen_TabConversion>Convert</RH_TET_Beastmen_TabConversion>
+	<RH_TET_Beastmen_ExecutionerDesc>Choose a herd member to commit the act.</RH_TET_Beastmen_ExecutionerDesc>
+	<RH_TET_Beastmen_SacrificeAnimalDesc>Choose an animal to give to the dark gods.</RH_TET_Beastmen_SacrificeAnimalDesc>
+	<RH_TET_Beastmen_SacrificeDesc>Choose a prisoner to give their life to the dark gods.</RH_TET_Beastmen_SacrificeDesc>
+	<RH_TET_Beastmen_ConversionDesc>Choose a prisoner to convert to the chaos, as an ungor, and have them join your herd.</RH_TET_Beastmen_ConversionDesc>
+	<RH_TET_Beastmen_Offering>Offering</RH_TET_Beastmen_Offering>
+	<RH_TET_Beastmen_OfferingDesc>The offerer will gather any unforbiden food of this type.</RH_TET_Beastmen_OfferingDesc>
+	<RH_TET_Beastmen_OffererDesc>Choose a herd member to bring the offering.</RH_TET_Beastmen_OffererDesc>
+	<RH_TET_Beastmen_Animal>Animal</RH_TET_Beastmen_Animal>
+	<RH_TET_Beastmen_Humanlike>Humanlike</RH_TET_Beastmen_Humanlike>
+
+	<RH_TET_Beastmen_SacrificeGathering>The {0} gathers for a sacrifice.</RH_TET_Beastmen_SacrificeGathering>
+	<RH_TET_Beastmen_WorshipGathering>{0} gathers for a ritual.</RH_TET_Beastmen_WorshipGathering>
+	<RH_TET_Beastmen_OfferingFinished>{0} finished an offering.</RH_TET_Beastmen_OfferingFinished>
+	<RH_TET_Beastmen_WorshipFinished>{0} finished worshipping.</RH_TET_Beastmen_WorshipFinished>
+	<RH_TET_Beastmen_CancellingSermon>Cancelling ritual.</RH_TET_Beastmen_CancellingSermon>
+	<RH_TET_Beastmen_NoWorshipWithoutGod>Cannot perform a ritual without choosing a dark god.</RH_TET_Beastmen_NoWorshipWithoutGod>
+	<RH_TET_Beastmen_Morning>morning</RH_TET_Beastmen_Morning>
+	<RH_TET_Beastmen_Evening>evening</RH_TET_Beastmen_Evening>
+	<RH_TET_Beastmen_MorningEveningSermonInterrupted>The {0} ritual was cancelled. The herd was offering up a sacrifice.</RH_TET_Beastmen_MorningEveningSermonInterrupted>
+	<RH_TET_Beastmen_AlreadyGatheringForARitual>Your herd is already gathering for a ritual.</RH_TET_Beastmen_AlreadyGatheringForARitual>
+	<RH_TET_Beastmen_NoShaman>No shaman selected.</RH_TET_Beastmen_NoShaman>
+	<RH_TET_Beastmen_NoDarkGod>No dark god selected.</RH_TET_Beastmen_NoDarkGod>
+	<RH_TET_Beastmen_NoShamanDrafted>Shaman is drafted.</RH_TET_Beastmen_NoShamanDrafted>
+	<RH_TET_Beastmen_SelectAblebodiedShaman>Select a healthy shaman.</RH_TET_Beastmen_SelectAblebodiedShaman>
+	<RH_TET_Beastmen_HerdstoneIsReserved>The herdstone is reserved by something else.</RH_TET_Beastmen_HerdstoneIsReserved>
+	<RH_TET_Beastmen_HerdstoneNeedsToBeCleared>The herdstone is reserved by something else.</RH_TET_Beastmen_HerdstoneNeedsToBeCleared>
+
+	<RH_TET_Beastmen_Amount>Amount</RH_TET_Beastmen_Amount>
+	<RH_TET_Beastmen_AmountDesc>Each amount is based on nutrition values.\nWeak: 5\nOK: 10\nNice: 20\nSolid: 50\nGreat: 100</RH_TET_Beastmen_AmountDesc>
+	<RH_TET_Beastmen_Plants>Plants</RH_TET_Beastmen_Plants>
+	<RH_TET_Beastmen_Meat>Meat</RH_TET_Beastmen_Meat>
+	<RH_TET_Beastmen_Meals>Meals</RH_TET_Beastmen_Meals>
+	<RH_TET_Beastmen_Meagre>Weak</RH_TET_Beastmen_Meagre>
+	<RH_TET_Beastmen_Decent>OK</RH_TET_Beastmen_Decent>
+	<RH_TET_Beastmen_Sizable>Nice</RH_TET_Beastmen_Sizable>
+	<RH_TET_Beastmen_Worthy>Solid</RH_TET_Beastmen_Worthy>
+	<RH_TET_Beastmen_Impressive>Great</RH_TET_Beastmen_Impressive>
+
+	<RH_TET_Beastmen_Joins>Joins</RH_TET_Beastmen_Joins>
+	<RH_TET_Beastmen_Join>Join</RH_TET_Beastmen_Join>
+	<RH_TET_Beastmen_CygorJoins>A wandering cygor has joined your herd.\n\nThey're not good for much, other than tossing huge stones, but they're truly terrifying to your opponents.</RH_TET_Beastmen_CygorJoins>
+	<RH_TET_Beastmen_CreaturesJoin>A wandering chaos creature has joined your herd.\n\nIt is mean, corrupted, and ready to assist you in your battles.</RH_TET_Beastmen_CreaturesJoin>
+	<RH_TET_Beastmen_CreatureJoins>Wandering chaos creatuers have joined your herd.\n\nThey're mean, corrupted, and ready to assist you in your battles.</RH_TET_Beastmen_CreatureJoins>
+
+	<RH_TET_Beastmen_Renown>World Renown</RH_TET_Beastmen_Renown>
+	<RH_TET_Beastmen_Tier>Tier</RH_TET_Beastmen_Tier>
+	<RH_TET_Beastmen_Favor>Favor</RH_TET_Beastmen_Favor>
+	<RH_TET_Beastmen_HumanlikeSacrifices>Humalike Sacrifices:</RH_TET_Beastmen_HumanlikeSacrifices>
+	<RH_TET_Beastmen_SacrificeIntro>Your herd has sacrificed a humanlike to {0}.</RH_TET_Beastmen_SacrificeIntro>
+	<RH_TET_Beastmen_ConversionIntro>Your herd has converted a humanlike to the dark gods with the power of chaos.</RH_TET_Beastmen_ConversionIntro>
+	<RH_TET_Beastmen_SacrificeIntroAnimal>Your herd has sacrificed an animal for {0}.</RH_TET_Beastmen_SacrificeIntroAnimal>
+	<RH_TET_Beastmen_AnimalSacrificePleased>Your reknown has grown, and a boon has been sent. Current renown: {0}.</RH_TET_Beastmen_AnimalSacrificePleased>
+	<RH_TET_Beastmen_HumanlikeSacrificeWasFamily>{0} executed {1} {2} {3}</RH_TET_Beastmen_HumanlikeSacrificeWasFamily>
+	<RH_TET_Beastmen_HumanlikeConversionWasFamily>{0} executed {1} {2} {3}</RH_TET_Beastmen_HumanlikeConversionWasFamily>
+
+	<RH_TET_Beastmen_SacrificeFailMessage1>{0} breaks wind during a sensitive chant.</RH_TET_Beastmen_SacrificeFailMessage1>
+	<RH_TET_Beastmen_SacrificeFailMessage2>{0} forgets some of the words and makes them up.</RH_TET_Beastmen_SacrificeFailMessage2>
+	<RH_TET_Beastmen_SacrificeFailMessage3>{0} starts screaming uncontrollably, as if someone else were controlling their voice.</RH_TET_Beastmen_SacrificeFailMessage3>
+	<RH_TET_Beastmen_SacrificeFailMessage4>{0} realizes their petition is being heard by something else.</RH_TET_Beastmen_SacrificeFailMessage4>
+	<RH_TET_Beastmen_SacrificeFailMessage5>{0} knocks over a brazier, almost setting themselves on fire.</RH_TET_Beastmen_SacrificeFailMessage5>
+	<RH_TET_Beastmen_SacrificeFailMessage6>{0} is distracted by visions of what is to come - the pain, the fire, the silence.</RH_TET_Beastmen_SacrificeFailMessage6>
+	<RH_TET_Beastmen_SacrificeFailMessage7>{0} is distracted by visions of basalt towers erupting from the ground under their feet.</RH_TET_Beastmen_SacrificeFailMessage7>
+	<RH_TET_Beastmen_SacrificeFailMessage8>{0} is distracted by everyone they know, dead, but not unmoving.</RH_TET_Beastmen_SacrificeFailMessage8>
+	<RH_TET_Beastmen_SacrificeFailMessage9>{0} scratches an itchy body part.</RH_TET_Beastmen_SacrificeFailMessage9>
+	<RH_TET_Beastmen_SacrificeFailMessage10>{0} breaks into a frenzied chant in otherwordly tongues.</RH_TET_Beastmen_SacrificeFailMessage10>
+	<RH_TET_Beastmen_SacrificeFailMessage11>{0} is distracted by another member's unworthiness.</RH_TET_Beastmen_SacrificeFailMessage11>
+	<RH_TET_Beastmen_SacrificeFailMessage12>{0} is temporarily blinded mid-sentence by a horrible vision of good triumphing over evil.</RH_TET_Beastmen_SacrificeFailMessage12>
+	<RH_TET_Beastmen_SacrificeFailMessage13>{0} is drawn to slumber mid-ritual to suffer visions of huge armored men in golden armor weilding lighting.</RH_TET_Beastmen_SacrificeFailMessage13>
+	<RH_TET_Beastmen_SacrificeFailMessage14>{0} sees visions of beastmen being cut down by shining knights on horseback.</RH_TET_Beastmen_SacrificeFailMessage14>
+	<RH_TET_Beastmen_SacrificeFailMessage15>{0} works themselves into a furver.</RH_TET_Beastmen_SacrificeFailMessage15>
+	<RH_TET_Beastmen_SacrificeFailMessage16>{0} begins laughing uncontrollably.</RH_TET_Beastmen_SacrificeFailMessage16>
+	<RH_TET_Beastmen_SacrificeFailMessage17>{0} slumbers mid-ritual, and sees a vision of a young beastling weeping lightning.</RH_TET_Beastmen_SacrificeFailMessage17>
+	<RH_TET_Beastmen_SacrificeFailMessage18>{0} is horrified by a vision of a monstrous horned creature bearing their own face deep within folds of massive flesh.</RH_TET_Beastmen_SacrificeFailMessage18>
+	<RH_TET_Beastmen_SacrificeFailMessage19>{0} feels an unnatural hunger mid-ritual, and attempts to bite another member.</RH_TET_Beastmen_SacrificeFailMessage19>
+	<RH_TET_Beastmen_SacrificeFailMessage20>{0} hallucinates visions of heavily armored men perched upon indescribable horrors.</RH_TET_Beastmen_SacrificeFailMessage20>
+	<RH_TET_Beastmen_SacrificeFailMessage21>{0} cannot help but feel that one amongst them is not considered to be worthy.</RH_TET_Beastmen_SacrificeFailMessage21>
+	<RH_TET_Beastmen_SacrificeFailMessage22>{0} begins breaking out into a sweat and cries, saying that they cannot continue.</RH_TET_Beastmen_SacrificeFailMessage22>
+	<RH_TET_Beastmen_SacrificeFailMessage23>{0} inadvertantly misses a part of the ritual.</RH_TET_Beastmen_SacrificeFailMessage23>
+	<RH_TET_Beastmen_SacrificeFailMessage24>{0} suffers symptoms of a heart attack, and yet moments later is completely unharmed</RH_TET_Beastmen_SacrificeFailMessage24>
+	<RH_TET_Beastmen_SacrificeFailMessage25>{0} cries out as they find themselves hallucinating about their flesh being devoured by maggots.</RH_TET_Beastmen_SacrificeFailMessage25>
+	<RH_TET_Beastmen_SacrificeFailMessage26>{0} violently vomits.</RH_TET_Beastmen_SacrificeFailMessage26>
+	<RH_TET_Beastmen_SacrificeFailMessage27>{0} passes out mid-ritual.</RH_TET_Beastmen_SacrificeFailMessage27>
+	<RH_TET_Beastmen_SacrificeFailMessage28>{0}'s stomach grumbles as they leave to fetch something to eat.</RH_TET_Beastmen_SacrificeFailMessage28>
+	<RH_TET_Beastmen_SacrificeFailMessage29>{0}'s face twists into a sneer and starts speaking in a horrific gutteral tongue.</RH_TET_Beastmen_SacrificeFailMessage29>
+	<RH_TET_Beastmen_SacrificeFailMessage30>{0} feels the presence of another as distant screams are heard.</RH_TET_Beastmen_SacrificeFailMessage30>
+	<RH_TET_Beastmen_SacrificeFailMessage31>{0} feels the presence of another enter their mind, and displace their own for just a moment.</RH_TET_Beastmen_SacrificeFailMessage31>
+	<RH_TET_Beastmen_SacrificeFailMessage32>{0} says the words of power and petition, but their heart is weak and without faith.</RH_TET_Beastmen_SacrificeFailMessage32>
+	<RH_TET_Beastmen_SacrificeFailMessage33>{0} sees the shadows lengthen and twist into mockeries of a bestial form.</RH_TET_Beastmen_SacrificeFailMessage33>
+	<RH_TET_Beastmen_SacrificeFailMessage34>{0} looks down on the sacrifice and, for just an instant, sees their own face in place of their victim's.</RH_TET_Beastmen_SacrificeFailMessage34>
+	<RH_TET_Beastmen_SacrificeFailMessage35>{0} suffers a glimpse of insight and sees this world destroyed, then remade a thousand generations later.</RH_TET_Beastmen_SacrificeFailMessage35>
+	<RH_TET_Beastmen_SacrificeFailMessage36>{0} uncontrollably shouts out, "The End Times are upon us!"</RH_TET_Beastmen_SacrificeFailMessage36>
+	<RH_TET_Beastmen_SacrificeFailMessage37>{0} feels a beckoning from the voids behind call out to their soul.</RH_TET_Beastmen_SacrificeFailMessage37>
+	<RH_TET_Beastmen_SacrificeFailMessage38>{0} stops chanting as the earth shudders a moment as if by the foot step of a dark god.</RH_TET_Beastmen_SacrificeFailMessage38>
+	<RH_TET_Beastmen_SacrificeFailMessage39>{0} feels rising accursed power inside themselves; mad and barely controllable.</RH_TET_Beastmen_SacrificeFailMessage39>
+
+	<RH_TET_Beastmen_butsOne>Even so</RH_TET_Beastmen_butsOne>
+	<RH_TET_Beastmen_butsTwo>Fortunately</RH_TET_Beastmen_butsTwo>
+	<RH_TET_Beastmen_butsThree>Despite this setback</RH_TET_Beastmen_butsThree>
+	<RH_TET_Beastmen_butsFour>Luckily</RH_TET_Beastmen_butsFour>
+	<RH_TET_Beastmen_ritualWas>The ritual was a</RH_TET_Beastmen_ritualWas>
+	<RH_TET_Beastmen_ritualSuccess>complete success.</RH_TET_Beastmen_ritualSuccess>
+	<RH_TET_Beastmen_ritualMixedSuccess>mixed success.</RH_TET_Beastmen_ritualMixedSuccess>
+	<RH_TET_Beastmen_ritualFailure>failure.</RH_TET_Beastmen_ritualFailure>
+	<RH_TET_Beastmen_ritualCompleteFailure>complete failure.</RH_TET_Beastmen_ritualCompleteFailure>
+	<RH_TET_Beastmen_SacrificeLabelsuccess>Success</RH_TET_Beastmen_SacrificeLabelsuccess>
+	<RH_TET_Beastmen_SacrificeLabelmixedsuccess>Mixed Success</RH_TET_Beastmen_SacrificeLabelmixedsuccess>
+	<RH_TET_Beastmen_SacrificeLabelfailure>Failure</RH_TET_Beastmen_SacrificeLabelfailure>
+	<RH_TET_Beastmen_SacrificeLabelcriticalfailure>Petty Failure</RH_TET_Beastmen_SacrificeLabelcriticalfailure>
+	<RH_TET_Beastmen_AnimalSacrificeLabel>Animal Sacrifice</RH_TET_Beastmen_AnimalSacrificeLabel>
+	<RH_TET_Beastmen_AnimalSacrificeReason>to offer up the life of an animal in their name</RH_TET_Beastmen_AnimalSacrificeReason>
+	<RH_TET_Beastmen_ReadilyReceived>The sacrifice was readily received</RH_TET_Beastmen_ReadilyReceived>
+	<RH_TET_Beastmen_AnimalSacrificeWasPet>Sacrificing such an innocent-looking animal seems to please</RH_TET_Beastmen_AnimalSacrificeWasPet>
+	<RH_TET_Beastmen_AnimalSacrificeWasBonded>{0} had shared a bond with {1} during its lifetime, adding to its sacrificial value.</RH_TET_Beastmen_AnimalSacrificeWasBonded>
+	<RH_TET_Beastmen_AnimalSacrificeWasExcMaster>Furthermore, {0}'s master, {1} carried out the sacrifice</RH_TET_Beastmen_AnimalSacrificeWasExcMaster>
+	<RH_TET_Beastmen_GreedilyReceived>This sacrifice gratified</RH_TET_Beastmen_GreedilyReceived>
+	<RH_TET_Beastmen_OfferingReason>to offer up valuable goods</RH_TET_Beastmen_OfferingReason>
+	<RH_TET_Beastmen_OfferingLabel>Goods Offering</RH_TET_Beastmen_OfferingLabel>
+
+	<RH_TET_Beastmen_AttendingSacrifice>Attending sacrifice</RH_TET_Beastmen_AttendingSacrifice>
+	<RH_TET_Beastmen_ReflectingOnSacrifice>Reflecting on sacrifice</RH_TET_Beastmen_ReflectingOnSacrifice>
+	<RH_TET_Beastmen_WaitingToStartSermon>Waiting to start ritual</RH_TET_Beastmen_WaitingToStartSermon>
+	<RH_TET_Beastmen_PreachingAbout>Praising {0}</RH_TET_Beastmen_PreachingAbout>
+	<RH_TET_Beastmen_PrayingTo>Praying to {0}</RH_TET_Beastmen_PrayingTo>
+  
+	<RH_TET_Beastmen_CarryToMassiveHerdstone>Burn {1_label} in massive herdstone</RH_TET_Beastmen_CarryToMassiveHerdstone>
+	<RH_TET_Beastmen_CannotCarryToMassiveHerdstone>Cannot carry to massive herdstone</RH_TET_Beastmen_CannotCarryToMassiveHerdstone>
+	<RH_TET_Beastmen_NoMassiveHerdstone>No available massive herdstone.</RH_TET_Beastmen_NoMassiveHerdstone>
+	<RH_TET_Beastmen_HerdstoneRequiresFuel>It likely requires refueling.</RH_TET_Beastmen_HerdstoneRequiresFuel>
+	<RH_TET_Beastmen_HerdstoneBodyCount>Khorne favor: {0}. Lord Khorne greedily accepts the skull for his Skull Throne.</RH_TET_Beastmen_HerdstoneBodyCount>
+	<RH_TET_Beastmen_HerdstoneDessicatedMessage>Nurgle favor: {0}. Papa Nurgle approves of the rot that you've offered up.</RH_TET_Beastmen_HerdstoneDessicatedMessage>
+	<RH_TET_Beastmen_HerdstoneFavorCount>Current favor of {0}: {1}. Your offering has been accepted.</RH_TET_Beastmen_HerdstoneFavorCount>
+	<RH_TET_Beastmen_HerdstoneFavorTotal>Current favor of {0}: {1}</RH_TET_Beastmen_HerdstoneFavorTotal>
+	<RH_TET_Beastmen_SacrificedHumansCount>Humanlikes sacrificed to {0}: {1}.\n\nYour offering has been accepted.</RH_TET_Beastmen_SacrificedHumansCount>
+	<RH_TET_Beastmen_HerdstoneRenown>Your worldy renown has grown to {0}.</RH_TET_Beastmen_HerdstoneRenown>
+
+	<RH_TET_Beastmen_Khorne>Khorne</RH_TET_Beastmen_Khorne>
+	<RH_TET_Beastmen_Nurgle>Nurgle</RH_TET_Beastmen_Nurgle>
+	<RH_TET_Beastmen_Slaanesh>Slaanesh</RH_TET_Beastmen_Slaanesh>
+	<RH_TET_Beastmen_Tzeentch>Tzeentch</RH_TET_Beastmen_Tzeentch>
+	<RH_TET_Beastmen_FavorOf>Favor of</RH_TET_Beastmen_FavorOf>
+	<RH_TET_Beastmen_Praise>Praise</RH_TET_Beastmen_Praise>
+	<RH_TET_Beastmen_BoonFrom>Boon from</RH_TET_Beastmen_BoonFrom>
+
+	<RH_TET_Beastmen_KhorneInfo>The sacred number of Khorne is 8. You've provided a number of skulls that are a factor of 8, and have thus pleased Khorne greatly.</RH_TET_Beastmen_KhorneInfo>
+	<RH_TET_Beastmen_NurgleInfo>The sacred number of Nurgle is 7. You've provided a number of offerings that are a factor of 7, and have thus pleased Nurgle greatly.</RH_TET_Beastmen_NurgleInfo>
+	<RH_TET_Beastmen_SlaaneshInfo>The sacred number of Slaanesh is 6. You've provided offerings with a total offering value that is a factor of 6, and have thus pleased Slaanesh greatly.</RH_TET_Beastmen_SlaaneshInfo>
+	<RH_TET_Beastmen_TzeentchInfo>The sacred number of Tzeentch is 9. You've provided offerings with a total offering value that is a factor of 9, and have thus pleased Tzeentch greatly.</RH_TET_Beastmen_TzeentchInfo>
+	<RH_TET_Beastmen_KhorneBoonInfo>The sacred number of Khorne is 8. You've provided either your first humalike sacrifice, or a total number of humanlike sacrifices equal to a factor of 8. Khorne smiles as another skull is added to his throne.</RH_TET_Beastmen_KhorneBoonInfo>
+	<RH_TET_Beastmen_NurgleBoonInfo>The sacred number of Nurgle is 7. You've provided either your first humalike sacrifice, or a total number of humanlike sacrifices equal to a factor of 7. Nurgle chortles with glee at your offering.</RH_TET_Beastmen_NurgleBoonInfo>
+	<RH_TET_Beastmen_SlaaneshBoonInfo>The sacred number of Slaanesh is 6. You've provided either your first humalike sacrifice, or a total number of humanlike sacrifices equal to a factor of 6. Slaanesh grins with pleasure.</RH_TET_Beastmen_SlaaneshBoonInfo>
+	<RH_TET_Beastmen_TzeentchBoonInfo>The sacred number of Tzeentch is 9. You've provided either your first humalike sacrifice, or a total number of humanlike sacrifices equal to a factor of 9. Tzeentch grows ever fonder of you.</RH_TET_Beastmen_TzeentchBoonInfo>
+  
+	<RH_TET_Beastmen_GenericBoonText>has granted you a favor: {0} {1}.</RH_TET_Beastmen_GenericBoonText>
+	<RH_TET_Beastmen_GenericBoonTextSingle>has granted you the following item: {0}.</RH_TET_Beastmen_GenericBoonTextSingle>
+	<RH_TET_Beastmen_BoonQualityStuffItemTextSingle>has granted you the following item: {0} {1} {2}.</RH_TET_Beastmen_BoonQualityStuffItemTextSingle>
+	<RH_TET_Beastmen_GenericStatIncreaseText>has granted one of your pawns an increase in stats. {0} has received a gift of {1} points of {2} skill experience.</RH_TET_Beastmen_GenericStatIncreaseText>
+	<RH_TET_Beastmen_MagicSkillIncreaseText>has granted one of your pawns a boon. {0} has received a gift of {1} magic points skill. You may upgrade the pawn's magic spells.</RH_TET_Beastmen_MagicSkillIncreaseText>
+	<RH_TET_Beastmen_GenericBoonTextPawn>Your offering has reached a factor of the sacred number of {0} squared. To reward your devotion and sacrifice, {0} has granted you a new beast: a {1} has joined you. This unique pawn has skills specific to its patron god, and has been gifted an amazing weapon by its patron. Use it well.</RH_TET_Beastmen_GenericBoonTextPawn>
+	<RH_TET_Beastmen_GenericBoonTextEnd>Well done! Continue your activites to receive more favors. The gods reward the devoted.</RH_TET_Beastmen_GenericBoonTextEnd>
+
+	<!-- Refugees chased -->
+	<RH_TET_Beastmen_RefugeeChasedTitle>Refugees chased at {0}</RH_TET_Beastmen_RefugeeChasedTitle>
+	<RH_TET_Beastmen_RefugeeChasedInitial>{PAWN_titleIndef} named {PAWN_nameDef} contacts you magically from nearby. {PAWN_pronoun} and some others are being chased by {2} from {3}!\n\n{PAWN_pronoun} begs for safety and offers to join your colony. {PAWN_pronoun} tells you {PAWN_pronoun} is accompanied by {4} others, but there's no time to collect more information. They are all happy to join you if you offer them safety.\n\nBe warned - if you accept, you'll have to fight off the {2} on {PAWN_possessive} tail. Their group is composed of:\n\n{5}</RH_TET_Beastmen_RefugeeChasedInitial>
+	<RH_TET_Beastmen_RefugeeChasedInitial_Accept>Offer safety</RH_TET_Beastmen_RefugeeChasedInitial_Accept>
+	<RH_TET_Beastmen_RefugeeChasedInitial_Reject>Ignore the message</RH_TET_Beastmen_RefugeeChasedInitial_Reject>
+	<RH_TET_Beastmen_RefugeeChasedRejected>{1_labelShort} screams in panic through the magical link before you cut off the communication.</RH_TET_Beastmen_RefugeeChasedRejected>
+  
+	<RH_TET_Beastmen_HomesteadDestroyed>You have destroyed the nearby enemies, claiming their lives and whatever material goods you could find.\n\nPerhaps they will be wiser in the future about where they choose to travel or settle.\n\nPraise the Dark Gods!</RH_TET_Beastmen_HomesteadDestroyed>
+	<RH_TET_Beastmen_LabelHomesteadDestroyed>Weaklings Destroyed</RH_TET_Beastmen_LabelHomesteadDestroyed>
+	<RH_TET_Beastmen_HomesteadInspectString>A group of enemies, ripe for plunder.</RH_TET_Beastmen_HomesteadInspectString>
+	<RH_TET_Beastmen_LetterTraderCaravanArrival>A caravan from {0} is in the area. They are a {1}.\n\nPrepare your assault carefully, they will likely scatter when attacked.</RH_TET_Beastmen_LetterTraderCaravanArrival>
+ 
+	<RH_TET_Beastmen_Destruction>Destruction</RH_TET_Beastmen_Destruction>
+	<RH_TET_Beastmen_DestructionDesc>You have constructed your first herdstone, and the gods have begun to glance in your direction.\n\nDestruction is your beastial nature, and destruction is what you must wreak upon the forces of Order to please the dark gods.\n\nDestroy 8 Order faction bases (that's The Empire or Dwarfs), in order to prove your worth. For each base you destroy, you'll be gifted by the gods with a truly monumental reward.\n\nThere are eight unique rewards that you can acquire, each a monument with its own unique powers or effects.\n\nThere's no limit to the number of rewards you can receive. They will be gifted in sets of 8 in random order as you destroy Order bases, and once you've received all 8, they will reset in random order should you continue to destroy more Order bases.\n\nAfter defeating your first 8 Order bases, you will be made aware of a new and final quest for Beastman domination.\n\nConquer your foes! Rend the humans and dwarfs of Order into meat and gore. Praise to the dark gods! Hail The End Times!</RH_TET_Beastmen_DestructionDesc>
+ 
+	<RH_TET_Beastmen_FinalDestructionHelp>You've reached the last bastion of the forces of Order. Smash them, and claim victory for the dark powers.\n\nTips: Keep moving so the mortars don't hit you! There's three mortars with a handful of shots each. Avoid the open areas around the castle towers so the warmachine emplacements cannot hit you. Bring some cygors so you can take out the main castle walls while staying in cover. The emplaced warmachines have the gates covered against melee forces.\n\nIf you fail, you can always try again with a bigger herd.\n\nTo grow your herd to a proper size, try smashing bases of the Cloven Ones. When you do so, some of the remaining beasts will join your clearly more powerful herd.</RH_TET_Beastmen_FinalDestructionHelp>
+	<RH_TET_Beastmen_HostileReasonFinalDestruction>They've decided that your evil ways cannot be tolerated any longer. Get ready for war!</RH_TET_Beastmen_HostileReasonFinalDestruction>
+	<RH_TET_Beastmen_DestroyedOrderLabel>Final Destruction Victory</RH_TET_Beastmen_DestroyedOrderLabel>
+	<RH_TET_Beastmen_DestroyedOrderDesc>The enemy at the {0} has been destroyed.\n\nIt was a gloriously brutal day of beastial victory. Burn the town to the ground, and rip the castle apart block by block. Consume your fallen foes and rejoice in the power of the dark gods.</RH_TET_Beastmen_DestroyedOrderDesc>
+	<RH_TET_FinalDestructionVictory>Victory has been claimed for the dark gods! Well done! You've smashed the forces of good, and ensured The End Times would truly come to pass.\n\nBlood flowed through the streets of the pathetic human town, and the castle was painted red with the blood of its former occupants. The dark powers swell with power at the destruction that you have wrought.\n\nThis mod was developed by Johnny Hastings (@SickBoyWI). Special thanks to @Dino's Bar and Grill for the fantastic artwork he generously donated his time and skills for that went into this mod; it made up for my lack of graphics skills, and made the Rimhammer - The End Times mod series that much more great.\n\nThank you for playing.\n\nYou're free to call it a win for now, or keep playing and see what else happens in the world. If that's the case, hit the escape key to return to the game.\n\nPlease look me up on Patreon, or Ko-Fi and donate what you feel this was worth! This beastman end game quest took me several weeks to design, create images for, and code up. I'm one guy who spends a whole lot of time on these mods. If you enjoyed it, then please show your love! I'll be encouraged to finish the other factions/races that much quicker if everyone contributes.</RH_TET_FinalDestructionVictory>
+	<RH_TET_Beastmen_FailedFinalDestructionLabel>Your Attack Was Repelled</RH_TET_Beastmen_FailedFinalDestructionLabel>
+	<RH_TET_Beastmen_FailedFinalDestructionDesc>Your attempt to bring destruction upon the forces of Order has failed. Any of your attackers that survived were no doubt finished off, having been put down by vengeful humans.\n\nPerhaps you can try again later, although your enemies would certainly have rebuilt their defenses by then.</RH_TET_Beastmen_FailedFinalDestructionDesc>
+	<RH_TET_Beastmen_LeaveCommand>Leave</RH_TET_Beastmen_LeaveCommand>
+	<RH_TET_Beastmen_LeaveCommandDesc>Form a caravan and leave.</RH_TET_Beastmen_LeaveCommandDesc>
+	<RH_TET_Beastmen_CaravanArrivedAt/>
+	
+	<RH_TET_Beastmen_Organize>Organize</RH_TET_Beastmen_Organize>
+	<RH_TET_Beastmen_CommandUpgrade>Upgrade Herdstone</RH_TET_Beastmen_CommandUpgrade>
+	<RH_TET_Beastmen_CommandDisabled>We haven't been gifted that wisdom by the gods yet.</RH_TET_Beastmen_CommandDisabled>
+	<RH_TET_Beastmen_CommandSacrifice>Sacrifice</RH_TET_Beastmen_CommandSacrifice>
+	<RH_TET_Beastmen_CommandSacrificeDesc>Make a living sacrifice to the dark gods in hopes of gaining their favor.</RH_TET_Beastmen_CommandSacrificeDesc>
+	<RH_TET_Beastmen_CommandCancelSacrifice>Cancel current sacrifice.</RH_TET_Beastmen_CommandCancelSacrifice>
+	<RH_TET_Beastmen_CommandConversion>Conversion</RH_TET_Beastmen_CommandConversion>
+	<RH_TET_Beastmen_CommandConversionDesc>Convert a prisoner into an ungor.</RH_TET_Beastmen_CommandConversionDesc>
+	<RH_TET_Beastmen_CommandCancelConversion>Cancel current conversion.</RH_TET_Beastmen_CommandCancelConversion>
+	<RH_TET_Beastmen_CommandOffering>Make An Offering</RH_TET_Beastmen_CommandOffering>
+	<RH_TET_Beastmen_CommandOfferingDesc>Make an offering of our limited foodstuffs, in the hopes of attracting the eye of one of the dark gods.</RH_TET_Beastmen_CommandOfferingDesc>
+	<RH_TET_Beastmen_CommandCancelOffering>Cancel Offering</RH_TET_Beastmen_CommandCancelOffering>
+	<RH_TET_Beastmen_CommandCancellingOffering>Cancelling offering.</RH_TET_Beastmen_CommandCancellingOffering>
+	<RH_TET_Beastmen_CommandGift>Spawn Chaos Wisdom Stone</RH_TET_Beastmen_CommandGift>
+	<RH_TET_Beastmen_CommandGiftDesc>Spawn the item that will grant a pawn the ability to cast magic.</RH_TET_Beastmen_CommandGiftDesc>
+	<RH_TET_Beastmen_CommandPulse>Release Animal Maddening Pulse</RH_TET_Beastmen_CommandPulse>
+	<RH_TET_Beastmen_CommandPulseDesc>Release a psychic pulse that will make all wild animals on the map mad.</RH_TET_Beastmen_CommandPulseDesc>
+	<RH_TET_Beastmen_CommandGas>Release Combat Gas</RH_TET_Beastmen_CommandGas>
+	<RH_TET_Beastmen_CommandGasDesc>Release a puff of combat gas. Any pawns that breathe in the gas will get a boost to combat skills.</RH_TET_Beastmen_CommandGasDesc>
+	<RH_TET_Beastmen_TurnOn>Turn On</RH_TET_Beastmen_TurnOn>
+	<RH_TET_Beastmen_TurnOnDesc>Turn on the sarsen beacon, and increase the herdstone event occurrences. This will increase the pawn join events more than it will the raid events.</RH_TET_Beastmen_TurnOnDesc>
+	<RH_TET_Beastmen_TurnOff>Turn Off</RH_TET_Beastmen_TurnOff>
+	<RH_TET_Beastmen_TurnOffDesc>Turn off the sarsen beacon, and decrease the herdstone event occurrences.</RH_TET_Beastmen_TurnOffDesc>
+  
+	<RH_TET_Beastmen_HerdGathering>The herd is already gathering.</RH_TET_Beastmen_HerdGathering>
+	<RH_TET_Beastmen_OfferingHappening>An offering is already happening.</RH_TET_Beastmen_OfferingHappening>
+	<RH_TET_Beastmen_NoOfferingSelected>No offering type selected.</RH_TET_Beastmen_NoOfferingSelected>
+	<RH_TET_Beastmen_NoOfferingAmtSelected>No offering amount selected.</RH_TET_Beastmen_NoOfferingAmtSelected>
+	<RH_TET_Beastmen_NoOffererSelected>No offerer selected.</RH_TET_Beastmen_NoOffererSelected>
+	<RH_TET_Beastmen_OffererDrafted>Offerer is drafted.</RH_TET_Beastmen_OffererDrafted>
+	<RH_TET_Beastmen_ExecutionerDrafted>The executioner is drafted.</RH_TET_Beastmen_ExecutionerDrafted>
+	<RH_TET_Beastmen_NoExecutionerSelected>No executioner selected.</RH_TET_Beastmen_NoExecutionerSelected>
+	<RH_TET_Beastmen_AbleOfferer>Select an able-bodied offerer.</RH_TET_Beastmen_AbleOfferer>
+	<RH_TET_Beastmen_AbleExec>Select an able-bodied executioner.</RH_TET_Beastmen_AbleExec>
+	<RH_TET_Beastmen_HerdstoneReserved>The herdstone is reserved by something else.</RH_TET_Beastmen_HerdstoneReserved>
+	<RH_TET_Beastmen_HerdstoneClear>The herdstone needs to be cleared first.</RH_TET_Beastmen_HerdstoneClear>
+	<RH_TET_Beastmen_OfferingGathered>An offering is being gathered.</RH_TET_Beastmen_OfferingGathered>
+	<RH_TET_Beastmen_SacrificeCancelled>Cancelling sacrifice.</RH_TET_Beastmen_SacrificeCancelled>
+	<RH_TET_Beastmen_ConversionCancelled>Cancelling chaos conversion.</RH_TET_Beastmen_ConversionCancelled>
+	<RH_TET_Beastmen_ConversionSarsenRequired>A conversion sarsen must be present near the herdstone.</RH_TET_Beastmen_ConversionSarsenRequired>
+	<RH_TET_Beastmen_SacrificeGatheringAlready>A ritual is already gathering.</RH_TET_Beastmen_SacrificeGatheringAlready>
+	<RH_TET_Beastmen_NoVictim>No victim selected for ritual.</RH_TET_Beastmen_NoVictim>
+	<RH_TET_Beastmen_VictimDead>The victim is already dead.</RH_TET_Beastmen_VictimDead>
+	<RH_TET_Beastmen_CantReserveSacrifice>The executioner can't reserve the victim.</RH_TET_Beastmen_CantReserveSacrifice>
+	<RH_TET_Beastmen_NoPrisonerAvailable>No prisoners available.</RH_TET_Beastmen_NoPrisonerAvailable>
+	<RH_TET_Beastmen_AbortHerdGathering>Aborting herd gathering.</RH_TET_Beastmen_AbortHerdGathering>
+	<RH_TET_Beastmen_Cancel>Cancel</RH_TET_Beastmen_Cancel>
+	<RH_TET_Beastmen_RewardSpawned>has been gifted to you by the gods. Praise the dark powers!</RH_TET_Beastmen_RewardSpawned>
+	<RH_TET_Beastmen_EffectAvailableStart>Time until effect is usable again:</RH_TET_Beastmen_EffectAvailableStart>
+	<RH_TET_Beastmen_Now>Now</RH_TET_Beastmen_Now>
+	<RH_TET_Beastmen_PulseOccurred>The power of chaos has driven all wild animals in the area mad.</RH_TET_Beastmen_PulseOccurred>
+	<RH_TET_Beastmen_SarsenInfo>Includes Beacon Sarsen bonus.</RH_TET_Beastmen_SarsenInfo>
+	<RH_TET_Beastmen_HerdstoneSarsenGiftLabel>Gift of the Gods</RH_TET_Beastmen_HerdstoneSarsenGiftLabel>
+	<RH_TET_Beastmen_HerdstoneSarsenGift>You destroyed an Order faction base, and have pleased the Dark Gods. They have have gifted you with: {0}</RH_TET_Beastmen_HerdstoneSarsenGift>
+  
+	<!-- Pit fight stuff -->
+	<RH_TET_Beastmen_HavingFun>Having Fun</RH_TET_Beastmen_HavingFun>
+	<RH_TET_Beastmen_FightAlreadyHeld>Pit fight is already being held.</RH_TET_Beastmen_FightAlreadyHeld>
+	<RH_TET_Beastmen_FightAlreadyProcess>Pit fight is already in process.</RH_TET_Beastmen_FightAlreadyProcess>
+	<RH_TET_Beastmen_SelectTwoFighters>You must select two fighters.</RH_TET_Beastmen_SelectTwoFighters>
+	<RH_TET_Beastmen_FightSelf>Fighter cannot fight themself; select two different fighters.</RH_TET_Beastmen_FightSelf>
+	<RH_TET_Beastmen_FighterCantFight>can't move, and therefore cannot fight.</RH_TET_Beastmen_FighterCantFight>
+	<RH_TET_Beastmen_FightCancelled>The pit fight has been cancelled.</RH_TET_Beastmen_FightCancelled>
+	<RH_TET_Beastmen_FightSuspended>The pit fight was suspended.</RH_TET_Beastmen_FightSuspended>
+	<RH_TET_Beastmen_FightWinner>The winner is</RH_TET_Beastmen_FightWinner>
+	<RH_TET_Beastmen_FightStarting>The pit fight is starting!</RH_TET_Beastmen_FightStarting>
+	<RH_TET_Beastmen_NoFighters>No fighters available.</RH_TET_Beastmen_NoFighters>
+
+	<!-- Settings Stuff -->
+	<RH_TET_Beastmen_UseHerdWealthMoodModifier>Use 'Herd Getting Soft' mood modifier?</RH_TET_Beastmen_UseHerdWealthMoodModifier>
+	<RH_TET_Beastmen_HerdWealthMoodModifierInfo>Turn this off if you want to use beasmen as builders, else they will get negative mood buffs for having too much item and building wealth.</RH_TET_Beastmen_HerdWealthMoodModifierInfo>
+	<RH_TET_Beastmen_MakePawnsRequireViolence>Enable need for violence in pawns?</RH_TET_Beastmen_MakePawnsRequireViolence>
+	<RH_TET_Beastmen_MakePawnsRequireViolenceInfo>Turn this off if you do not want pawns to have a need for violence. This only affects beastmen, unless you have the Any One Can Beastmen mod installed also, then it affects all pawns.</RH_TET_Beastmen_MakePawnsRequireViolenceInfo>
+	<RH_TET_Beastmen_Herdstone_Settings>These settings control the events that are caused by the massive herdstone. The herdstone will cause frequent raids of varying strength degrees, as well as events that cause new pawns to join (sometimes being chased by enemies, sometimes not).</RH_TET_Beastmen_Herdstone_Settings>
+	<RH_TET_Beastmen_Herdstone_UseEvents>Allow additional herdstone events?</RH_TET_Beastmen_Herdstone_UseEvents>
+	<RH_TET_Beastmen_Herdstone_Default>Default</RH_TET_Beastmen_Herdstone_Default>
+	<RH_TET_Beastmen_Herdstone_EventFrequency>Select the frequency at which the herdstone events should fire. Negative numbers are less frequent, positive numbers make the events happen more often.</RH_TET_Beastmen_Herdstone_EventFrequency>
+  	
+	<!-- Jerky / Cauldron stuff -->
+	<RH_TET_Beastmen_ContainsSmoking>Contains {0} / {1} smoking meat.</RH_TET_Beastmen_ContainsSmoking>
+	<RH_TET_Beastmen_ContainsSmokingMeat>Contains {0} / {1} smoked meat.</RH_TET_Beastmen_ContainsSmokingMeat>
+	<RH_TET_Beastmen_Smoked>smoked</RH_TET_Beastmen_Smoked>
+	<RH_TET_Beastmen_SmokingProgress>{0} smoked, {1} time remaining.</RH_TET_Beastmen_SmokingProgress>
+	<RH_TET_Beastmen_SmokerOutOfIdealTemperature>Outside ideal temperature, current smoking rate {0}.</RH_TET_Beastmen_SmokerOutOfIdealTemperature>
+	<RH_TET_Beastmen_IdealSmokingTemperature>Ideal smoking temperature</RH_TET_Beastmen_IdealSmokingTemperature>
+	<RH_TET_Beastmen_NoBrinedMeat>need brined meat</RH_TET_Beastmen_NoBrinedMeat>
+	<RH_TET_Beastmen_NextToCauldron>Must be placed next to a cauldron.</RH_TET_Beastmen_NextToCauldron>
+	
+	<!-- Wall Vent -->
+	<RH_TET_Beastmen_WallNeeded>Must be placed on walls.</RH_TET_Beastmen_WallNeeded>
+	
+	<!-- Defeated Foe Joins -->
+	<RH_TET_Beastmen_MessageRecruitSuccess>{RECRUITEE_nameFull} has joined your herd. You defeated the enemy herd, and your herd is clearly stronger and more worthy.</RH_TET_Beastmen_MessageRecruitSuccess>
+	
+</LanguageData>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>ProxyHeat</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<!-- RH_TET_Beastmen_CauldronSlopDispenser -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_CauldronSlopDispenser"]/comps</xpath>
+					<success>Always</success>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_CauldronSlopDispenser"]</xpath>
+						<value>
+							<comps/>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_CauldronSlopDispenser"]/comps</xpath>
+					<value>
+						<li Class="ProxyHeat.CompProperties_TemperatureSource">
+							<radius>3.5</radius>
+							<tempOutcome>18</tempOutcome>
+							<dependsOnFuel>true</dependsOnFuel>
+							<maxTemperature>30</maxTemperature>
+							
+							<smeltSnowRadius>1</smeltSnowRadius>
+							<smeltSnowAtTemperature>3</smeltSnowAtTemperature>
+							<smeltSnowPower>0.001</smeltSnowPower>
+						</li>
+					</value>
+				</li>
+				<!-- RH_TET_Beastmen_Bonfire -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_Bonfire"]/comps</xpath>
+					<success>Always</success>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_Bonfire"]</xpath>
+						<value>
+							<comps/>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_Bonfire"]/comps</xpath>
+					<value>
+						<li Class="ProxyHeat.CompProperties_TemperatureSource">
+							<radius>2.5</radius>
+							<tempOutcome>20</tempOutcome>
+							<dependsOnFuel>true</dependsOnFuel>
+							<maxTemperature>35</maxTemperature>
+							
+							<smeltSnowRadius>2.5</smeltSnowRadius>
+							<smeltSnowAtTemperature>2</smeltSnowAtTemperature>
+							<smeltSnowPower>0.001</smeltSnowPower>
+						</li>
+					</value>
+				</li>
+				<!-- RH_TET_Beastmen_MeatSmoker -->
+				<li Class="PatchOperationConditional">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_MeatSmoker"]/comps</xpath>
+					<success>Always</success>
+					<nomatch Class="PatchOperationAdd">
+						<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_MeatSmoker"]</xpath>
+						<value>
+							<comps/>
+						</value>
+					</nomatch>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RH_TET_Beastmen_MeatSmoker"]/comps</xpath>
+					<value>
+						<li Class="ProxyHeat.CompProperties_TemperatureSource">
+							<radius>1</radius>
+							<tempOutcome>18</tempOutcome>
+							<dependsOnFuel>true</dependsOnFuel>
+							<maxTemperature>25</maxTemperature>
+							
+							<smeltSnowRadius>1</smeltSnowRadius>
+							<smeltSnowAtTemperature>4</smeltSnowAtTemperature>
+							<smeltSnowPower>0.001</smeltSnowPower>
+						</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

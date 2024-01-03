@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_OtherPrisonerWasSacrificed</defName>
+		<durationDays>8</durationDays>
+		<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>other prisoner was sacrificed</label>
+				<description>I can't be in this place! What if I'm next?!</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_AttendedSuccessfulSacrifice</defName>
+		<durationDays>2</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>Successful sacrifice</label>
+				<description>What a glorious display of devotion to the dark gods!</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_AttendedFailedSacrifice</defName>
+		<durationDays>2</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>Failed sacrifice</label>
+				<description>Such a glorious sacrifice to the dark gods, wasted. Surely they will frown upon us.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_AttendedSuccessfulConversion</defName>
+		<durationDays>3</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>Successful conversion</label>
+				<description>What a glorious display of devotion to the dark gods! We corrupted someone to the powers of chaos.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_AttendedFailedConversion</defName>
+		<durationDays>3</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>Failed conversion</label>
+				<description>Such a glorious conversion to the dark gods, wasted. Surely they will frown upon us.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_ExecutedFamily</defName>
+		<durationDays>10</durationDays>
+		<stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>executed {0}</label>
+				<description>We executed a family member to the dark gods. Surely they must be pleased.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_ConvertedFamily</defName>
+		<durationDays>10</durationDays>
+		<stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+		<stackLimit>5</stackLimit>
+		<stages>
+			<li>
+				<label>converted {0}</label>
+				<description>We converted a family member to the dark gods. Surely the gods are pleased.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_ExecutedPet</defName>
+		<durationDays>5</durationDays>
+		<stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>sacrificed my pet {0}</label>
+				<description>I killed a pet in the name of the dark gods. Surely they must approve.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_SacrificedFamily</defName>
+		<durationDays>10</durationDays>
+		<stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>my family member {0} was sacrified</label>
+				<description>We're monsters. Surely the dark gods smile upon us.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_SacrificedFriend</defName>
+		<durationDays>8</durationDays>
+		<stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>my friend {0} was sacrified</label>
+				<description>We sacrificed my friend to the dark gods. Their sacrifice surely brings the favor of the gods.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_ConvertedFriend</defName>
+		<durationDays>8</durationDays>
+		<stackedEffectMultiplier>0.25</stackedEffectMultiplier>
+		<stackLimit>5</stackLimit>
+		<stages>
+			<li>
+				<label>my friend {0} was converted</label>
+				<description>We converted my friend to the dark gods. Their conversion will surely bring the favor of the gods.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+     
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_SacrificedPet</defName>
+		<durationDays>3</durationDays>
+		<stackedEffectMultiplier>0.5</stackedEffectMultiplier>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>my pet {0} was sacrificed</label>
+				<description>My favorite pet was given to the dark gods. Praise them!</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_SacrificedRival</defName>
+		<durationDays>8</durationDays>
+		<stackedEffectMultiplier>0.33</stackedEffectMultiplier>
+		<stackLimit>5</stackLimit>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>my rival {0} was sacrified</label>
+				<description>What a great turn of events! I'm glad they're gone, and the dark gods must be pleased.</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_ConvertedRival</defName>
+		<durationDays>8</durationDays>
+		<stackedEffectMultiplier>0.33</stackedEffectMultiplier>
+		<stackLimit>5</stackLimit>
+		<stages>
+			<li>
+				<label>my rival {0} was converted</label>
+				<description>What a great turn of events! I'm glad they've been converted to chaos, and the dark gods must be pleased.</description>
+				<baseMoodEffect>7</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  
+</Defs>

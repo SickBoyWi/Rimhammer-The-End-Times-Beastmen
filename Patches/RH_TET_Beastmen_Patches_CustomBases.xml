@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[defName="RH_TET_Beastmen_GorFaction"]</xpath>
+		<value>
+			<modExtensions>
+				<li Class="KCSG.CustomGenOption">
+					<chooseFromlayouts>
+						<li>RH_TET_Beastmen_Base_1</li>
+						<li>RH_TET_Beastmen_Base_2</li>
+						<li>RH_TET_Beastmen_Base_3</li>
+						<li>RH_TET_Beastmen_Base_4</li>
+						<li>RH_TET_Beastmen_Base_5</li>
+						<li>RH_TET_Beastmen_Base_6</li>
+					</chooseFromlayouts>
+				</li>
+			</modExtensions>
+		</value>
+	</Operation>
+	
+</Patch>

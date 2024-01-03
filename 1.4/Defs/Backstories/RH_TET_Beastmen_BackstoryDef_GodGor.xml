@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Khorne -->
+  
+	<!-- Adulthood -->
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_Khornegor</defName>
+		<title>blessed by Khorne</title>
+		<titleShort>khornate</titleShort>
+		<baseDesc>[PAWN_nameDef] has been blessed by Khorne. [PAWN_pronoun] fights better than the rest, and cares less about anything other than fighting.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<forcedHediffs>
+			<li>RH_TET_Beastmen_KhorngorHornLeft</li>
+			<li>RH_TET_Beastmen_KhorngorHornRight</li>
+		</forcedHediffs>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>8</value>
+			</li>
+			<li>
+				<key>Shooting</key>
+				<value>-8</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Artistic</li>
+			<li>Intellectual</li>
+			<li>Caring</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Khornegor</li>
+		</spawnCategories>
+		<forcedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>98</chance>
+				<commonalityMale>100</commonalityMale>
+				<commonalityFemale>100</commonalityFemale>
+			</li>
+			<li>
+				<defName>Brawler</defName>
+				<chance>75</chance>
+				<commonalityMale>75</commonalityMale>
+				<commonalityFemale>75</commonalityFemale>
+			</li>
+			<li>
+				<defName>Tough</defName>
+				<chance>50</chance>
+			</li>
+		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- Childhood -->
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_Khornegor_Young</defName>
+		<title>child of Khorne</title>
+		<titleShort>Khorne child</titleShort>
+		<baseDesc>[PAWN_nameDef] was gifted by Khorne at birth, blessed with great fighting ability and a mad rage.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Artistic</li>
+			<li>Intellectual</li>
+			<li>Caring</li>
+			<li>PlantWork</li>
+			<li>Cooking</li>
+			<li>Social</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Khornegor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- Nurgle -->
+  
+	<!-- Adulthood -->
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_Pestigor</defName>
+		<title>beloved of Nurgle</title>
+		<titleShort>nurgley</titleShort>
+		<baseDesc>[PAWN_nameDef] has been blessed by Nurgle. [PAWN_pronoun]  fights better than most gor, but seems to heal faster than most and knows enough about how bodies work to be a decent healer.</baseDesc>
+		<bodyTypeMale>Fat</bodyTypeMale>
+		<bodyTypeFemale>Fat</bodyTypeFemale>
+		<forcedHediffs>
+			<li>RH_TET_Beastmen_PestigorHornLeft</li>
+			<li>RH_TET_Beastmen_PestigorHornRight</li>
+		</forcedHediffs>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Pestigor</li>
+		</spawnCategories>
+		<forcedTraitsChance>
+			<li>
+				<defName>Gourmand</defName>
+				<chance>50</chance>
+				<commonalityMale>25</commonalityMale>
+				<commonalityFemale>25</commonalityFemale>
+			</li>
+			<li>
+				<defName>Tough</defName>
+				<chance>98</chance>
+				<commonalityMale>100</commonalityMale>
+				<commonalityFemale>100</commonalityFemale>
+			</li>
+		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Caring</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- Childhood -->
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_Pestigor_Young</defName>
+		<title>child of Nurgle</title>
+		<titleShort>Nurgle child</titleShort>
+		<baseDesc>[PAWN_nameDef] was blessed by Nurgle at birth. [PAWN_pronoun] knows how to fight, and has an inate understanding of how to heal.</baseDesc>
+		<bodyTypeMale>Fat</bodyTypeMale>
+		<bodyTypeFemale>Fat</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Medicine</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>PlantWork</li>
+			<li>Cooking</li>
+			<li>Social</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Pestigor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- Slaanesh -->
+  
+	<!-- Adulthood -->
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_Slaangor</defName>
+		<title>child of Slaanesh</title>
+		<titleShort>slaaneshi</titleShort>
+		<baseDesc>[PAWN_nameDef] has been touched by Slaanesh. [PAWN_pronoun] fights better than most beasts, and is as fast as it gets.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<forcedHediffs>
+			<li>RH_TET_Beastmen_SlaangorHornLeft</li>
+			<li>RH_TET_Beastmen_SlaangorHornRight</li>
+		</forcedHediffs>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Slaangor</li>
+		</spawnCategories>
+		<forcedTraitsChance>
+			<li>
+				<defName>Masochist</defName>
+				<chance>75</chance>
+				<commonalityMale>25</commonalityMale>
+				<commonalityFemale>25</commonalityFemale>
+			</li>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>35</chance>
+				<commonalityMale>100</commonalityMale>
+				<commonalityFemale>100</commonalityFemale>
+			</li>
+			<li>
+				<defName>Nimble</defName>
+				<chance>35</chance>
+				<commonalityMale>100</commonalityMale>
+				<commonalityFemale>100</commonalityFemale>
+			</li>
+		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- Childhood -->
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_Slaangor_Young</defName>
+		<title>Slaaneshi young</title>
+		<titleShort>Slaanesh child</titleShort>
+		<baseDesc>[PAWN_nameDef] was blessed by Slaanesh at birth. [PAWN_pronoun] has speed like few others, and enjoys causing pain to others and [PAWN_objective]self.</baseDesc>
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>1</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Cooking</li>
+			<li>Cleaning</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Slaangor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- Tzeentch -->
+  
+	<!-- Adulthood -->
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_Tzaangor</defName>
+		<title>gifted by Tzeentch</title>
+		<titleShort>tzeentchian</titleShort>
+		<baseDesc>[PAWN_nameDef] has been given the favor of Tzeentch. [PAWN_pronoun] fights better than beastmen, and is also smarter.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<forcedHediffs>
+			<li>RH_TET_Beastmen_TzaangorHornLeft</li>
+			<li>RH_TET_Beastmen_TzaangorHornRight</li>
+		</forcedHediffs>
+		<slot>Adulthood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>3</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>3</value>
+			</li>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Tzaangor</li>
+		</spawnCategories>
+		<forcedTraitsChance>
+			<li>
+				<defName>TooSmart</defName>
+				<chance>25</chance>
+				<commonalityMale>100</commonalityMale>
+				<commonalityFemale>100</commonalityFemale>
+			</li>
+		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- Childhood -->
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_Tzaangor_Young</defName>
+		<title>Tzeentchian young</title>
+		<titleShort>Tzeentch child</titleShort>
+		<baseDesc>[PAWN_nameDef] was blessed by Tzeentch at birth. [PAWN_pronoun] posseses smarts that most beastmen don't.</baseDesc>
+		<bodyTypeMale>Thin</bodyTypeMale>
+		<bodyTypeFemale>Female</bodyTypeFemale>
+		<slot>Childhood</slot>
+		<skillGains>
+			<li>
+				<key>Melee</key>
+				<value>1</value>
+			</li>
+			<li>
+				<key>Intellectual</key>
+				<value>2</value>
+			</li>
+		</skillGains>
+		<workDisables>
+			<li>Cooking</li>
+			<li>Cleaning</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Tzaangor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+</Defs>

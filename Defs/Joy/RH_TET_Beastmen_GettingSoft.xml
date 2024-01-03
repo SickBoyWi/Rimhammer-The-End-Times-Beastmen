@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TheEndTimes_Beastmen.GettingSoftDef>
+		<defName>RH_TET_Beastmen_ExtremelyLow</defName>
+		<label>extremely low</label>
+		<thoughtStage>5</thoughtStage>
+		<maxMapWealth>40000</maxMapWealth>
+	</TheEndTimes_Beastmen.GettingSoftDef>
+
+	<TheEndTimes_Beastmen.GettingSoftDef>
+		<defName>RH_TET_Beastmen_VeryLow</defName>
+		<label>very low</label>
+		<thoughtStage>4</thoughtStage>
+		<maxMapWealth>80000</maxMapWealth>
+	</TheEndTimes_Beastmen.GettingSoftDef>
+
+	<TheEndTimes_Beastmen.GettingSoftDef>
+		<defName>RH_TET_Beastmen_Low</defName>
+		<label>low</label>
+		<thoughtStage>3</thoughtStage>
+		<maxMapWealth>120000</maxMapWealth>
+	</TheEndTimes_Beastmen.GettingSoftDef>
+
+	<TheEndTimes_Beastmen.GettingSoftDef>
+		<defName>RH_TET_Beastmen_Moderate</defName>
+		<label>moderate</label>
+		<thoughtStage>2</thoughtStage>
+		<maxMapWealth>175000</maxMapWealth>
+	</TheEndTimes_Beastmen.GettingSoftDef>
+
+	<TheEndTimes_Beastmen.GettingSoftDef>
+		<defName>RH_TET_Beastmen_High</defName>
+		<label>high</label>
+		<thoughtStage>1</thoughtStage>
+		<maxMapWealth>250000</maxMapWealth>
+	</TheEndTimes_Beastmen.GettingSoftDef>
+
+	<TheEndTimes_Beastmen.GettingSoftDef>
+		<defName>RH_TET_Beastmen_SkyHigh</defName>
+		<label>sky high</label>
+		<thoughtStage>0</thoughtStage>
+		<maxMapWealth>1000000000</maxMapWealth>
+	</TheEndTimes_Beastmen.GettingSoftDef>
+
+	<ThoughtDef>
+		<defName>RH_TET_Beastmen_GettingSoft</defName>
+		<workerClass>TheEndTimes_Beastmen.ThoughtWorker_GettingSoft</workerClass>
+		<stages>
+			<li>
+				<label>herd is soft</label>
+				<description>This herd has gotten too soft. What's next? Clothing and proper manling speech? I demand that we get rid of wealth.</description>
+				<baseMoodEffect>-30</baseMoodEffect>
+			</li>
+			<li>
+				<label>herd getting soft</label>
+				<description>The herd is getting softer every day. If we aren't careful we'll soon be farming and whelping young. We must stay strong, and get rid of wealth.</description>
+				<baseMoodEffect>-15</baseMoodEffect>
+			</li>
+			<li>
+				<label>herd not so strong</label>
+				<description>The herd has gathered some comforts. I cannot let myself be pampered. We should get rid of some wealth.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+			<li>
+				<label>herd starting to get soft</label>
+				<description>This place is beginning to get soft. I have to focus to stay strong. We should consider getting rid of some wealth.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+			<li>
+				<label>herd reasonably strong</label>
+				<description>This place is mostly free of comforts. I need to keep myself strong to survive.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+			<li>
+				<label>herd is strong</label>
+				<description>We have no comforts. I must stay strong to survive.</description>
+				<baseMoodEffect>20</baseMoodEffect>
+			</li>
+		</stages>
+		<validWhileDespawned>true</validWhileDespawned>
+	</ThoughtDef>
+
+</Defs>

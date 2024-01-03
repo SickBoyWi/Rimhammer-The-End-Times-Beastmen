@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ================ Player ========================== -->
+  
+  <PawnKindDef Name="RH_TET_Beastmen_GorBase" Abstract="True">
+    <defName>RH_TET_Beastmen_GorFaction</defName>
+    <label>gor</label>
+    <combatPower>45</combatPower>
+    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
+    <isFighter>true</isFighter>
+    <apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <race>RH_TET_Beastmen_Alien_Gor</race>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <initialResistanceRange>0</initialResistanceRange>
+    <initialWillRange>0~0</initialWillRange>
+  </PawnKindDef>
+
+  <PawnKindDef Name="RH_TET_Beastmen_UngorBase" Abstract="True">
+    <defName>RH_TET_Beastmen_UngorFaction</defName>
+    <label>Ungor</label>
+    <combatPower>35</combatPower>
+    <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <race>RH_TET_Beastmen_Alien_Ungor</race>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <initialResistanceRange>0</initialResistanceRange>
+    <initialWillRange>0~0</initialWillRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="RH_TET_Beastmen_GorBase">
+    <defName>RH_TET_Beastmen_GorColony</defName>
+    <race>RH_TET_Beastmen_Alien_Gor</race>
+    <combatPower>45</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>RH_TET_Beastmen_Gor</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelTags>
+      <li>RH_TET_Beastmen_GorLow</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>0</min>
+      <max>500</max>
+    </apparelMoney>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="RH_TET_Beastmen_GorBase">
+    <defName>RH_TET_Beastmen_GorTribe</defName>
+    <label>gor</label>
+    <race>RH_TET_Beastmen_Alien_Gor</race>
+    <combatPower>45</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>RH_TET_Beastmen_Gor</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelTags>
+      <li>RH_TET_Beastmen_GorLow</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>0</min>
+      <max>200</max>
+    </apparelMoney>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="RH_TET_Beastmen_UngorBase">
+    <defName>RH_TET_Beastmen_UngorColony</defName>
+    <race>RH_TET_Beastmen_Alien_Ungor</race>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>RH_TET_Beastmen_Ungor</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelTags>
+      <li>RH_TET_Beastmen_GorLow</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>0</min>
+      <max>200</max>
+    </apparelMoney>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="RH_TET_Beastmen_UngorBase">
+    <defName>RH_TET_Beastmen_UngorTribe</defName>
+    <label>ungor</label>
+    <race>RH_TET_Beastmen_Alien_Ungor</race>
+    <combatPower>35</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>RH_TET_Beastmen_Ungor</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelTags>
+      <li>RH_TET_Beastmen_GorLow</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>0</min>
+      <max>200</max>
+    </apparelMoney>
+  </PawnKindDef>
+
+  <!-- ================ Player Scenario - Bray  ========================== -->
+
+  <PawnKindDef>
+    <defName>RH_TET_Beastmen_BrayScenario</defName>
+    <race>RH_TET_Beastmen_Alien_BrayGor</race>
+    <combatPower>30</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>RH_TET_Beastmen_BrayShaman</li>
+          <li>RH_TET_Beastmen_GreatBrayShaman</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <minGenerationAge>22</minGenerationAge>
+    <maxGenerationAge>42</maxGenerationAge>
+    <apparelTags>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>125</min>
+      <max>200</max>
+    </apparelMoney>
+    <weaponTags>
+      <li>RH_TET_Beastmen_BrayShaman</li>
+    </weaponTags>
+    <weaponMoney>
+      <min>150</min>
+      <max>250</max>
+    </weaponMoney>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>150</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <techHediffsChance>0.5</techHediffsChance>
+    <initialResistanceRange>0</initialResistanceRange>
+    <initialWillRange>0~0</initialWillRange>
+  </PawnKindDef>
+
+  <!-- ================ Player Scenario - BeastmenHerd ========================== -->
+
+  <PawnKindDef>
+    <defName>RH_TET_Beastmen_BullgorBeastmenPlayer</defName>
+    <label>minotaur</label>
+    <race>RH_TET_Beastmen_Alien_Bullgor</race>
+    <factionLeader>false</factionLeader>
+    <combatPower>30</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>RH_TET_Beastmen_Bullgor</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelTags>
+      <li>RH_TET_Beastmen_GorLow</li>
+    </apparelTags>
+    <gearHealthRange>
+      <min>0.5</min>
+      <max>2.0</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>200</min>
+      <max>300</max>
+    </apparelMoney>
+    <weaponMoney>
+      <min>0</min>
+      <max>0</max>
+    </weaponMoney>
+    <initialResistanceRange>0</initialResistanceRange>
+    <initialWillRange>0~0</initialWillRange>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>RH_TET_Beastmen_GorBeastmenPlayer</defName>
+    <label>ravager</label>
+    <race>RH_TET_Beastmen_Alien_Gor</race>
+    <combatPower>30</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>RH_TET_Beastmen_Gor</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelTags>
+      <li>RH_TET_Beastmen_GorLow</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>0</min>
+      <max>200</max>
+    </apparelMoney>
+    <weaponTags>
+      <li>NeolithicMeleeBasic</li>
+    </weaponTags>
+    <weaponMoney>
+      <min>80</min>
+      <max>120</max>
+    </weaponMoney>
+    <initialResistanceRange>0</initialResistanceRange>
+    <initialWillRange>0~0</initialWillRange>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>RH_TET_Beastmen_UngorBeastmenPlayer</defName>
+    <label>raider</label>
+    <race>RH_TET_Beastmen_Alien_Ungor</race>
+    <combatPower>30</combatPower>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>RH_TET_Beastmen_Ungor</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelTags>
+      <li>RH_TET_Beastmen_GorLow</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>0</min>
+      <max>200</max>
+    </apparelMoney>
+    <weaponTags>
+      <li>NeolithicRangedBasic</li>
+    </weaponTags>
+    <weaponMoney>
+      <min>80</min>
+      <max>120</max>
+    </weaponMoney>
+    <initialResistanceRange>0</initialResistanceRange>
+    <initialWillRange>0~0</initialWillRange>
+  </PawnKindDef>
+  
+</Defs>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IncidentDef>
+		<defName>RH_TET_Beastmen_RefugeesChased</defName>
+		<label>chased refugee group</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>TheEndTimes_Beastmen.IncidentWorker_RefugeesChased</workerClass>
+		<baseChance>2</baseChance>
+		<populationEffect>IncreaseHard</populationEffect>
+		<minRefireDays>4</minRefireDays>
+		<earliestDay>10</earliestDay>
+	</IncidentDef>
+
+</Defs>
