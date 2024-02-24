@@ -506,6 +506,11 @@
 				<westOffset>(0,0,-0.1)</westOffset>
 				<southOffset>(-0.1,0,-0.1)</southOffset>
 			</li>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<ConsiderMelee>true</ConsiderMelee>
+				<verbProps />
+			</li>
 		</comps>
 		<statBases>
 			<WorkToMake>12000</WorkToMake>
@@ -531,6 +536,16 @@
 		<weaponTags>
 			<li>RH_TET_Beastmen_Ungor_Melee</li>
 		</weaponTags>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>RH_TET_BeastsSpearLow_Proj</defaultProjectile>
+				<warmupTime>1</warmupTime>
+				<range>5</range>
+				<soundCast>ThrowGrenade</soundCast>
+			</li>
+		</verbs>		
 		<tools>
 			<li>
 				<label>shaft</label>
@@ -552,6 +567,22 @@
 		</tools>
 	</ThingDef>
 
+	<ThingDef ParentName="BaseProjectileNeolithic">
+		<defName>RH_TET_BeastsSpearLow_Proj</defName>
+		<label>beast spear</label>
+		<graphicData>
+			<texPath>Things/Projectiles/RH_TET_Beasts_SpearLow</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Stab</damageDef>
+			<damageAmountBase>17</damageAmountBase>
+			<armorPenetrationBase>0.2</armorPenetrationBase>
+			<speed>75</speed>
+		</projectile>
+	</ThingDef>
+	
 	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
 		<defName>RH_TET_Beastmen_MeleeWeapon_Pick</defName>
 		<label>crude pick</label>
@@ -1259,7 +1290,14 @@
 				<power>14</power>
 				<cooldownTime>2</cooldownTime>
 			</li>
-		</tools>
+		</tools>		
+		<comps>
+			<li Class="MVCF.Comps.CompProperties_VerbProps">
+				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
+				<ConsiderMelee>true</ConsiderMelee>
+				<verbProps />
+			</li>
+		</comps>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseProjectileNeolithic">
