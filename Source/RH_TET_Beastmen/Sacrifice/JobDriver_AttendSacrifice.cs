@@ -177,7 +177,7 @@ namespace TheEndTimes_Beastmen
             };
 
 
-            this.AddFinishAction(() =>
+            this.AddFinishAction(jobCondition =>
             {
                 if (this.TargetC.Cell.GetEdifice(this.pawn.Map) != null)
                 {

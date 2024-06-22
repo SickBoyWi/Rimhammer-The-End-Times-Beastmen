@@ -26,3 +26,4 @@ D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Beastmen\1.4\Ass
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Beastmen\Source\RH_TET_Beastmen\obj\Debug\RH_TET_Beastmen.csprojAssemblyReference.cache
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Beastmen\Source\RH_TET_Beastmen\obj\Debug\RH_TET_Beastmen.csproj.CoreCompileInputs.cache
 D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Beastmen\Source\RH_TET_Beastmen\obj\Debug\RH_TET_Beastmen.dll
+D:\BackUp\Modding\RimWorld\Repositories\Rimhammer-The-End-Times-Beastmen\1.5\Assemblies\RH_TET_Beastmen.dll

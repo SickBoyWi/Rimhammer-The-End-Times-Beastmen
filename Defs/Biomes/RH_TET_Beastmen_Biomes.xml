@@ -112,14 +112,14 @@
 			<Plant_Brambles>1.0</Plant_Brambles>
 			<!-- Trees -->
 			<Plant_TreeWillow>0.10</Plant_TreeWillow>
-			<RH_TET_Beastmen_GreatOak>0.15</RH_TET_Beastmen_GreatOak>
+			<RH_TET_Beastmen_GreatOak>0.10</RH_TET_Beastmen_GreatOak>
 			<Plant_TreeOak>0.25</Plant_TreeOak>
 			<Plant_TreeMaple>0.25</Plant_TreeMaple>
-			<Plant_TreePoplar>0.35</Plant_TreePoplar>
-			<RH_TET_Beastmen_OldGrowthSugarMaple>0.35</RH_TET_Beastmen_OldGrowthSugarMaple>
-			<RH_TET_Beastmen_OldGrowthFir>0.35</RH_TET_Beastmen_OldGrowthFir>
-			<RH_TET_Beastmen_OldTwistedTree>0.40</RH_TET_Beastmen_OldTwistedTree>
-			<RH_TET_Beastmen_Willow>0.40</RH_TET_Beastmen_Willow>
+			<Plant_TreePoplar>0.10</Plant_TreePoplar>
+			<RH_TET_Beastmen_OldGrowthSugarMaple>0.30</RH_TET_Beastmen_OldGrowthSugarMaple>
+			<RH_TET_Beastmen_OldGrowthFir>0.30</RH_TET_Beastmen_OldGrowthFir>
+			<RH_TET_Beastmen_OldTwistedTree>0.30</RH_TET_Beastmen_OldTwistedTree>
+			<RH_TET_Beastmen_Willow>0.30</RH_TET_Beastmen_Willow>
 		</wildPlants>
 		<wildAnimals>
 			<Hare>1.00</Hare>

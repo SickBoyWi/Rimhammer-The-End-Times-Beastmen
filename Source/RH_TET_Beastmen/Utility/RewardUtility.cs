@@ -605,7 +605,8 @@ namespace TheEndTimes_Beastmen
                     CellRect cellRectAroundHerdstone7 = new CellRect(herdstone.InteractionCell.x - 4, herdstone.InteractionCell.z - 4, 10, 12);
                     TryFindSpawnCellForItem(cellRectAroundHerdstone7, herdstone.Map, out spawnCell7);
 
-                    Thing drug = ThingMaker.MakeThing(ThingDefOf.SmokeleafJoint);
+                    Thing drug = ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamed("SmokeleafJoint"));
+                    
                     drug.stackCount = 27;
                     GenSpawn.Spawn(drug, spawnCell7, herdstone.Map);
 

@@ -26,10 +26,10 @@ namespace TheEndTimes_Beastmen
           float extraRotation)
         {
             if (thingDef == null)
-                Log.ErrorOnce("Fire DrawWorker with null thingDef: " + (object)loc, 3427324, false);
+                Log.ErrorOnce("Fire DrawWorker with null thingDef: " + (object)loc, 3427324);
             else if (this.subGraphics == null)
             {
-                Log.ErrorOnce("Graphic_FlickerCustom2 has no subgraphics " + (object)thingDef, 358773632, false);
+                Log.ErrorOnce("Graphic_FlickerCustom2 has no subgraphics " + (object)thingDef, 358773632);
             }
             else
             {
@@ -54,7 +54,7 @@ namespace TheEndTimes_Beastmen
                 int index = Mathf.Abs(num1 ^ (thing != null ? thing.thingIDNumber : 0) * 391) % this.subGraphics.Length;
                 if (index < 0 || index >= this.subGraphics.Length)
                 {
-                    Log.ErrorOnce("Fire drawing out of range: " + (object)index, 7453435, false);
+                    Log.ErrorOnce("Fire drawing out of range: " + (object)index, 7453435);
                     index = 0;
                 }
                 Graphic subGraphic = this.subGraphics[index];

@@ -3,16 +3,16 @@
 
 	<JobDef>
 		<defName>CastAbilityVerb</defName>
-		<driverClass>AbilityUser.JobDriver_CastAbilityVerb</driverClass>
-		<reportString>Using an spell</reportString>
+		<driverClass>SickAbilityUser.JobDriver_CastAbilityVerb</driverClass>
+		<reportString>Using a spell</reportString>
 		<alwaysShowWeapon>true</alwaysShowWeapon>
 		<casualInterruptible>false</casualInterruptible>
 	</JobDef>
 
 	<JobDef>
 		<defName>CastAbilitySelf</defName>
-		<driverClass>AbilityUser.JobDriver_CastAbilitySelf</driverClass>
-		<reportString>Using an spell</reportString>
+		<driverClass>SickAbilityUser.JobDriver_CastAbilitySelf</driverClass>
+		<reportString>Using a spell</reportString>
 		<alwaysShowWeapon>true</alwaysShowWeapon>
 		<casualInterruptible>false</casualInterruptible>
 	</JobDef>

@@ -767,11 +767,11 @@ namespace TheEndTimes_Beastmen
                         action = TryConversion,
                         defaultLabel = "RH_TET_Beastmen_CommandConversion".Translate(),
                         defaultDesc = "RH_TET_Beastmen_CommandConversionDesc".Translate(),
-                        disabled = false,
                         disabledReason = "RH_TET_Beastmen_CommandDisabled".Translate(),
                         hotKey = KeyBindingDefOf.Misc1,
                         icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_Conversion")
                     };
+                    command_Action.Disabled = false;
                     if (currentFunction < Function.Level2) command_Action.icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_ConversionDisabled");
                     yield return command_Action;
                 }
@@ -782,10 +782,10 @@ namespace TheEndTimes_Beastmen
                         action = CancelConversion,
                         defaultLabel = "CommandCancelConstructionLabel".Translate(),
                         defaultDesc = "RH_TET_Beastmen_CommandCancelConversion".Translate(),
-                        disabled = false,
                         hotKey = KeyBindingDefOf.Designator_Cancel,
                         icon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel")
                     };
+                    command_Cancel.Disabled = false;
                     yield return command_Cancel;
                 }
             }
@@ -799,10 +799,10 @@ namespace TheEndTimes_Beastmen
                         action = TryOffering,
                         defaultLabel = "RH_TET_Beastmen_CommandOffering".Translate(),
                         defaultDesc = "RH_TET_Beastmen_CommandOfferingDesc".Translate(),
-                        disabled = false,
                         hotKey = KeyBindingDefOf.Misc3,
                         icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_MakeOffering")
                     };
+                    command_Action.Disabled = false;
                     yield return command_Action;
                 }
                 else
@@ -827,11 +827,11 @@ namespace TheEndTimes_Beastmen
                             action = TrySacrifice,
                             defaultLabel = "RH_TET_Beastmen_CommandSacrifice".Translate(),
                             defaultDesc = "RH_TET_Beastmen_CommandSacrificeDesc".Translate(),
-                            disabled = (currentFunction < Function.Level2),
                             disabledReason = "RH_TET_Beastmen_CommandDisabled".Translate(),
                             hotKey = KeyBindingDefOf.Misc1,
                             icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_Sacrifice")
                         };
+                        command_Action.Disabled = (currentFunction < Function.Level2);
                         if (currentFunction < Function.Level2) command_Action.icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_SacrificeDisabled");
                         yield return command_Action;
                     }
@@ -842,10 +842,10 @@ namespace TheEndTimes_Beastmen
                             action = CancelSacrifice,
                             defaultLabel = "CommandCancelConstructionLabel".Translate(),
                             defaultDesc = "RH_TET_Beastmen_CommandCancelSacrifice".Translate(),
-                            disabled = (currentFunction < Function.Level2),
                             hotKey = KeyBindingDefOf.Designator_Cancel,
                             icon = ContentFinder<Texture2D>.Get("UI/Designators/Cancel")
                         };
+                        command_Cancel.Disabled = (currentFunction < Function.Level2);
                         yield return command_Cancel;
                     }
                 }
@@ -1003,7 +1003,10 @@ namespace TheEndTimes_Beastmen
         private void CancelOffering()
         {
             Pawn pawn = null;
-            var listeners = Map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike);
+            // JEH 1.4
+            //var listeners = Map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike);
+            // JEH 1.5
+            var listeners = Map.mapPawns.AllPawnsSpawned.Where<Pawn>((Func<Pawn, bool>)(x => x.RaceProps.intelligence == Intelligence.Humanlike)).ToList<Pawn>();
             var flag = new bool[listeners.Count];
             for (var i = 0; i < listeners.Count; i++)
             {
@@ -1116,7 +1119,10 @@ namespace TheEndTimes_Beastmen
         private void CancelSacrifice()
         {
             Pawn pawn = null;
-            var listeners = Map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike);
+            // JEH 1.4
+            //var listeners = Map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike);
+            // JEH 1.5
+            var listeners = Map.mapPawns.AllPawnsSpawned.Where<Pawn>((Func<Pawn, bool>)(x => x.RaceProps.intelligence == Intelligence.Humanlike)).ToList<Pawn>();
             if (!listeners.NullOrEmpty())
             {
                 foreach (var t in listeners)
@@ -1260,22 +1266,42 @@ namespace TheEndTimes_Beastmen
                 if (availableAttendees == null || availableAttendees.Count == 0)
                 {
                     availableAttendees =
-                        new HashSet<Pawn>(Map.mapPawns.AllPawnsSpawned.FindAll(y => y is Pawn x &&
-                           x.RaceProps.Humanlike &&
-                           !x.IsPrisoner &&
-                           x.Faction == Faction &&
-                           x.RaceProps.intelligence == Intelligence.Humanlike &&
-                           !x.Downed && !x.Dead &&
-                           !x.InMentalState && !x.InAggroMentalState &&
-                           x.CurJob.def != BeastmenDefOf.RH_TET_Beastmen_AttendSacrifice &&
-                           x.CurJob.def != JobDefOf.Capture &&
-                           x.CurJob.def != JobDefOf.ExtinguishSelf && 
-                           x.CurJob.def != JobDefOf.Rescue && 
-                           x.CurJob.def != JobDefOf.TendPatient && 
-                           x.CurJob.def != JobDefOf.BeatFire && 
-                           x.CurJob.def != JobDefOf.Lovin && 
-                           x.CurJob.def != JobDefOf.LayDown && 
-                           x.CurJob.def != JobDefOf.FleeAndCower 
+                        new HashSet<Pawn>(
+                            
+                            //Map.mapPawns.AllPawnsSpawned.FindAll(y => y is Pawn x &&
+                            //   x.RaceProps.Humanlike &&
+                            //   !x.IsPrisoner &&
+                            //   x.Faction == Faction &&
+                            //   x.RaceProps.intelligence == Intelligence.Humanlike &&
+                            //   !x.Downed && !x.Dead &&
+                            //   !x.InMentalState && !x.InAggroMentalState &&
+                            //   x.CurJob.def != BeastmenDefOf.RH_TET_Beastmen_AttendSacrifice &&
+                            //   x.CurJob.def != JobDefOf.Capture &&
+                            //   x.CurJob.def != JobDefOf.ExtinguishSelf && 
+                            //   x.CurJob.def != JobDefOf.Rescue && 
+                            //   x.CurJob.def != JobDefOf.TendPatient && 
+                            //   x.CurJob.def != JobDefOf.BeatFire && 
+                            //   x.CurJob.def != JobDefOf.Lovin && 
+                            //   x.CurJob.def != JobDefOf.LayDown && 
+                            //   x.CurJob.def != JobDefOf.FleeAndCower
+
+                            Map.mapPawns.AllPawnsSpawned.Where<Pawn>((Func<Pawn, bool>)(y => y is Pawn x &&
+                               x.RaceProps.Humanlike &&
+                               !x.IsPrisoner &&
+                               x.Faction == Faction &&
+                               x.RaceProps.intelligence == Intelligence.Humanlike &&
+                               !x.Downed && !x.Dead &&
+                               !x.InMentalState && !x.InAggroMentalState &&
+                               x.CurJob.def != BeastmenDefOf.RH_TET_Beastmen_AttendSacrifice &&
+                               x.CurJob.def != JobDefOf.Capture &&
+                               x.CurJob.def != JobDefOf.ExtinguishSelf &&
+                               x.CurJob.def != JobDefOf.Rescue &&
+                               x.CurJob.def != JobDefOf.TendPatient &&
+                               x.CurJob.def != JobDefOf.BeatFire &&
+                               x.CurJob.def != JobDefOf.Lovin &&
+                               x.CurJob.def != JobDefOf.LayDown &&
+                               x.CurJob.def != JobDefOf.FleeAndCower)
+
                     ).ChangeType<List<Pawn>>());
                 }
                 return availableAttendees;
@@ -1307,7 +1333,10 @@ namespace TheEndTimes_Beastmen
         private void CancelConversion()
         {
             Pawn pawn = null;
-            var listeners = Map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike);
+            // JEH 1.4
+            //var listeners = Map.mapPawns.AllPawnsSpawned.FindAll(x => x.RaceProps.intelligence == Intelligence.Humanlike);
+            // JEH 1.5
+            var listeners = Map.mapPawns.AllPawnsSpawned.Where<Pawn>((Func<Pawn, bool>)(x => x.RaceProps.intelligence == Intelligence.Humanlike)).ToList<Pawn>();
             if (!listeners.NullOrEmpty())
             {
                 foreach (var t in listeners)

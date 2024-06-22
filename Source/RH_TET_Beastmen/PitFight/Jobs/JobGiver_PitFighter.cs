@@ -46,7 +46,7 @@ namespace TheEndTimes_Beastmen
                 return (Job)null;
 
             if (attackVerb.verbProps.IsMeleeAttack)
-                return this.MeleeAttackJob(enemyTarget);
+                return this.MeleeAttackJob(pawn, enemyTarget);
 
             return new Job(JobDefOf.Wait);
         }

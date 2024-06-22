@@ -133,7 +133,7 @@ namespace TheEndTimes_Beastmen
             Pawn p1 = f.p;
             MentalStateDef stateDef = fighterState;
             Pawn p2 = this.getOtherFighter(f).p;
-            mentalStateHandler.TryStartMentalState(stateDef, "", false, false, (Pawn)null, true);
+            mentalStateHandler.TryStartMentalState(stateDef, "", true, false, false, (Pawn)null, true);
             
             // This will tell the pawn to quit when the opponent is downed or dead.
             MentalState_PitFighter mentalState = f.p.MentalState as MentalState_PitFighter;

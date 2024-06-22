@@ -195,7 +195,7 @@ namespace TheEndTimes_Beastmen
                 defaultCompleteMode = ToilCompleteMode.Instant
             };
 
-            this.AddFinishAction(() =>
+            this.AddFinishAction(jobCondition =>
             {
                 TaleDef taleToAdd = TaleDef.Named("RH_TET_MadeConversion");
                 if ((this.pawn.IsColonist || this.pawn.HostFaction == Faction.OfPlayer) && taleToAdd != null)

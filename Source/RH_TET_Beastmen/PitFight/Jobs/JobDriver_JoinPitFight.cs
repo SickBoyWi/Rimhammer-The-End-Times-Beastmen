@@ -43,7 +43,7 @@ namespace TheEndTimes_Beastmen
                 return this.PitRef.currentState == Building_PitFightSpot.State.resting;
             }));
 
-            this.AddFinishAction((Action)(() =>
+            this.AddFinishAction(jobCondition =>
             {
                 try
                 {
@@ -57,7 +57,7 @@ namespace TheEndTimes_Beastmen
                 if (this.PitRef.GetFighter(this.pawn).isInFight)
                     return;
                 this.PitRef.TryCancelFight("");
-            }));
+            });
 
             yield return new Toil()
             {

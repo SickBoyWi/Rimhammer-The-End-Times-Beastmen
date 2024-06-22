@@ -94,7 +94,7 @@ namespace TheEndTimes_Beastmen
             object researchProgress = researchProgressInfo.GetValue(Find.ResearchManager);
             PropertyInfo itemPropertyInfo = researchProgress.GetType().GetProperty("Item");
             itemPropertyInfo.SetValue(researchProgress, progressValue, new[] { projectDef });
-            if (deselectCurrentResearch) Find.ResearchManager.currentProj = null;
+            if (deselectCurrentResearch) Find.ResearchManager.SetCurrentProject(null);
             Find.ResearchManager.ReapplyAllMods();
         }
         

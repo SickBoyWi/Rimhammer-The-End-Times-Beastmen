@@ -27,11 +27,11 @@ namespace TheEndTimes_Beastmen
                     action = SpawnGift,
                     defaultLabel = "RH_TET_Beastmen_CommandGift".Translate(),
                     defaultDesc = "RH_TET_Beastmen_CommandGiftDesc".Translate(),
-                    disabled = false,
                     disabledReason = "RH_TET_Beastmen_CommandDisabled".Translate(),
                     hotKey = KeyBindingDefOf.Misc1,
                     icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_SpawnGift")
                 };
+                command_Action.Disabled = false;
                 if (!hasGift) command_Action.icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_SpawnGiftDisabled");
                 yield return command_Action;
             }

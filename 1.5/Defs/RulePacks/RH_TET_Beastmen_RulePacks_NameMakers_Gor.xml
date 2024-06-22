@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RulePackDef>
+		<defName>RH_TET_Beastmen_NamerGor</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_name->[pack] [pack]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>pack</keyword>
+					<path>NameBanks/RH_TET_Beastmen_Names_Gor</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+
+	<RulePackDef>
+		<defName>RH_TET_Beastmen_NamerGorBase</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>name->[pack]</li>
+			</rulesStrings>
+			<rulesRaw>
+				<li Class="Rule_File">
+					<keyword>pack</keyword>
+					<path>NameBanks/RH_TET_Beastmen_Names_GorBase</path>
+				</li>
+			</rulesRaw>
+		</rulePack>
+	</RulePackDef>
+
+</Defs>

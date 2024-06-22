@@ -154,6 +154,133 @@
 					<value>
 						<li>RH_TET_Stove</li>
 					</value>
+				</li>				
+				<li Class="PatchOperationAdd">
+					<xpath>//ThingDef[defName = "RH_TET_Beastmen_Raven_Race"]/race/wildBiomes</xpath>
+					<value>
+						<RH_TET_ChaosWastes>0.20</RH_TET_ChaosWastes>
+					</value>
+				</li>				
+				<li Class="PatchOperationAdd">
+					<xpath>//TheEndTimes_Beastmen.MapGenDef[defName = "RH_TET_Beastmen_FinalDestructionMap"]/MapData</xpath>
+					<value>
+						<li>
+							<key>
+								<Thing>RH_TET_CuringCabinet</Thing>
+								<Rotate>0</Rotate>
+							</key>
+							<value>
+								<li>(95, 0, 161)</li>
+								<li>(97, 0, 161)</li>
+							</value>
+						</li>
+						<li>
+							<key>
+								<Thing>RH_TET_CuringCabinet</Thing>
+								<Rotate>1</Rotate>
+							</key>
+							<value>
+								<li>(95, 0, 158)</li>
+								<li>(95, 0, 156)</li>
+								<li>(95, 0, 154)</li>
+								<li>(95, 0, 152)</li>
+								<li>(95, 0, 150)</li>
+							</value>
+						</li>
+						<li>
+							<key>
+								<Thing>RH_TET_MineableCoal</Thing>
+							</key>
+							<value>
+								<li>(175, 0, 91)</li>
+								<li>(175, 0, 92)</li>
+								<li>(176, 0, 92)</li>
+								<li>(177, 0, 92)</li>
+							</value>
+						</li>
+						<li>
+							<key>
+								<Thing>RH_TET_CuringPot</Thing>
+								<Rotate>0</Rotate>
+							</key>
+							<value>
+								<li>(99, 0, 154)</li>
+								<li>(100, 0, 154)</li>
+								<li>(99, 0, 153)</li>
+								<li>(100, 0, 153)</li>
+								<li>(99, 0, 152)</li>
+								<li>(100, 0, 152)</li>
+								<li>(99, 0, 155)</li>
+								<li>(100, 0, 155)</li>
+								<li>(99, 0, 156)</li>
+								<li>(100, 0, 156)</li>
+								<li>(99, 0, 157)</li>
+								<li>(100, 0, 157)</li>
+							</value>
+						</li>
+						<li>
+							<key>
+								<Thing>RH_TET_PicklingCrock</Thing>
+								<Stuff>BlocksGranite</Stuff>
+								<Rotate>0</Rotate>
+							</key>
+							<value>
+								<li>(119, 0, 159)</li>
+								<li>(120, 0, 159)</li>
+								<li>(122, 0, 159)</li>
+								<li>(123, 0, 159)</li>
+								<li>(124, 0, 159)</li>
+								<li>(126, 0, 159)</li>
+								<li>(127, 0, 159)</li>
+								<li>(121, 0, 157)</li>
+								<li>(122, 0, 157)</li>
+								<li>(123, 0, 157)</li>
+								<li>(124, 0, 157)</li>
+								<li>(125, 0, 157)</li>
+							</value>
+						</li>
+						<li>
+							<key>
+								<Thing>RH_TET_CuringPotBulk</Thing>
+								<Rotate>0</Rotate>
+							</key>
+							<value>
+								<li>(103, 0, 154)</li>
+								<li>(103, 0, 148)</li>
+								<li>(101, 0, 148)</li>
+								<li>(101, 0, 160)</li>
+								<li>(103, 0, 160)</li>
+							</value>
+						</li>
+						<li>
+							<key>
+								<Thing>RH_TET_PicklingCrockBulk</Thing>
+								<Stuff>BlocksGranite</Stuff>
+								<Rotate>0</Rotate>
+							</key>
+							<value>
+								<li>(117, 0, 157)</li>
+								<li>(128, 0, 157)</li>
+								<li>(128, 0, 160)</li>
+								<li>(117, 0, 160)</li>
+							</value>
+						</li>
+						<li>
+							<key>
+								<Thing>RH_TET_Candle</Thing>
+								<Rotate>0</Rotate>
+							</key>
+							<value>
+								<li>(17, 0, 199)</li>
+								<li>(171, 0, 231)</li>
+								<li>(231, 0, 202)</li>
+								<li>(231, 0, 69)</li>
+								<li>(171, 0, 25)</li>
+								<li>(16, 0, 15)</li>
+								<li>(199, 0, 232)</li>
+							</value>
+						</li>
+					</value>
 				</li>
 			</operations>
 		</match>

@@ -235,7 +235,7 @@ namespace TheEndTimes_Beastmen
                 return;
 
             Find.LetterStack.ReceiveLetter((Letter)LetterMaker.MakeLetter("RH_TET_Beastmen_FailedFinalDestructionLabel".Translate(), "RH_TET_Beastmen_FailedFinalDestructionDesc".Translate(), LetterDefOf.NegativeEvent), (string)null);
-            Current.Game.DeinitAndRemoveMap(this.Map);
+            Current.Game.DeinitAndRemoveMap(this.Map, false);
 
             HerdUtility.GiveMoodToPawns(BeastmenDefOf.RH_TET_Beastmen_FinalDestructionDefeat, PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists);
         }

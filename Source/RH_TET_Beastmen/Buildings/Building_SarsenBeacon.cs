@@ -29,11 +29,11 @@ namespace TheEndTimes_Beastmen
                     action = TurnOn,
                     defaultLabel = "RH_TET_Beastmen_TurnOn".Translate(),
                     defaultDesc = "RH_TET_Beastmen_TurnOnDesc".Translate(),
-                    disabled = false,
                     disabledReason = "RH_TET_Beastmen_CommandDisabled".Translate(),
                     hotKey = KeyBindingDefOf.Misc1,
                     icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_TurnOn")
                 };
+                command_Action.Disabled = false;
                 yield return command_Action;
             }
             else
@@ -43,11 +43,11 @@ namespace TheEndTimes_Beastmen
                     action = TurnOff,
                     defaultLabel = "RH_TET_Beastmen_TurnOff".Translate(),
                     defaultDesc = "RH_TET_Beastmen_TurnOffDesc".Translate(),
-                    disabled = false,
                     disabledReason = "RH_TET_Beastmen_CommandDisabled".Translate(),
                     hotKey = KeyBindingDefOf.Misc1,
                     icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_TurnOff")
                 };
+                command_Action.Disabled = false;
                 yield return command_Action;
             }
 

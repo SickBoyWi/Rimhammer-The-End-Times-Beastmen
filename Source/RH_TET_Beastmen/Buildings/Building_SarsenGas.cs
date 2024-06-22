@@ -32,11 +32,11 @@ namespace TheEndTimes_Beastmen
                     action = PerformPsychicPulse,
                     defaultLabel = "RH_TET_Beastmen_CommandGas".Translate(),
                     defaultDesc = "RH_TET_Beastmen_CommandGasDesc".Translate(),
-                    disabled = false,
                     disabledReason = "RH_TET_Beastmen_CommandDisabled".Translate(),
                     hotKey = KeyBindingDefOf.Misc1,
                     icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_ReleaseGas")
                 };
+                command_Action.Disabled = false;
                 if (ticksUntilNextUse > 0) command_Action.icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_ReleaseGasDisabled");
                 yield return command_Action;
             }
@@ -70,7 +70,7 @@ namespace TheEndTimes_Beastmen
             SoundInfo info = SoundInfo.InMap(new TargetInfo(position, map2, false), MaintenanceType.None);
             info.pitchFactor = 1.3f;
             info.volumeFactor = 1.6f;
-            SoundDefOf.Hive_Spawn.PlayOneShot(info);
+            DefDatabase<SoundDef>.GetNamed("Hive_Spawn").PlayOneShot(info);
 
             Thing thing2 = ThingMaker.MakeThing(RH_TET_MagicDefOf.RH_TET_CombatGas, (ThingDef)null);
             GenPlace.TryPlaceThing(thing2, position, map2, ThingPlaceMode.Direct, (Action<Verse.Thing, int>)null, (Predicate<IntVec3>)null, new Rot4());

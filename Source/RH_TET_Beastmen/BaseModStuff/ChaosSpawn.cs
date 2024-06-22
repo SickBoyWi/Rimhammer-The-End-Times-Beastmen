@@ -10,9 +10,8 @@ namespace TheEndTimes_Beastmen
         {
             base.SpawnSetup(map, respawningAfterLoad);
             var hediffsToRemove = this?.health?.hediffSet?.hediffs.FindAll(x =>
-                x.def == RimWorld.HediffDefOf.BadBack ||
-                x.def == RimWorld.HediffDefOf.Cataract ||
-                x.def == RimWorld.HediffDefOf.Gunshot);
+                x.def == DefDatabase<HediffDef>.GetNamed("BadBack") ||
+                x.def == DefDatabase<HediffDef>.GetNamed("Cataract"));
             if (!hediffsToRemove.NullOrEmpty())
             {
                 if (hediffsToRemove != null)

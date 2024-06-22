@@ -198,7 +198,7 @@ namespace TheEndTimes_Beastmen.RandomHarmonyStuff
         }
 
         [HarmonyPatch(typeof(RimWorld.FoodUtility))]
-        [HarmonyPatch("BestFoodSourceOnMap_NewTemp")]
+        [HarmonyPatch("BestFoodSourceOnMap")]
         static class Patch_FoodUtility_BestFoodSourceOnMap
         {
             static void Postfix(ref Thing __result,
@@ -217,7 +217,10 @@ namespace TheEndTimes_Beastmen.RandomHarmonyStuff
                   bool allowHarvest = false,
                   bool forceScanWholeMap = false,
                   bool ignoreReservations = false,
-                  FoodPreferability minPrefOverride = FoodPreferability.Undefined)
+                  bool calculateWantedStackCount = false,
+                  FoodPreferability minPrefOverride = FoodPreferability.Undefined,
+                  float? minNutrition = null,
+                  bool allowVenerated = false)
             {
                 if (__result == null && getter.RaceProps.Humanlike)
                 {

@@ -30,11 +30,11 @@ namespace TheEndTimes_Beastmen
                     action = PerformPsychicPulse,
                     defaultLabel = "RH_TET_Beastmen_CommandPulse".Translate(),
                     defaultDesc = "RH_TET_Beastmen_CommandPulseDesc".Translate(),
-                    disabled = false,
                     disabledReason = "RH_TET_Beastmen_CommandDisabled".Translate(),
                     hotKey = KeyBindingDefOf.Misc1,
                     icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_PerformPulse")
                 };
+                command_Action.Disabled = false;
                 if (ticksUntilNextUse > 0) command_Action.icon = ContentFinder<Texture2D>.Get("UI/RH_TET_Beastmen_PerformPulseDisabled");
                 yield return command_Action;
             }
@@ -60,7 +60,7 @@ namespace TheEndTimes_Beastmen
             bool flag = false;
             foreach (Pawn pawn in pawns)
             {
-                if (pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, false, false, (Pawn)null, false))
+                if (pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Manhunter, (string)null, true, true, false, (Pawn)null, false))
                     flag = true;
             }
             if (!flag)
