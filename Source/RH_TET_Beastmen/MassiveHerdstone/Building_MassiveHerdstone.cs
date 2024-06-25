@@ -455,7 +455,7 @@ namespace TheEndTimes_Beastmen
                 OfferingCheckTick();
                 SacrificeCheckTick();
 
-                if (this.sacrificedAnimalsCount > 30)
+                if (this.sacrificedAnimalsCount >= 30)
                 {
                     TryUpgrade();
                 }
@@ -1301,8 +1301,7 @@ namespace TheEndTimes_Beastmen
                                x.CurJob.def != JobDefOf.Lovin &&
                                x.CurJob.def != JobDefOf.LayDown &&
                                x.CurJob.def != JobDefOf.FleeAndCower)
-
-                    ).ChangeType<List<Pawn>>());
+                            )).ToHashSet<Pawn>();
                 }
                 return availableAttendees;
             }
