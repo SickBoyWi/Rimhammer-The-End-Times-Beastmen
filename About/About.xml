@@ -55,7 +55,8 @@ Final development version released for testing. So close to actually being done 
 ========================
 Development started. 
 
-	</description>	<modDependencies>
+	</description>	
+	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
 			<displayName>Harmony</displayName>
