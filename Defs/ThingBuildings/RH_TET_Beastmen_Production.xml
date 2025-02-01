@@ -55,7 +55,7 @@
 	<ThingDef ParentName="BuildingBase">
 		<defName>RH_TET_Beastmen_MeatSmoker</defName>
 		<label>meat smoking pit</label>
-		<description>A stone lined hole in the ground for smoking meat. Can handle large quantities at once.</description>
+		<description>A stone lined hole in the ground for smoking meat. Can handle large quantities at once.\n\nMust be filled with Brined Meat, which can be made camp fire or cooking work table.</description>
 		<thingClass>TheEndTimes_Beastmen.Building_MeatSmoker</thingClass>
 		<size>(2,2)</size>
 		<drawerType>MapMeshAndRealTime</drawerType>
