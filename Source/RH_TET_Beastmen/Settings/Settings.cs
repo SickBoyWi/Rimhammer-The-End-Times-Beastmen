@@ -19,7 +19,7 @@ namespace TheEndTimes_Beastmen
 
         public override string SettingsCategory()
         {
-            return "Rimhammer - The End Times - Beastmen";
+            return "Rimhammer - Beastmen";
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
