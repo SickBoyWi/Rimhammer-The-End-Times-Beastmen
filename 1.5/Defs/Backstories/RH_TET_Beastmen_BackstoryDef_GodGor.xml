@@ -137,7 +137,6 @@
 		<workDisables>
 			<li>PlantWork</li>
 			<li>Cooking</li>
-			<li>Social</li>
 		</workDisables>
 		<spawnCategories>
 			<li>RH_TET_Beastmen_Pestigor</li>
