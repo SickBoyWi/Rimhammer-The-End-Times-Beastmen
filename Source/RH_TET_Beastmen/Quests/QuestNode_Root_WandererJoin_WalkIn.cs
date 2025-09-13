@@ -136,12 +136,14 @@ namespace TheEndTimes_Beastmen
             TaggedString text = "LetterWandererJoins".Translate(pawn.Named("PAWN")).AdjustedFor(pawn, "PAWN", true);
             QuestNode_Root_WandererJoin_WalkIn.AppendCharityInfoToLetter("JoinerCharityInfo".Translate((NamedArgument)(Thing)pawn), ref text);
             PawnRelationUtility.TryAppendRelationsWithColonistsInfo(ref text, ref title, pawn);
-            ChoiceLetter_AcceptJoiner letterAcceptJoiner = (ChoiceLetter_AcceptJoiner)LetterMaker.MakeLetter(title, text, LetterDefOf.AcceptJoiner, (Faction)null, (Quest)null);
+
+            ChoiceLetter_AcceptJoiner letterAcceptJoiner = (ChoiceLetter_AcceptJoiner)LetterMaker.MakeLetter(title, text, LetterDefOf.AcceptJoiner, (LookTargets)((Thing)pawn), (Faction)null, (Quest)null);
+
             letterAcceptJoiner.signalAccept = this.signalAccept;
             letterAcceptJoiner.signalReject = this.signalReject;
             letterAcceptJoiner.quest = quest;
             letterAcceptJoiner.StartTimeout(60000);
-            Find.LetterStack.ReceiveLetter((Letter)letterAcceptJoiner, (string)null);
+            Find.LetterStack.ReceiveLetter((Letter)letterAcceptJoiner, (string)null, 0, true);
         }
 
         public static void AppendCharityInfoToLetter(

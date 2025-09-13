@@ -26,8 +26,8 @@ namespace TheEndTimes_Beastmen
                     || this.pawn.Faction.def.defName.Equals("RH_TET_Beastmen_BeastmenPlayerFaction")))
                     {
                         if (((Building_PitFightSpot)this.pawn.mindState.duty.focus.Thing).currentState == Building_PitFightSpot.State.fighting)
-                            JoyUtility.JoyTickCheckEnd(this.pawn, JoyTickFullJoyAction.None, 1f, (Building)null);
-                        this.pawn.GainComfortFromCellIfPossible();
+                            JoyUtility.JoyTickCheckEnd(this.pawn, 1, JoyTickFullJoyAction.None, 1f, (Building)null);
+                        this.pawn.GainComfortFromCellIfPossible(1);
                         if (!this.pawn.IsHashIntervalTick(100))
                             return;
                         this.pawn.jobs.CheckForJobOverride();

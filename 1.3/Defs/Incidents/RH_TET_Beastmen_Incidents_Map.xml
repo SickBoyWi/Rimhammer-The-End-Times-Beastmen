@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<IncidentDef>
+		<defName>RH_TET_Beastmen_HerdMigration</defName>
+		<label>herd migration</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<allowedBiomes>
+			<li>SeaIce</li>
+			<li>IceSheet</li>
+			<li>Tundra</li>
+			<li>Desert</li>
+			<li>ExtremeDesert</li>
+		</allowedBiomes>
+		<workerClass>TheEndTimes_Beastmen.IncidentWorker_HerdMigration</workerClass>
+		<baseChance>1.5</baseChance>
+		<letterLabel>Animal migration: {0}</letterLabel>
+		<letterText>A group of {0} is passing through the area.\n\nThey won't attack unless provoked.</letterText>
+		<letterDef>NeutralEvent</letterDef>
+	</IncidentDef>
+	
+	<!-- =========================== Good - special ============================-->
+	<IncidentDef>
+		<defName>RH_TET_Beastmen_CygorJoin</defName>
+		<label>cygor joins</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>TheEndTimes_Beastmen.IncidentWorker_CygorJoin</workerClass>
+		<baseChance>0.25</baseChance>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>RH_TET_Beastmen_MonsterJoin</defName>
+		<label>creatures join</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>TheEndTimes_Beastmen.IncidentWorker_CreatureJoin</workerClass>
+		<baseChance>1.0</baseChance>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>RH_TET_Beastmen_WildCygorWandersIn</defName>
+		<label>Wild Cygor Wanders In</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>TheEndTimes_Beastmen.IncidentWorker_WildCygorWandersIn</workerClass>
+		<baseChance>0.50</baseChance>
+		<populationEffect>IncreaseMedium</populationEffect>
+		<letterLabel>Wild Cygor Wanders In</letterLabel>
+		<letterText>A wild cygor has wandered near, perhaps drawn by the scent of the herd. Perhaps it could be recruited; it would definitely prove a powerful ally.</letterText>
+		<letterDef>NeutralEvent</letterDef>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>RH_TET_Beastmen_WildGorWandersIn</defName>
+		<label>wild gor wanders in</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>TheEndTimes_Beastmen.IncidentWorker_WildGorWandersIn</workerClass>
+		<baseChance>0.70</baseChance>
+		<populationEffect>IncreaseMedium</populationEffect>
+		<letterLabel>wild gor wanders in</letterLabel>
+		<letterText>A gor living among wild animals has wandered into the area. {PAWN_pronoun}'s called {0}.\n\nYou can attempt to tame or arrest {PAWN_objective}.</letterText>
+		<letterDef>NeutralEvent</letterDef>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>RH_TET_Beastmen_WildUngorWandersIn</defName>
+		<label>wild ungor wanders in</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>TheEndTimes_Beastmen.IncidentWorker_WildUngorWandersIn</workerClass>
+		<baseChance>0.70</baseChance>
+		<populationEffect>IncreaseMedium</populationEffect>
+		<letterLabel>wild ungor wanders in</letterLabel>
+		<letterText>An ungor living among wild animals has wandered into the area. {PAWN_pronoun}'s called {0}.\n\nYou can attempt to tame or arrest {PAWN_objective}.</letterText>
+		<letterDef>NeutralEvent</letterDef>
+	</IncidentDef>
+	
+	<IncidentDef>
+		<defName>RH_TET_Beastmen_WildBullgorWandersIn</defName>
+		<label>wild bullgor wanders in</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>TheEndTimes_Beastmen.IncidentWorker_WildBullgorWandersIn</workerClass>
+		<baseChance>0.25</baseChance>
+		<populationEffect>IncreaseMedium</populationEffect>
+		<letterLabel>wild bullgor wanders in</letterLabel>
+		<letterText>A bullgor living among wild animals has wandered into the area. {PAWN_pronoun}'s called {0}.\n\nYou can attempt to tame or arrest {PAWN_objective}.</letterText>
+		<letterDef>NeutralEvent</letterDef>
+	</IncidentDef>
+	
+	<!-- Main wild man behavior core -->
+	<li Class="ThinkNode_ConditionalPawnKind">
+		<pawnKind>RH_TET_Beastmen_WildGor</pawnKind>
+		<subNodes>
+			<li Class="ThinkNode_Subtree">
+				<treeDef>RH_TET_Beastmen_MainWildBeastBehaviorCore</treeDef>
+				<leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
+			</li>
+		</subNodes>
+	</li>
+	<li Class="ThinkNode_ConditionalPawnKind">
+		<pawnKind>RH_TET_Beastmen_WildUngor</pawnKind>
+		<subNodes>
+			<li Class="ThinkNode_Subtree">
+				<treeDef>RH_TET_Beastmen_MainWildBeastBehaviorCore</treeDef>
+				<leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
+			</li>
+		</subNodes>
+	</li>
+	<li Class="ThinkNode_ConditionalPawnKind">
+		<pawnKind>RH_TET_Beastmen_WildBullgor</pawnKind>
+		<subNodes>
+			<li Class="ThinkNode_Subtree">
+				<treeDef>RH_TET_Beastmen_MainWildBeastBehaviorCore</treeDef>
+				<leaveJoinableLordIfIssuesJob>true</leaveJoinableLordIfIssuesJob>
+			</li>
+		</subNodes>
+	</li>
+	
+	<ThinkTreeDef>
+		<defName>RH_TET_Beastmen_MainWildBeastBehaviorCore</defName>
+		<thinkRoot Class="ThinkNode_Priority">
+			<subNodes>
+				<!-- Leave the colony -->
+				<li Class="ThinkNode_ConditionalWildManNeedsToReachOutside">
+					<subNodes>
+						<li Class="JobGiver_ReachOutside"/>
+					</subNodes>
+				</li>
+
+				<!-- Drop random gear or apparel -->
+				<li Class="ThinkNode_ChancePerHour_Constant">
+					<mtbHours>10</mtbHours>
+					<subNodes>
+						<li Class="JobGiver_DropRandomGearOrApparel"/>
+					</subNodes>
+				</li>
+
+				<!-- Satisfy needs -->
+				<li Class="ThinkNode_Tagger">
+					<tagToGive>SatisfyingNeeds</tagToGive>
+					<subNodes>
+						<li Class="ThinkNode_PrioritySorter">
+							<subNodes>
+								<li Class="JobGiver_GetFood"/>
+								<li Class="JobGiver_GetRest"/>
+								<li Class="JobGiver_SatisfyChemicalNeed"/>
+								<li Class="ThinkNode_Priority_GetJoy">
+									<subNodes>
+										<li Class="JobGiver_GetJoy"/>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
+  
+</Defs>

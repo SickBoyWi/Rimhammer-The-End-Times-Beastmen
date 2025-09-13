@@ -23,7 +23,7 @@ namespace TheEndTimes_Beastmen
             }
         }
 
-        public override void MentalStateTick()
+        public override void MentalStateTick(int delta)
         {
             if (this.ShouldStop)
             {
@@ -33,7 +33,7 @@ namespace TheEndTimes_Beastmen
                 this.pitFightingSpot.EndFight(this.pawn, false);
             }
             else
-                base.MentalStateTick();
+                base.MentalStateTick(delta);
         }
     }
 }

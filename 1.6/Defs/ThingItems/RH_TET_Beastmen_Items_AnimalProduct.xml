@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>RH_TET_Beastmen_EggHarpyFertilized</defName>
+		<label>harpy egg (fert.)</label>
+		<description>A fertilized Harpy egg. If all goes well, it will hatch into a harpy.</description>
+		<graphicData>
+			<color>(112,82,65)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>50.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>8</hatcherDaystoHatch>
+				<hatcherPawn>RH_TET_Beastmen_BeastmenPawnHarpy</hatcherPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="EggUnfertBase">
+		<defName>RH_TET_Beastmen_EggHarpyUnfertilized</defName>
+		<label>harpy egg(unfert.)</label>
+		<description>A unfertilized harpy egg. It can be eaten raw, but it's much, much better cooked.</description>
+		<graphicData>
+			<color>(92,65,45)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>6.0</MarketValue>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="MealBase">
+		<defName>RH_TET_Empire_BrinedMeat</defName><!-- taken from Empire mod, not changing name, since it's used in many places. -->
+		<label>brined meat</label>
+		<description>Brined meat. This substance needs to smoked in a meat smoker before it becomes jerky.</description>
+		<graphicData>
+			<texPath>Things/Items/Resource/BrinedMeat</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>30</stackLimit>
+		<statBases>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<MarketValue>1</MarketValue>
+			<Mass>0.8</Mass>
+			<Flammability>0.2</Flammability>
+			<MaxHitPoints>60</MaxHitPoints>
+			<WorkToMake>300</WorkToMake>
+			<Nutrition>0.05</Nutrition>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<ingestible>
+			<preferability>DesperateOnly</preferability>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+		</ingestible>
+		<thingCategories>
+			<li>RH_TET_PreservedFoods</li>
+		</thingCategories>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>5</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="OrganicProductBase">
+		<defName>RH_TET_Jerky</defName>
+		<label>jerky</label>
+		<description>Meat preserved by brining and smoking. Tastes great. It lasts significantly longer than raw meat. Great for traveling. Not poisonable. Has a shelf life of one year.</description>
+		<thingClass>ThingWithComps</thingClass>
+		<thingCategories>
+			<li>RH_TET_PreservedFoods</li>
+			<li>AnimalProductRaw</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Items/Resource/RH_TET_Jerky</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MarketValue>4</MarketValue>
+			<Mass>0.02</Mass>
+			<Flammability>0.7</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+			<Nutrition>0.05</Nutrition>
+			<FoodPoisonChanceFixedHuman>0.0</FoodPoisonChanceFixedHuman>
+		</statBases>
+		<ingestible>
+			<foodType>AnimalProduct</foodType>
+			<preferability>RawTasty</preferability>
+			<tasteThought>AteFineMeal</tasteThought>
+			<ingestEffect>EatMeat</ingestEffect>
+			<ingestSound>Meal_Eat</ingestSound>
+			<optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>60</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Ingredients"/>
+		</comps>
+	</ThingDef>
+  
+</Defs>

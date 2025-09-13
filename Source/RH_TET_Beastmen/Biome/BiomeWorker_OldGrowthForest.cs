@@ -6,9 +6,9 @@ namespace TheEndTimes_Beastmen
 {
     class BiomeWorker_OldGrowthForest : BiomeWorker_BorealForest
     {
-        public override float GetScore(Tile tile, int id)
+        public override float GetScore(BiomeDef biome, Tile tile, PlanetTile planetTile)
         {
-            if (tile.biome != null && tile.biome.defName != null && tile.biome.defName.Equals("RH_TET_ChaosWastes"))
+            if (tile.PrimaryBiome != null && tile.PrimaryBiome.defName != null && tile.PrimaryBiome.defName.Equals("RH_TET_ChaosWastes"))
                 return -100f;
             if (tile.WaterCovered)
             {

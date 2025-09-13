@@ -56,7 +56,6 @@ namespace TheEndTimes_Beastmen
 
         public MapComponent_SacrificeTracker(Map map) : base(map)
         {
-            this.map = map;
         }
         
         public void ClearSacrificeVariables()

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Ungor -->
+  
+	<!-- Adulthood -->
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_UnTurned</defName>
+		<title>turned</title>
+		<titleShort>turned</titleShort>
+		<description>[PAWN_nameDef] was turned by chaos, and left in the wild by parents too soft to do the right thing.</description>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Melee>3</Melee>
+			<Shooting>3</Shooting>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Ungor</li>
+		</spawnCategories>
+		<forcedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>25</chance>
+			</li>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>5</chance>
+			</li>
+		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<workDisables>
+		</workDisables>
+		<linkedBackstory>RH_TET_Beastmen_UnChild</linkedBackstory>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_UnTurnedRich</defName>
+		<title>corrupted</title>
+		<titleShort>corrupted</titleShort>
+		<description>[PAWN_nameDef] was from a rich family, but was corrupted by chaos as a babe. [PAWN_possessive] parents hid [PAWN_objective] condition for as long as they could, but eventually had to abandon their child to the wild.</description>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Melee>3</Melee>
+			<Shooting>3</Shooting>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Ungor</li>
+		</spawnCategories>
+		<forcedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>98</chance>
+			</li>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>25</chance>
+			</li>
+		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+		<workDisables>
+			<li>PlantWork</li>
+		</workDisables>
+		<linkedBackstory>RH_TET_Beastmen_UnChildRich</linkedBackstory>
+	</AlienRace.AlienBackstoryDef>
+  
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_UnRaider</defName>
+		<title>raider</title>
+		<titleShort>raider</titleShort>
+		<description>[PAWN_nameDef] is cut from the same cloth as the rest of the herd. [PAWN_pronoun] loves violence, and is as angry and spiteful as could be.</description>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Melee>2</Melee>
+			<Shooting>2</Shooting>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Ungor</li>
+		</spawnCategories>
+		<forcedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>10</chance>
+			</li>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>5</chance>
+			</li>
+		</forcedTraitsChance>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+  
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_UnThrall</defName>
+		<title>thrall</title>
+		<titleShort>thrall</titleShort>
+		<description>[PAWN_nameDef] scrapes by as a menial thrall, abused by the herd. [PAWN_pronoun] is only capable of taking out all the pent up rage during battles, and on prisoners.</description>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Construction>1</Construction>
+			<Mining>1</Mining>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Ungor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_UnGrunt</defName>
+		<title>grunt</title>
+		<titleShort>grunt</titleShort>
+		<description>[PAWN_nameDef] is an average rough and vile ungor. Mean and spiteful, [PAWN_pronoun] lives to cause pain on any one lesser than [PAWN_pronoun] is.</description>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Melee>2</Melee>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Ungor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<!-- Childhood -->
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_UnWild</defName>
+		<title>wildling</title>
+		<titleShort>wildling</titleShort>
+		<description>[PAWN_nameDef] was born a mutant. [PAWN_pronoun] was left in the wilds like so many other mutant children, by parents too weak to put the babe down. [PAWN_pronoun] was picked up by a wandering gor herd that heard the mutant child wailing in the woods.</description>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<Melee>2</Melee>
+		</skillGains>
+		<workDisables>
+			<li>Artistic</li>
+			<li>Intellectual</li>
+			<li>Caring</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Ungor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_UnOutcast</defName>
+		<title>outcast</title>
+		<titleShort>outcast</titleShort>
+		<description>[PAWN_nameDef] was born as a mutant, but was never chased out of the village. [PAWN_pronoun] lived life on the outskirts; never loved yet never fully despised, hiding during the day, and only coming out at night.</description>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<Shooting>1</Shooting>
+			<Melee>1</Melee>
+			<Crafting>1</Crafting>
+		</skillGains>
+		<workDisables>
+			<li>Artistic</li>
+			<li>Intellectual</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Ungor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_UnCared</defName>
+		<title>loved</title>
+		<titleShort>loved</titleShort>
+		<description>[PAWN_nameDef] was born as a mutant, but had parents that could never muster the courage to even abandon their child alone in the woods like so many others did. [PAWN_nameDef] was cared for through childhood, but the future looked bleak since those parents coudn't protect their child forever.</description>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<Medicine>1</Medicine>
+			<Intellectual>1</Intellectual>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Ungor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Caring</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_UnStrange</defName>
+		<title>strange child</title>
+		<titleShort>strange</titleShort>
+		<description>[PAWN_nameDef] was born as a mutant. Abandoned like so many other mutants, [PAWN_nameDef] was left to fend for itself in a passing gor herd. [PAWN_pronoun] was stranger than the rest of the mutant children with a mind deeply touched by chaos throwing [PAWN_nameDef] into mania from time to time.</description>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<Artistic>2</Artistic>
+			<Melee>2</Melee>
+		</skillGains>
+		<forcedTraitsChance>
+			<li>
+				<defName>Bloodlust</defName>
+				<chance>10</chance>
+			</li>
+			<li>
+				<defName>Psychopath</defName>
+				<chance>15</chance>
+			</li>
+			<li>
+				<defName Degree="-2">Nerves</defName>
+				<chance>98</chance>
+			</li>
+		</forcedTraitsChance>
+		<workDisables>
+			<li>Caring</li>
+		</workDisables>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Ungor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+			<li>Artistic</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_UnChild</defName>
+		<title>farm child</title>
+		<titleShort>farmer</titleShort>
+		<description>[PAWN_nameDef] wasn't born as a mutant. [PAWN_pronoun] lived life as a farmers child.  [PAWN_nameDef] was corrupted by chaos during the early teenage years. When fleeing for [PAWN_possessive] life, [PAWN_nameDef] came across a gor herd passing by, and joined the lower cast like the rest of the ungors.</description>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<Crafting>1</Crafting>
+			<Plants>1</Plants>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Ungor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>PlantWork</li>
+			<li>Crafting</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_UnChildRich</defName>
+		<title>rich child</title>
+		<titleShort>rich</titleShort>
+		<description>[PAWN_nameDef] wasn't born as a mutant. [PAWN_pronoun] was born into a rich family, and spent childhood studying the arts of an aristocrat. [PAWN_pronoun] was tainted by chaos in his mid teenage years. [PAWN_nameDef] fled for safety from the villages, and came across a gor herd passing by. He was forced in, and joined the lower cast with the rest of the ungors.</description>
+
+		<bodyTypeMale>Male</bodyTypeMale>
+		<bodyTypeFemale>Thin</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<Intellectual>1</Intellectual>
+			<Social>1</Social>
+			<Artistic>1</Artistic>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Ungor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Artistic</li>
+			<li>Social</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+</Defs>

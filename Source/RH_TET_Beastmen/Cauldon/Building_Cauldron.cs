@@ -44,7 +44,7 @@ namespace TheEndTimes_Beastmen
             }
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             ResolveSmoke();

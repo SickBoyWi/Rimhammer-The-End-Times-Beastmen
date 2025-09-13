@@ -63,7 +63,7 @@ namespace TheEndTimes_Beastmen
             return f;
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
 
@@ -95,7 +95,7 @@ namespace TheEndTimes_Beastmen
 
             // Do positive mood thing for a pawns involved.
             HerdUtility.RemoveMoodFromPawns(BeastmenDefOf.RH_TET_Beastmen_FightingFinalBattle, map.mapPawns.FreeColonistsSpawned);
-            HerdUtility.GiveMoodToPawns(BeastmenDefOf.RH_TET_Beastmen_DestroyedFinalOrder, PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists);
+            HerdUtility.GiveMoodToPawns(BeastmenDefOf.RH_TET_Beastmen_DestroyedFinalOrder, PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_Colonists);
 
             StringBuilder text = new StringBuilder();
             text.Append("RH_TET_Beastmen_DestroyedOrderDesc".Translate((NamedArgument)this.Label, (NamedArgument)TimedForcedExit.GetForceExitAndRemoveMapCountdownTimeLeftString(60000)));
@@ -237,7 +237,7 @@ namespace TheEndTimes_Beastmen
             Find.LetterStack.ReceiveLetter((Letter)LetterMaker.MakeLetter("RH_TET_Beastmen_FailedFinalDestructionLabel".Translate(), "RH_TET_Beastmen_FailedFinalDestructionDesc".Translate(), LetterDefOf.NegativeEvent), (string)null);
             Current.Game.DeinitAndRemoveMap(this.Map, false);
 
-            HerdUtility.GiveMoodToPawns(BeastmenDefOf.RH_TET_Beastmen_FinalDestructionDefeat, PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists);
+            HerdUtility.GiveMoodToPawns(BeastmenDefOf.RH_TET_Beastmen_FinalDestructionDefeat, PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_Colonists);
         }
 
         public override void PostMapGenerate()

@@ -124,7 +124,7 @@ namespace TheEndTimes_Beastmen
             herdstoneToil.defaultDuration = HerdUtility.ritualDuration;
             herdstoneToil.AddPreTickAction(() =>
             {
-                this.pawn.GainComfortFromCellIfPossible();
+                this.pawn.GainComfortFromCellIfPossible(1);
                 this.pawn.rotationTracker.FaceCell(TargetB.Cell);
                 if (report == "") report = "RH_TET_Beastmen_AttendingSacrifice".Translate();
                 if (ExecutionerPawn != null)

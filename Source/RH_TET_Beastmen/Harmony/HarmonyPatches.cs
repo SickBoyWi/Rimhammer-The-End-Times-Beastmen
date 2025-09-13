@@ -61,10 +61,10 @@ namespace TheEndTimes_Beastmen
                     prefix: new HarmonyMethod(typeof(HarmonyPatches), nameof(QuestUtility_GenerateQuestAndMakeAvailable_PreFix)),
                     postfix: null);
 
-            harmony.Patch(AccessTools.Method(typeof(FloatMenuMakerMap), "AddHumanlikeOrders"), null,
-                new HarmonyMethod(typeof(HarmonyPatches), nameof(FloatMenuMakerMap_AddHumanlikeOrders_PostFix)), null);
-            harmony.Patch(AccessTools.Method(typeof(Pawn_EquipmentTracker), "EquipmentTrackerTick"), null,
-                new HarmonyMethod(typeof(HarmonyPatches), nameof(Pawn_EquipmentTracker_EquipmentTrackerTick_PostFix)), null);
+            // Removed for 1.6
+            //harmony.Patch(AccessTools.Method(typeof(FloatMenuMakerMap), "AddHumanlikeOrders"), null,
+            //    new HarmonyMethod(typeof(HarmonyPatches), nameof(FloatMenuMakerMap_AddHumanlikeOrders_PostFix)), null);
+
             harmony.Patch(AccessTools.Method(typeof(WildManUtility), "IsWildMan"), null,
                 new HarmonyMethod(typeof(HarmonyPatches), nameof(WildManUtility_IsWildMan_PostFix)), null);
             harmony.Patch(AccessTools.Method(typeof(WildManUtility), "AnimalOrWildMan"), null,
@@ -79,10 +79,12 @@ namespace TheEndTimes_Beastmen
                 new HarmonyMethod(typeof(HarmonyPatches), nameof(GenRecipe_MakeRecipeProducts_PostFix)), null);
             harmony.Patch(AccessTools.Method(typeof(LordToil_PanicFlee), nameof(LordToil_PanicFlee.Init)), null,
                 new HarmonyMethod(typeof(HarmonyPatches), nameof(LordToil_PanicFlee_LordToil_PanicFlee_PostFix)), null);
-
             harmony.Patch(AccessTools.Method(typeof(SettlementDefeatUtility), nameof(SettlementDefeatUtility.CheckDefeated)), null,
                 new HarmonyMethod(typeof(HarmonyPatches), nameof(SettlementDefeatUtility_CheckDefeated_PostFix)), null);
 
+            // Removed due to performance issues with game.
+            //harmony.Patch(AccessTools.Method(typeof(Pawn_EquipmentTracker), "EquipmentTrackerTick"), null,
+            //    new HarmonyMethod(typeof(HarmonyPatches), nameof(Pawn_EquipmentTracker_EquipmentTrackerTick_PostFix)), null);
         }
 
         static void SettlementDefeatUtility_CheckDefeated_PostFix(Settlement factionBase)
@@ -417,7 +419,7 @@ namespace TheEndTimes_Beastmen
             }
         }
 
-        private static void PrisonerWillingToJoinQuestUtility_GeneratePrisoner_PreFix(ref Pawn __result, int tile, Faction hostFaction)
+        private static void PrisonerWillingToJoinQuestUtility_GeneratePrisoner_PreFix(ref Pawn __result, PlanetTile tile, Faction hostFaction)
         {
             Faction ofPlayer = Faction.OfPlayerSilentFail;
 
@@ -445,7 +447,7 @@ namespace TheEndTimes_Beastmen
             }
         }
 
-        private static void PrisonerWillingToJoinQuestUtility_GeneratePrisoner_PostFix(ref Pawn __result, int tile, Faction hostFaction)
+        private static void PrisonerWillingToJoinQuestUtility_GeneratePrisoner_PostFix(ref Pawn __result, PlanetTile tile, Faction hostFaction)
         {
             Faction ofPlayer = Faction.OfPlayerSilentFail;
 
@@ -459,7 +461,7 @@ namespace TheEndTimes_Beastmen
             }
         }
 
-        private static void DownedRefugeeQuestUtility_GenerateRefugee_PreFix(int tile)
+        private static void DownedRefugeeQuestUtility_GenerateRefugee_PreFix(PlanetTile tile)
         {
             Faction ofPlayer = Faction.OfPlayerSilentFail;
 
@@ -490,7 +492,7 @@ namespace TheEndTimes_Beastmen
             }
         }
 
-        private static void DownedRefugeeQuestUtility_GenerateRefugee_PostFix(int tile)
+        private static void DownedRefugeeQuestUtility_GenerateRefugee_PostFix(PlanetTile tile)
         {
             Faction ofPlayer = Faction.OfPlayerSilentFail;
 
@@ -685,23 +687,30 @@ namespace TheEndTimes_Beastmen
             }
         }
 
-        private static void Pawn_EquipmentTracker_EquipmentTrackerTick_PostFix(Pawn_EquipmentTracker __instance)
-        {
-            List<ThingWithComps> equipmentListForReading = __instance.AllEquipmentListForReading;
-            for (int index = 0; index < equipmentListForReading.Count; ++index)
-            {
-                if (equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_KhorneAxe")
-                    || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_NurgleStar")
-                    || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_SlaaneshWhip")
-                    || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_TzeentchStaff"))
-                {
-                    equipmentListForReading[index].Tick();
-                }
-            }
-        }
+        // This should be removed. I believe it facilitated the glow, when these weapons glowed their god's color. Which really slagged out the game.
+        //private static void Pawn_EquipmentTracker_EquipmentTrackerTick_PostFix(Pawn_EquipmentTracker __instance)
+        //{
+        //    List<ThingWithComps> equipmentListForReading = __instance.AllEquipmentListForReading;
+        //    for (int index = 0; index < equipmentListForReading.Count; ++index)
+        //    {
+        //        if (equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_KhorneAxe")
+        //            || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_NurgleStar")
+        //            || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_SlaaneshWhip")
+        //            || equipmentListForReading[index].def.defName.Equals("RH_TET_MeleeWeapon_TzeentchStaff"))
+        //        {
+        //            equipmentListForReading[index].DoTick();
+        //        }
+        //    }
+        //}
 
         public static void FloatMenuMakerMap_AddHumanlikeOrders_PostFix(Vector3 clickPos, Pawn pawn, List<FloatMenuOption> opts)
         {
+
+      //      Pawn pawn,
+      //      WorkGiverDef workGiver,
+      //LocalTargetInfo target,
+      //FloatMenuContext context
+
             IntVec3 c = IntVec3.FromVector3(clickPos);
 
             if (pawn.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation))
@@ -712,6 +721,7 @@ namespace TheEndTimes_Beastmen
                     Corpse victim = (Corpse)localTargetInfo.Thing;
                     Building_MassiveHerdstone herdstoneMaybeUnfueled = Building_MassiveHerdstone.FindMassiveHerdstoneFor(victim, pawn, false, true);
                     Building_MassiveHerdstone herdstone = Building_MassiveHerdstone.FindMassiveHerdstoneFor(victim, pawn, true, true);
+
                     if (victim.InnerPawn.RaceProps.Humanlike && pawn.CanReserveAndReach(victim, PathEndMode.OnCell, Danger.Deadly, 1, -1, null, true) && herdstoneMaybeUnfueled != null)
                     {
                         if (herdstone != null)

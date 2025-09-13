@@ -53,7 +53,7 @@ namespace TheEndTimes_Beastmen
         }
 
         public override Map GetOrGenerateMap(
-          int tile,
+          PlanetTile tile,
           IntVec3 mapSize,
           WorldObjectDef suggestedMapParentDef)
         {

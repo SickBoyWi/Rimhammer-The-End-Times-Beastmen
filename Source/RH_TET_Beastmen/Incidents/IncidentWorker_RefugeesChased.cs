@@ -49,7 +49,7 @@ namespace TheEndTimes_Beastmen
             raidParms.points = Mathf.Max(raidParms.points * IncidentWorker_RefugeesChased.RaidPointsFactorRange.RandomInRange, enemyFac.def.MinPointsToGeneratePawnGroup(PawnGroupKindDefOf.Combat));
             raidParms.pawnGroupMakerSeed = new int?(num);
             PawnGroupMakerParms pawnGroupMakerParms = IncidentParmsUtility.GetDefaultPawnGroupMakerParms(PawnGroupKindDefOf.Combat, raidParms, false);
-            pawnGroupMakerParms.points = IncidentWorker_Raid.AdjustedRaidPoints(pawnGroupMakerParms.points, raidParms.raidArrivalMode, raidParms.raidStrategy, pawnGroupMakerParms.faction, PawnGroupKindDefOf.Combat);
+            pawnGroupMakerParms.points = IncidentWorker_Raid.AdjustedRaidPoints(pawnGroupMakerParms.points, raidParms.raidArrivalMode, raidParms.raidStrategy, pawnGroupMakerParms.faction, PawnGroupKindDefOf.Combat, raidParms.target, (RaidAgeRestrictionDef)null);
             IEnumerable<PawnKindDef> pawnKindsExample = PawnGroupMakerUtility.GeneratePawnKindsExample(pawnGroupMakerParms);
 
             int randoPawnsCount = RH_TET_BeastmenMod.random.Next(2, 5);

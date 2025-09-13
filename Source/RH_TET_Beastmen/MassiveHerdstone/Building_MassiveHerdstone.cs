@@ -357,7 +357,7 @@ namespace TheEndTimes_Beastmen
 
         #region Ticker
 
-        public override void Tick()
+        protected override void Tick()
         {
             if (destroyedFlag)
                 return;

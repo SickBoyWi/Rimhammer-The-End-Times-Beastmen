@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Adulthood -->
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_WildCygor</defName>
+		<title>wild</title>
+		<titleShort>wild</titleShort>
+		<description>[PAWN_nameDef] has roamed the wild for years, looking for a worthy herd to join. [PAWN_pronoun] is as mindless as most cygor, and is only capable of focusing on the most menial task.</description>
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Melee>5</Melee>
+			<Shooting>5</Shooting>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Cygor</li>
+		</spawnCategories>
+		<workDisables>
+			<li>Intellectual</li>
+			<li>Cooking</li>
+			<li>Firefighting</li>
+			<li>Caring</li>
+			<li>Social</li>
+			<li>ManualSkilled</li>
+			<li>PlantWork</li>
+			<li>Mining</li>
+			<li>Crafting</li>
+			<li>Artistic</li>
+			<li>Cleaning</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_InsaneCygor</defName>
+		<title>insane</title>
+		<titleShort>insane</titleShort>
+		<description>[PAWN_nameDef] has roamed the wild for years, and gone quite insane from the tme alone and the magical visions. [PAWN_pronoun] is as mindless as most cygor, and is only capable of focusing on the most menial task.</description>
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+
+		<slot>Adulthood</slot>
+		<skillGains>
+			<Melee>5</Melee>
+			<Shooting>5</Shooting>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Cygor</li>
+		</spawnCategories>
+		<workDisables>
+			<li>Intellectual</li>
+			<li>Cooking</li>
+			<li>Firefighting</li>
+			<li>Caring</li>
+			<li>Social</li>
+			<li>ManualSkilled</li>
+			<li>PlantWork</li>
+			<li>Mining</li>
+			<li>Crafting</li>
+			<li>Artistic</li>
+			<li>Cleaning</li>
+		</workDisables>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+  
+	<!-- Childhood -->
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_WildCygorChild</defName>
+		<title>wildling</title>
+		<titleShort>wildling</titleShort>
+		<description>[PAWN_nameDef] was born in the old forest, and grew up wild and free. [PAWN_possessive] magical sight freqently drove [PAWN_objective] to madness, and [PAWN_pronoun] still has a hard time focusing on basic tasks because of it.</description>
+
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<Melee>1</Melee>
+			<Shooting>1</Shooting>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Cygor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+	<AlienRace.AlienBackstoryDef>
+		<defName>RH_TET_Beastmen_CurruptedCygorChild</defName>
+		<title>corrupted</title>
+		<titleShort>corrupted</titleShort>
+		<description>[PAWN_nameDef] was born to human parents, and grew so much so fast that it didn't take them long to figure out that their child was a moster. [PAWN_possessive] magical sight freqently drove [PAWN_objective] to madness, and [PAWN_pronoun] still has a hard time focusing on basic tasks because of it.</description>
+
+		<bodyTypeMale>Hulk</bodyTypeMale>
+		<bodyTypeFemale>Hulk</bodyTypeFemale>
+
+		<slot>Childhood</slot>
+		<skillGains>
+			<Melee>1</Melee>
+			<Shooting>1</Shooting>
+		</skillGains>
+		<spawnCategories>
+			<li>RH_TET_Beastmen_Cygor</li>
+		</spawnCategories>
+		<requiredWorkTags>
+			<li>Violent</li>
+		</requiredWorkTags>
+	</AlienRace.AlienBackstoryDef>
+
+</Defs>

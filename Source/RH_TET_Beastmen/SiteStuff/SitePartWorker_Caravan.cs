@@ -31,7 +31,7 @@ namespace TheEndTimes_Beastmen
 
         public override SitePartParams GenerateDefaultParams(
               float myThreatPoints,
-              int tile,
+              PlanetTile tile,
               Faction faction)
         {
 

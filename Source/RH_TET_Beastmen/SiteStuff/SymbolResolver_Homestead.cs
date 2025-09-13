@@ -23,7 +23,7 @@ namespace TheEndTimes_Beastmen
             float f = (float)((double)rp.rect.Area / 144.0 * 0.170000001788139);
 
             RimWorld.BaseGen.BaseGen.globalSettings.minEmptyNodes = (double)f >= 1.0 ? GenMath.RoundRandom(f) : 0;
-            Lord lord = rp.singlePawnLord ?? LordMaker.MakeNewLord(faction, (LordJob)new LordJob_DefendBase(faction, rp.rect.CenterCell), map, (IEnumerable<Pawn>)null);
+            Lord lord = rp.singlePawnLord ?? LordMaker.MakeNewLord(faction, (LordJob)new LordJob_DefendBase(faction, rp.rect.CenterCell, 25000, false), map, (IEnumerable<Pawn>)null);
             TraverseParms traverseParms = TraverseParms.For(TraverseMode.PassDoors, Danger.Deadly, false);
 
             ResolveParams resolveParams1 = rp;

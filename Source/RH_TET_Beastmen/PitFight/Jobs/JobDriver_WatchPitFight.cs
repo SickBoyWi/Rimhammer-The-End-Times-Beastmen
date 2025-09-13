@@ -33,9 +33,9 @@ namespace TheEndTimes_Beastmen
                         this.pawn.needs.mood.thoughts.memories.TryGainMemory(BeastmenDefOf.RH_TET_Beastmen_WatchedPitFight, (Pawn)null);
                     }
                     if (((Building_PitFightSpot)this.pawn.mindState.duty.focus.Thing).currentState == Building_PitFightSpot.State.fighting)
-                        JoyUtility.JoyTickCheckEnd(this.pawn, JoyTickFullJoyAction.None, 1f, (Building)null);
+                        JoyUtility.JoyTickCheckEnd(this.pawn, 1,JoyTickFullJoyAction.None, 1f, (Building)null);
                     this.pawn.rotationTracker.FaceCell(this.job.GetTarget(TargetIndex.B).Cell);
-                    this.pawn.GainComfortFromCellIfPossible();
+                    this.pawn.GainComfortFromCellIfPossible(1);
                     if (!this.pawn.IsHashIntervalTick(100))
                         return;
                     this.pawn.jobs.CheckForJobOverride();

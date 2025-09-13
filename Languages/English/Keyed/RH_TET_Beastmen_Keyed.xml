@@ -153,8 +153,8 @@
 	<RH_TET_Beastmen_PreachingAbout>Praising {0}</RH_TET_Beastmen_PreachingAbout>
 	<RH_TET_Beastmen_PrayingTo>Praying to {0}</RH_TET_Beastmen_PrayingTo>
   
-	<RH_TET_Beastmen_CarryToMassiveHerdstone>Burn {1_label} in massive herdstone</RH_TET_Beastmen_CarryToMassiveHerdstone>
-	<RH_TET_Beastmen_CannotCarryToMassiveHerdstone>Cannot carry to massive herdstone</RH_TET_Beastmen_CannotCarryToMassiveHerdstone>
+	<RH_TET_Beastmen_CarryToMassiveHerdstone>Burn {1_labelShort} in massive herdstone</RH_TET_Beastmen_CarryToMassiveHerdstone>
+	<RH_TET_Beastmen_CannotCarryToMassiveHerdstone>Cannot carry to massive herdstone {1_labelShort}</RH_TET_Beastmen_CannotCarryToMassiveHerdstone>
 	<RH_TET_Beastmen_NoMassiveHerdstone>No available massive herdstone.</RH_TET_Beastmen_NoMassiveHerdstone>
 	<RH_TET_Beastmen_HerdstoneRequiresFuel>It likely requires refueling.</RH_TET_Beastmen_HerdstoneRequiresFuel>
 	<RH_TET_Beastmen_HerdstoneBodyCount>Khorne favor: {0}. Lord Khorne greedily accepts the skull for his Skull Throne.</RH_TET_Beastmen_HerdstoneBodyCount>

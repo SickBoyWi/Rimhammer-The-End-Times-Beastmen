@@ -1,4 +1,5 @@
 ﻿using RimWorld;
+using RimWorld.Planet;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,14 +52,14 @@ namespace TheEndTimes_Beastmen
             return true;
         }
 
-        private bool TryFindAnimalKind(int tile, out PawnKindDef animalKind)
+        private bool TryFindAnimalKind(PlanetTile tile, out PawnKindDef animalKind)
         {
             return DefDatabase<PawnKindDef>.AllDefs.Where<PawnKindDef>((Func<PawnKindDef, bool>)(k =>
             {
                 if (k.RaceProps.CanDoHerdMigration)
                     return Find.World.tileTemperatures.SeasonAndOutdoorTemperatureAcceptableFor(tile, k.race);
                 return false;
-            })).TryRandomElementByWeight<PawnKindDef>((Func<PawnKindDef, float>)(x => Mathf.Lerp(0.2f, 1f, x.RaceProps.wildness)), out animalKind);
+            })).TryRandomElementByWeight<PawnKindDef>((Func<PawnKindDef, float>)(x => Mathf.Lerp(0.2f, 1f, x.race.GetStatValueAbstract(StatDefOf.Wildness, (ThingDef)null))), out animalKind);
         }
 
         private bool TryFindStartAndEndCells(Map map, out IntVec3 start, out IntVec3 end)
@@ -84,17 +85,15 @@ namespace TheEndTimes_Beastmen
             return end.IsValid;
         }
 
-        private List<Pawn> GenerateAnimals(PawnKindDef animalKind, int tile)
+        private List<Pawn> GenerateAnimals(PawnKindDef animalKind, PlanetTile tile)
         {
             int num1 = Mathf.Max(IncidentWorker_HerdMigration.AnimalsCount.RandomInRange, Mathf.CeilToInt(4f / animalKind.RaceProps.baseBodySize));
             List<Pawn> pawnList = new List<Pawn>();
             for (int index = 0; index < num1; ++index)
             {
                 PawnKindDef pawnKindDef = animalKind;
-                int num2 = tile;
                 PawnKindDef kind = pawnKindDef;
-                int tile1 = num2;
-                PawnGenerationRequest local = new PawnGenerationRequest(kind, (Faction)null, PawnGenerationContext.NonPlayer, tile1, 
+                PawnGenerationRequest local = new PawnGenerationRequest(kind, (Faction)null, PawnGenerationContext.NonPlayer, tile, 
                     false, false, false, 
                     false, false, 0.0f, 
                     false, true, false, 

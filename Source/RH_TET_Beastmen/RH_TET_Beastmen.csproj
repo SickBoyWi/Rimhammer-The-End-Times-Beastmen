@@ -17,7 +17,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\1.5\Assemblies\</OutputPath>
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -44,19 +44,19 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="HugsLib">
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.5\Assemblies\HugsLib.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\818773962\v1.6\Assemblies\HugsLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="RH_TET_Magic">
-      <HintPath>..\..\..\Rimhammer-The-End-Times-Magic\1.5\Assemblies\RH_TET_Magic.dll</HintPath>
+      <HintPath>..\..\..\Rimhammer-The-End-Times-Magic\1.6\Assemblies\RH_TET_Magic.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SickAbilityUser">
-      <HintPath>..\..\..\SickTools\1.5\Assemblies\SickAbilityUser.dll</HintPath>
+      <HintPath>..\..\..\SickTools\1.6\Assemblies\SickAbilityUser.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="SickAbilityUserAI">
-      <HintPath>..\..\..\SickTools\1.5\Assemblies\SickAbilityUserAI.dll</HintPath>
+      <HintPath>..\..\..\SickTools\1.6\Assemblies\SickAbilityUserAI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -147,6 +147,7 @@
     <Compile Include="MapGen\MapObject.cs" />
     <Compile Include="MapGen\MapGenHandler.cs" />
     <Compile Include="MapGen\MapGenDef.cs" />
+    <Compile Include="MassiveHerdstone\FloatMenuOptionProvider_HerdstoneCarcassBurn.cs" />
     <Compile Include="MassiveHerdstone\WeatherEvent_LightningStrikeNoDamage.cs" />
     <Compile Include="MassiveHerdstone\ITab_HerdstoneHumanConversionCardUtil.cs" />
     <Compile Include="MassiveHerdstone\ITab_Conversion.cs" />

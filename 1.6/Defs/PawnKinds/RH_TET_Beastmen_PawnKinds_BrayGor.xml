@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Bray Base for Faction -->
+
+	<PawnKindDef Name="RH_TET_Beastmen_BrayGorKind" Abstract="True">
+		<defaultFactionDef>RH_TET_Beastmen_GorFaction</defaultFactionDef>
+		<combatPower>65</combatPower>
+		<apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+		<invNutrition>3.0</invNutrition>
+		<invFoodDef>Pemmican</invFoodDef>
+	</PawnKindDef>
+
+	<!-- Leader -->
+
+	<PawnKindDef ParentName="RH_TET_Beastmen_BrayGorKind">
+		<defName>RH_TET_Beastmen_GreatBrayShaman</defName>
+		<label>great bray shaman</label>
+		<race>RH_TET_Beastmen_Alien_BrayGor</race>
+		<factionLeader>true</factionLeader>
+		<combatPower>120</combatPower>
+		<defaultFactionDef>RH_TET_Beastmen_GorFaction</defaultFactionDef>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RH_TET_Beastmen_GreatBrayShaman</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<minGenerationAge>40</minGenerationAge>
+		<maxGenerationAge>90</maxGenerationAge>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>RH_TET_Beastmen_BrayShaman</li>
+		</apparelTags>
+		<gearHealthRange>
+			<min>1.0</min>
+			<max>3.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>400</min>
+			<max>3500</max>
+		</apparelMoney>
+		<weaponTags>
+			<li>RH_TET_Beastmen_BrayShaman</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>500</min>
+			<max>2500</max>
+		</weaponMoney>
+		<initialResistanceRange>30~45</initialResistanceRange>
+		<initialWillRange>3~5</initialWillRange>
+	</PawnKindDef>
+
+	<!-- Generals -->
+
+	<PawnKindDef ParentName="RH_TET_Beastmen_BrayGorKind">
+		<defName>RH_TET_Beastmen_BrayShaman</defName>
+		<label>bray shaman</label>
+		<race>RH_TET_Beastmen_Alien_BrayGor</race>
+		<factionLeader>false</factionLeader>
+		<combatPower>65</combatPower>
+		<defaultFactionDef>RH_TET_Beastmen_GorFaction</defaultFactionDef>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>RH_TET_Beastmen_BrayShaman</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<minGenerationAge>30</minGenerationAge>
+		<maxGenerationAge>90</maxGenerationAge>
+		<apparelAllowHeadgearChance>1.0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>RH_TET_Beastmen_BrayShaman</li>
+		</apparelTags>
+		<gearHealthRange>
+			<min>1.0</min>
+			<max>3.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>300</min>
+			<max>1400</max>
+		</apparelMoney>
+		<weaponTags>
+			<li>RH_TET_Beastmen_BrayShaman</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>350</min>
+			<max>1500</max>
+		</weaponMoney>
+		<initialResistanceRange>20~35</initialResistanceRange>
+		<initialWillRange>2~4</initialWillRange>
+	</PawnKindDef>
+
+</Defs>

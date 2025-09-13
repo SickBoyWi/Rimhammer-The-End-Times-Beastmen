@@ -99,7 +99,7 @@ namespace TheEndTimes_Beastmen
             }
         }
 
-        public override void Tick()
+        protected override void Tick()
         {
             base.Tick();
             if (isOn &&  (Find.TickManager.TicksGame % 600 == 0))

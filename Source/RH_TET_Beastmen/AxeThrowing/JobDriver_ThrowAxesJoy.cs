@@ -8,11 +8,11 @@ namespace TheEndTimes_Beastmen
     {
         private const int AxeThrowInterval = 400;
 
-        protected override void WatchTickAction()
+        protected override void WatchTickAction(int delta)
         {
             if (this.pawn.IsHashIntervalTick(400))
                 JobDriver_ThrowAxesJoy.ThrowObjectAt(this.pawn, this.TargetA.Cell, BeastmenDefOf.RH_TET_Beastmen_MoteAxe);
-            base.WatchTickAction();
+            base.WatchTickAction( delta);
         }
 
         private static void ThrowObjectAt(Pawn thrower, IntVec3 targetCell, ThingDef mote)
