@@ -60,8 +60,17 @@ namespace TheEndTimes_Beastmen
             //if (fog)
             //    MapGenHandler.RefogMap(mapGenerator.defogPosition, map);
             // 1.5
+            //if (fog)
+            //    map.fogGrid.FloodUnfogAdjacent(mapGenerator.defogPosition, false);
+            // 1.6
             if (fog)
-                map.fogGrid.FloodUnfogAdjacent(mapGenerator.defogPosition, false);
+            {
+                GenStep_Fog gs_f = new GenStep_Fog();
+                gs_f.Generate(map, new GenStepParams());
+            }
+
+
+
             if (!unFogRoom)
                 return;
             foreach (IntVec3 allCell in map.AllCells)
