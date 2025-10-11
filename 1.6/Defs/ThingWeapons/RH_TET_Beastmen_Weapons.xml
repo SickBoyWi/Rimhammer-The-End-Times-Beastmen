@@ -506,14 +506,6 @@
 				<westOffset>(0,0,-0.1)</westOffset>
 				<southOffset>(-0.1,0,-0.1)</southOffset>
 			</li>
-			<!--
-			<li Class="MVCF.Comps.CompProperties_VerbProps">
-				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
-				<verbProps>
-					<li><brawlerCaresAbout>false</brawlerCaresAbout></li>
-				</verbProps>
-			</li>
-			-->
 		</comps>
 		<statBases>
 			<WorkToMake>12000</WorkToMake>
@@ -568,6 +560,9 @@
 				<cooldownTime>2.5</cooldownTime>
 			</li>
 		</tools>
+		<modExtensions>
+			<li Class="BrawlerFriendly.DefModExtension_BrawlerFriendly" />
+		</modExtensions>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseProjectileNeolithic">
@@ -1294,16 +1289,9 @@
 				<cooldownTime>2</cooldownTime>
 			</li>
 		</tools>
-<!--		
-		<comps>
-			<li Class="MVCF.Comps.CompProperties_VerbProps">
-				<compClass>MVCF.Comps.Comp_VerbProps</compClass>
-				<verbProps>
-					<li><brawlerCaresAbout>false</brawlerCaresAbout></li>
-				</verbProps>
-			</li>
-		</comps>
--->
+		<modExtensions>
+			<li Class="BrawlerFriendly.DefModExtension_BrawlerFriendly" />
+		</modExtensions>
 	</ThingDef>
 
 	<ThingDef ParentName="BaseProjectileNeolithic">
